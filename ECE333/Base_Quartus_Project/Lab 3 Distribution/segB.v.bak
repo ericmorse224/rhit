@@ -1,0 +1,10 @@
+// Implement your segB module using Verilog
+
+module segB
+(
+	input D3, D2, D1, D0,
+	output segB
+);
+
+	assign segB = ; // put the correct Verliog equation here
+endmodule

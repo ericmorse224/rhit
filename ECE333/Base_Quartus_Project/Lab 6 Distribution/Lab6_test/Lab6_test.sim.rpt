@@ -1,0 +1,620 @@
+Simulator report for Lab6_test
+Sun Feb 04 20:32:29 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 305 nodes    ;
+; Simulation Coverage         ;      52.13 % ;
+; Total Number of Transitions ; 1178         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                                             ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                                           ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                                        ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                                              ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                                               ;               ;
+; Vector input source                                                                        ; C:/altera/13.0sp1/Base_Quartus_Project/Lab 6 Distribution/Lab6_test/Lab6_test.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                                                ; On            ;
+; Check outputs                                                                              ; Off                                                                               ; Off           ;
+; Report simulation coverage                                                                 ; On                                                                                ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                                                ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                                                ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                                                ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                                               ; Off           ;
+; Detect glitches                                                                            ; Off                                                                               ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                                               ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                                               ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                               ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                                               ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                                ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                                        ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                               ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                               ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                              ; Auto          ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      52.13 % ;
+; Total nodes checked                                 ; 305          ;
+; Total output ports checked                          ; 305          ;
+; Total output ports with complete 1/0-value coverage ; 159          ;
+; Total output ports with no 1/0-value coverage       ; 145          ;
+; Total output ports with no 1-value coverage         ; 146          ;
+; Total output ports with no 0-value coverage         ; 145          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                        ;
++------------------------------------------------+------------------------------------------------+------------------+
+; Node Name                                      ; Output Port Name                               ; Output Port Type ;
++------------------------------------------------+------------------------------------------------+------------------+
+; |Lab6_test|LOAD_NOTE                           ; |Lab6_test|LOAD_NOTE                           ; pin_out          ;
+; |Lab6_test|LEFT                                ; |Lab6_test|LEFT                                ; out              ;
+; |Lab6_test|MID                                 ; |Lab6_test|MID                                 ; out              ;
+; |Lab6_test|RIGHT                               ; |Lab6_test|RIGHT                               ; out              ;
+; |Lab6_test|START                               ; |Lab6_test|START                               ; out              ;
+; |Lab6_test|nOVER                               ; |Lab6_test|nOVER                               ; out              ;
+; |Lab6_test|TIME                                ; |Lab6_test|TIME                                ; out              ;
+; |Lab6_test|END_LEFT                            ; |Lab6_test|END_LEFT                            ; out              ;
+; |Lab6_test|END_MID                             ; |Lab6_test|END_MID                             ; out              ;
+; |Lab6_test|END_RIGHT                           ; |Lab6_test|END_RIGHT                           ; out              ;
+; |Lab6_test|CLK                                 ; |Lab6_test|CLK                                 ; out              ;
+; |Lab6_test|SHIFT                               ; |Lab6_test|SHIFT                               ; pin_out          ;
+; |Lab6_test|INC_SCORE                           ; |Lab6_test|INC_SCORE                           ; pin_out          ;
+; |Lab6_test|INC_MISS                            ; |Lab6_test|INC_MISS                            ; pin_out          ;
+; |Lab6_test|nCLRPT                              ; |Lab6_test|nCLRPT                              ; pin_out          ;
+; |Lab6_test|G_LOAD_NOTE                         ; |Lab6_test|G_LOAD_NOTE                         ; pin_out          ;
+; |Lab6_test|G_SHIFT                             ; |Lab6_test|G_SHIFT                             ; pin_out          ;
+; |Lab6_test|G_INC_SCORE                         ; |Lab6_test|G_INC_SCORE                         ; pin_out          ;
+; |Lab6_test|G_INC_MISS                          ; |Lab6_test|G_INC_MISS                          ; pin_out          ;
+; |Lab6_test|G_nCLRPT                            ; |Lab6_test|G_nCLRPT                            ; pin_out          ;
+; |Lab6_test|G_STATE[6]                          ; |Lab6_test|G_STATE[6]                          ; pin_out          ;
+; |Lab6_test|G_STATE[5]                          ; |Lab6_test|G_STATE[5]                          ; pin_out          ;
+; |Lab6_test|G_STATE[4]                          ; |Lab6_test|G_STATE[4]                          ; pin_out          ;
+; |Lab6_test|G_STATE[3]                          ; |Lab6_test|G_STATE[3]                          ; pin_out          ;
+; |Lab6_test|G_STATE[2]                          ; |Lab6_test|G_STATE[2]                          ; pin_out          ;
+; |Lab6_test|G_STATE[1]                          ; |Lab6_test|G_STATE[1]                          ; pin_out          ;
+; |Lab6_test|G_STATE[0]                          ; |Lab6_test|G_STATE[0]                          ; pin_out          ;
+; |Lab6_test|STATE[6]                            ; |Lab6_test|STATE[6]                            ; pin_out          ;
+; |Lab6_test|STATE[5]                            ; |Lab6_test|STATE[5]                            ; pin_out          ;
+; |Lab6_test|STATE[4]                            ; |Lab6_test|STATE[4]                            ; pin_out          ;
+; |Lab6_test|STATE[3]                            ; |Lab6_test|STATE[3]                            ; pin_out          ;
+; |Lab6_test|STATE[2]                            ; |Lab6_test|STATE[2]                            ; pin_out          ;
+; |Lab6_test|STATE[1]                            ; |Lab6_test|STATE[1]                            ; pin_out          ;
+; |Lab6_test|STATE[0]                            ; |Lab6_test|STATE[0]                            ; pin_out          ;
+; |Lab6_test|control_gold:inst|STATE[6]          ; |Lab6_test|control_gold:inst|STATE[6]          ; regout           ;
+; |Lab6_test|control_gold:inst|STATE[5]          ; |Lab6_test|control_gold:inst|STATE[5]          ; regout           ;
+; |Lab6_test|control_gold:inst|STATE[4]          ; |Lab6_test|control_gold:inst|STATE[4]          ; regout           ;
+; |Lab6_test|control_gold:inst|STATE[3]          ; |Lab6_test|control_gold:inst|STATE[3]          ; regout           ;
+; |Lab6_test|control_gold:inst|STATE[2]          ; |Lab6_test|control_gold:inst|STATE[2]          ; regout           ;
+; |Lab6_test|control_gold:inst|STATE[1]          ; |Lab6_test|control_gold:inst|STATE[1]          ; regout           ;
+; |Lab6_test|control_gold:inst|NextState~0       ; |Lab6_test|control_gold:inst|NextState~0       ; out              ;
+; |Lab6_test|control_gold:inst|NextState~1       ; |Lab6_test|control_gold:inst|NextState~1       ; out              ;
+; |Lab6_test|control_gold:inst|NextState~2       ; |Lab6_test|control_gold:inst|NextState~2       ; out              ;
+; |Lab6_test|control_gold:inst|NextState~3       ; |Lab6_test|control_gold:inst|NextState~3       ; out              ;
+; |Lab6_test|control_gold:inst|NextState~4       ; |Lab6_test|control_gold:inst|NextState~4       ; out              ;
+; |Lab6_test|control_gold:inst|NextState~5       ; |Lab6_test|control_gold:inst|NextState~5       ; out              ;
+; |Lab6_test|control_gold:inst|NextState~6       ; |Lab6_test|control_gold:inst|NextState~6       ; out              ;
+; |Lab6_test|control_gold:inst|always1~0         ; |Lab6_test|control_gold:inst|always1~0         ; out0             ;
+; |Lab6_test|control_gold:inst|always1~1         ; |Lab6_test|control_gold:inst|always1~1         ; out0             ;
+; |Lab6_test|control_gold:inst|always1~2         ; |Lab6_test|control_gold:inst|always1~2         ; out0             ;
+; |Lab6_test|control_gold:inst|WideOr0           ; |Lab6_test|control_gold:inst|WideOr0           ; out0             ;
+; |Lab6_test|control_gold:inst|LOAD_NOTE         ; |Lab6_test|control_gold:inst|LOAD_NOTE         ; out0             ;
+; |Lab6_test|control_gold:inst|SHIFT             ; |Lab6_test|control_gold:inst|SHIFT             ; out0             ;
+; |Lab6_test|control_gold:inst|INC_SCORE~0       ; |Lab6_test|control_gold:inst|INC_SCORE~0       ; out0             ;
+; |Lab6_test|control_gold:inst|INC_SCORE~1       ; |Lab6_test|control_gold:inst|INC_SCORE~1       ; out0             ;
+; |Lab6_test|control_gold:inst|INC_SCORE~2       ; |Lab6_test|control_gold:inst|INC_SCORE~2       ; out0             ;
+; |Lab6_test|control_gold:inst|INC_SCORE~3       ; |Lab6_test|control_gold:inst|INC_SCORE~3       ; out0             ;
+; |Lab6_test|control_gold:inst|INC_SCORE         ; |Lab6_test|control_gold:inst|INC_SCORE         ; out0             ;
+; |Lab6_test|control_gold:inst|STATE[0]          ; |Lab6_test|control_gold:inst|STATE[0]          ; regout           ;
+; |Lab6_test|control_gold:inst|INC_MISS~0        ; |Lab6_test|control_gold:inst|INC_MISS~0        ; out0             ;
+; |Lab6_test|control_gold:inst|INC_MISS~1        ; |Lab6_test|control_gold:inst|INC_MISS~1        ; out0             ;
+; |Lab6_test|control_gold:inst|INC_MISS          ; |Lab6_test|control_gold:inst|INC_MISS          ; out0             ;
+; |Lab6_test|error_detector:inst2|output_error~3 ; |Lab6_test|error_detector:inst2|output_error~3 ; out0             ;
+; |Lab6_test|error_detector:inst2|output_error~4 ; |Lab6_test|error_detector:inst2|output_error~4 ; out0             ;
+; |Lab6_test|control:inst1|inst1                 ; |Lab6_test|control:inst1|inst1                 ; out0             ;
+; |Lab6_test|control:inst1|inst7                 ; |Lab6_test|control:inst1|inst7                 ; regout           ;
+; |Lab6_test|control:inst1|inst3                 ; |Lab6_test|control:inst1|inst3                 ; out0             ;
+; |Lab6_test|control:inst1|inst37                ; |Lab6_test|control:inst1|inst37                ; out0             ;
+; |Lab6_test|control:inst1|inst36                ; |Lab6_test|control:inst1|inst36                ; out0             ;
+; |Lab6_test|control:inst1|inst                  ; |Lab6_test|control:inst1|inst                  ; regout           ;
+; |Lab6_test|control:inst1|inst18                ; |Lab6_test|control:inst1|inst18                ; out0             ;
+; |Lab6_test|control:inst1|inst17                ; |Lab6_test|control:inst1|inst17                ; out0             ;
+; |Lab6_test|control:inst1|inst16                ; |Lab6_test|control:inst1|inst16                ; out0             ;
+; |Lab6_test|control:inst1|inst12                ; |Lab6_test|control:inst1|inst12                ; regout           ;
+; |Lab6_test|control:inst1|inst6                 ; |Lab6_test|control:inst1|inst6                 ; out0             ;
+; |Lab6_test|control:inst1|inst5                 ; |Lab6_test|control:inst1|inst5                 ; out0             ;
+; |Lab6_test|control:inst1|inst4                 ; |Lab6_test|control:inst1|inst4                 ; out0             ;
+; |Lab6_test|control:inst1|inst9                 ; |Lab6_test|control:inst1|inst9                 ; regout           ;
+; |Lab6_test|control:inst1|inst38                ; |Lab6_test|control:inst1|inst38                ; out0             ;
+; |Lab6_test|control:inst1|inst14                ; |Lab6_test|control:inst1|inst14                ; out0             ;
+; |Lab6_test|control:inst1|inst58                ; |Lab6_test|control:inst1|inst58                ; out0             ;
+; |Lab6_test|control:inst1|inst13                ; |Lab6_test|control:inst1|inst13                ; out0             ;
+; |Lab6_test|control:inst1|inst8                 ; |Lab6_test|control:inst1|inst8                 ; regout           ;
+; |Lab6_test|control:inst1|inst46                ; |Lab6_test|control:inst1|inst46                ; out0             ;
+; |Lab6_test|control:inst1|inst45                ; |Lab6_test|control:inst1|inst45                ; out0             ;
+; |Lab6_test|control:inst1|inst59                ; |Lab6_test|control:inst1|inst59                ; out0             ;
+; |Lab6_test|control:inst1|inst44                ; |Lab6_test|control:inst1|inst44                ; out0             ;
+; |Lab6_test|control:inst1|inst11                ; |Lab6_test|control:inst1|inst11                ; regout           ;
+; |Lab6_test|control:inst1|inst50                ; |Lab6_test|control:inst1|inst50                ; out0             ;
+; |Lab6_test|control:inst1|inst49                ; |Lab6_test|control:inst1|inst49                ; out0             ;
+; |Lab6_test|control:inst1|inst60                ; |Lab6_test|control:inst1|inst60                ; out0             ;
+; |Lab6_test|control:inst1|inst48                ; |Lab6_test|control:inst1|inst48                ; out0             ;
+; |Lab6_test|control:inst1|inst10                ; |Lab6_test|control:inst1|inst10                ; regout           ;
+; |Lab6_test|control:inst1|inst55                ; |Lab6_test|control:inst1|inst55                ; out0             ;
+; |Lab6_test|control:inst1|inst54                ; |Lab6_test|control:inst1|inst54                ; out0             ;
+; |Lab6_test|control:inst1|inst53                ; |Lab6_test|control:inst1|inst53                ; out0             ;
+; |Lab6_test|control:inst1|inst39                ; |Lab6_test|control:inst1|inst39                ; out0             ;
+; |Lab6_test|control:inst1|inst2                 ; |Lab6_test|control:inst1|inst2                 ; out0             ;
+; |Lab6_test|control:inst1|inst40                ; |Lab6_test|control:inst1|inst40                ; out0             ;
+; |Lab6_test|control:inst1|inst41                ; |Lab6_test|control:inst1|inst41                ; out0             ;
+; |Lab6_test|control:inst1|inst42                ; |Lab6_test|control:inst1|inst42                ; out0             ;
+; |Lab6_test|control:inst1|inst24                ; |Lab6_test|control:inst1|inst24                ; out0             ;
+; |Lab6_test|control:inst1|inst52                ; |Lab6_test|control:inst1|inst52                ; out0             ;
+; |Lab6_test|control:inst1|inst47                ; |Lab6_test|control:inst1|inst47                ; out0             ;
+; |Lab6_test|control:inst1|inst51                ; |Lab6_test|control:inst1|inst51                ; out0             ;
+; |Lab6_test|control:inst1|inst43                ; |Lab6_test|control:inst1|inst43                ; out0             ;
+; |Lab6_test|control:inst1|inst61                ; |Lab6_test|control:inst1|inst61                ; out0             ;
+; |Lab6_test|control:inst1|inst57                ; |Lab6_test|control:inst1|inst57                ; out0             ;
+; |Lab6_test|control_gold:inst|Selector0~0       ; |Lab6_test|control_gold:inst|Selector0~0       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector0~1       ; |Lab6_test|control_gold:inst|Selector0~1       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector0~2       ; |Lab6_test|control_gold:inst|Selector0~2       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector0~3       ; |Lab6_test|control_gold:inst|Selector0~3       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector1~0       ; |Lab6_test|control_gold:inst|Selector1~0       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector1~1       ; |Lab6_test|control_gold:inst|Selector1~1       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector1~2       ; |Lab6_test|control_gold:inst|Selector1~2       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector1~3       ; |Lab6_test|control_gold:inst|Selector1~3       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector2~0       ; |Lab6_test|control_gold:inst|Selector2~0       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector2~1       ; |Lab6_test|control_gold:inst|Selector2~1       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector2~2       ; |Lab6_test|control_gold:inst|Selector2~2       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector2~3       ; |Lab6_test|control_gold:inst|Selector2~3       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector3~0       ; |Lab6_test|control_gold:inst|Selector3~0       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector3~1       ; |Lab6_test|control_gold:inst|Selector3~1       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector3~2       ; |Lab6_test|control_gold:inst|Selector3~2       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector4~0       ; |Lab6_test|control_gold:inst|Selector4~0       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector4~1       ; |Lab6_test|control_gold:inst|Selector4~1       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector4~2       ; |Lab6_test|control_gold:inst|Selector4~2       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector5~0       ; |Lab6_test|control_gold:inst|Selector5~0       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector5~1       ; |Lab6_test|control_gold:inst|Selector5~1       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector5~2       ; |Lab6_test|control_gold:inst|Selector5~2       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector5~3       ; |Lab6_test|control_gold:inst|Selector5~3       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector5~4       ; |Lab6_test|control_gold:inst|Selector5~4       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector5~5       ; |Lab6_test|control_gold:inst|Selector5~5       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector5~6       ; |Lab6_test|control_gold:inst|Selector5~6       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector6~0       ; |Lab6_test|control_gold:inst|Selector6~0       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector6~1       ; |Lab6_test|control_gold:inst|Selector6~1       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector6~2       ; |Lab6_test|control_gold:inst|Selector6~2       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector6~3       ; |Lab6_test|control_gold:inst|Selector6~3       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~0        ; |Lab6_test|control_gold:inst|Decoder0~0        ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~1        ; |Lab6_test|control_gold:inst|Decoder0~1        ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~2        ; |Lab6_test|control_gold:inst|Decoder0~2        ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~4        ; |Lab6_test|control_gold:inst|Decoder0~4        ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~8        ; |Lab6_test|control_gold:inst|Decoder0~8        ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~16       ; |Lab6_test|control_gold:inst|Decoder0~16       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~20       ; |Lab6_test|control_gold:inst|Decoder0~20       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~32       ; |Lab6_test|control_gold:inst|Decoder0~32       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~36       ; |Lab6_test|control_gold:inst|Decoder0~36       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~64       ; |Lab6_test|control_gold:inst|Decoder0~64       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~66       ; |Lab6_test|control_gold:inst|Decoder0~66       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~128      ; |Lab6_test|control_gold:inst|Decoder0~128      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~129      ; |Lab6_test|control_gold:inst|Decoder0~129      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~130      ; |Lab6_test|control_gold:inst|Decoder0~130      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~132      ; |Lab6_test|control_gold:inst|Decoder0~132      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~136      ; |Lab6_test|control_gold:inst|Decoder0~136      ; out              ;
+; |Lab6_test|control_gold:inst|Equal0~0          ; |Lab6_test|control_gold:inst|Equal0~0          ; out0             ;
+; |Lab6_test|control_gold:inst|Equal1~0          ; |Lab6_test|control_gold:inst|Equal1~0          ; out0             ;
+; |Lab6_test|control_gold:inst|Equal2~0          ; |Lab6_test|control_gold:inst|Equal2~0          ; out0             ;
+; |Lab6_test|control_gold:inst|Equal3~0          ; |Lab6_test|control_gold:inst|Equal3~0          ; out0             ;
+; |Lab6_test|control_gold:inst|Equal4~0          ; |Lab6_test|control_gold:inst|Equal4~0          ; out0             ;
+; |Lab6_test|control_gold:inst|Equal5~0          ; |Lab6_test|control_gold:inst|Equal5~0          ; out0             ;
++------------------------------------------------+------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                           ;
++------------------------------------------------+------------------------------------------------+------------------+
+; Node Name                                      ; Output Port Name                               ; Output Port Type ;
++------------------------------------------------+------------------------------------------------+------------------+
+; |Lab6_test|RESET                               ; |Lab6_test|RESET                               ; out              ;
+; |Lab6_test|state_error                         ; |Lab6_test|state_error                         ; pin_out          ;
+; |Lab6_test|output_error                        ; |Lab6_test|output_error                        ; pin_out          ;
+; |Lab6_test|error_detector:inst2|output_error   ; |Lab6_test|error_detector:inst2|output_error   ; regout           ;
+; |Lab6_test|error_detector:inst2|output_error~0 ; |Lab6_test|error_detector:inst2|output_error~0 ; out0             ;
+; |Lab6_test|error_detector:inst2|output_error~1 ; |Lab6_test|error_detector:inst2|output_error~1 ; out0             ;
+; |Lab6_test|error_detector:inst2|output_error~2 ; |Lab6_test|error_detector:inst2|output_error~2 ; out0             ;
+; |Lab6_test|error_detector:inst2|state_error    ; |Lab6_test|error_detector:inst2|state_error    ; regout           ;
+; |Lab6_test|control_gold:inst|Selector3~3       ; |Lab6_test|control_gold:inst|Selector3~3       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector4~3       ; |Lab6_test|control_gold:inst|Selector4~3       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~3        ; |Lab6_test|control_gold:inst|Decoder0~3        ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~5        ; |Lab6_test|control_gold:inst|Decoder0~5        ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~6        ; |Lab6_test|control_gold:inst|Decoder0~6        ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~7        ; |Lab6_test|control_gold:inst|Decoder0~7        ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~9        ; |Lab6_test|control_gold:inst|Decoder0~9        ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~10       ; |Lab6_test|control_gold:inst|Decoder0~10       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~11       ; |Lab6_test|control_gold:inst|Decoder0~11       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~12       ; |Lab6_test|control_gold:inst|Decoder0~12       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~13       ; |Lab6_test|control_gold:inst|Decoder0~13       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~14       ; |Lab6_test|control_gold:inst|Decoder0~14       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~15       ; |Lab6_test|control_gold:inst|Decoder0~15       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~17       ; |Lab6_test|control_gold:inst|Decoder0~17       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~18       ; |Lab6_test|control_gold:inst|Decoder0~18       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~19       ; |Lab6_test|control_gold:inst|Decoder0~19       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~21       ; |Lab6_test|control_gold:inst|Decoder0~21       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~22       ; |Lab6_test|control_gold:inst|Decoder0~22       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~23       ; |Lab6_test|control_gold:inst|Decoder0~23       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~24       ; |Lab6_test|control_gold:inst|Decoder0~24       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~25       ; |Lab6_test|control_gold:inst|Decoder0~25       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~26       ; |Lab6_test|control_gold:inst|Decoder0~26       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~27       ; |Lab6_test|control_gold:inst|Decoder0~27       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~28       ; |Lab6_test|control_gold:inst|Decoder0~28       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~29       ; |Lab6_test|control_gold:inst|Decoder0~29       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~30       ; |Lab6_test|control_gold:inst|Decoder0~30       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~31       ; |Lab6_test|control_gold:inst|Decoder0~31       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~33       ; |Lab6_test|control_gold:inst|Decoder0~33       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~34       ; |Lab6_test|control_gold:inst|Decoder0~34       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~35       ; |Lab6_test|control_gold:inst|Decoder0~35       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~37       ; |Lab6_test|control_gold:inst|Decoder0~37       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~38       ; |Lab6_test|control_gold:inst|Decoder0~38       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~39       ; |Lab6_test|control_gold:inst|Decoder0~39       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~40       ; |Lab6_test|control_gold:inst|Decoder0~40       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~41       ; |Lab6_test|control_gold:inst|Decoder0~41       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~42       ; |Lab6_test|control_gold:inst|Decoder0~42       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~43       ; |Lab6_test|control_gold:inst|Decoder0~43       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~44       ; |Lab6_test|control_gold:inst|Decoder0~44       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~45       ; |Lab6_test|control_gold:inst|Decoder0~45       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~46       ; |Lab6_test|control_gold:inst|Decoder0~46       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~47       ; |Lab6_test|control_gold:inst|Decoder0~47       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~48       ; |Lab6_test|control_gold:inst|Decoder0~48       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~49       ; |Lab6_test|control_gold:inst|Decoder0~49       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~50       ; |Lab6_test|control_gold:inst|Decoder0~50       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~51       ; |Lab6_test|control_gold:inst|Decoder0~51       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~52       ; |Lab6_test|control_gold:inst|Decoder0~52       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~53       ; |Lab6_test|control_gold:inst|Decoder0~53       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~54       ; |Lab6_test|control_gold:inst|Decoder0~54       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~55       ; |Lab6_test|control_gold:inst|Decoder0~55       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~56       ; |Lab6_test|control_gold:inst|Decoder0~56       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~57       ; |Lab6_test|control_gold:inst|Decoder0~57       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~58       ; |Lab6_test|control_gold:inst|Decoder0~58       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~59       ; |Lab6_test|control_gold:inst|Decoder0~59       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~60       ; |Lab6_test|control_gold:inst|Decoder0~60       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~61       ; |Lab6_test|control_gold:inst|Decoder0~61       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~62       ; |Lab6_test|control_gold:inst|Decoder0~62       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~63       ; |Lab6_test|control_gold:inst|Decoder0~63       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~65       ; |Lab6_test|control_gold:inst|Decoder0~65       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~67       ; |Lab6_test|control_gold:inst|Decoder0~67       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~68       ; |Lab6_test|control_gold:inst|Decoder0~68       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~69       ; |Lab6_test|control_gold:inst|Decoder0~69       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~70       ; |Lab6_test|control_gold:inst|Decoder0~70       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~71       ; |Lab6_test|control_gold:inst|Decoder0~71       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~72       ; |Lab6_test|control_gold:inst|Decoder0~72       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~73       ; |Lab6_test|control_gold:inst|Decoder0~73       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~74       ; |Lab6_test|control_gold:inst|Decoder0~74       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~75       ; |Lab6_test|control_gold:inst|Decoder0~75       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~76       ; |Lab6_test|control_gold:inst|Decoder0~76       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~77       ; |Lab6_test|control_gold:inst|Decoder0~77       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~78       ; |Lab6_test|control_gold:inst|Decoder0~78       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~79       ; |Lab6_test|control_gold:inst|Decoder0~79       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~80       ; |Lab6_test|control_gold:inst|Decoder0~80       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~81       ; |Lab6_test|control_gold:inst|Decoder0~81       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~82       ; |Lab6_test|control_gold:inst|Decoder0~82       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~83       ; |Lab6_test|control_gold:inst|Decoder0~83       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~84       ; |Lab6_test|control_gold:inst|Decoder0~84       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~85       ; |Lab6_test|control_gold:inst|Decoder0~85       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~86       ; |Lab6_test|control_gold:inst|Decoder0~86       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~87       ; |Lab6_test|control_gold:inst|Decoder0~87       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~88       ; |Lab6_test|control_gold:inst|Decoder0~88       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~89       ; |Lab6_test|control_gold:inst|Decoder0~89       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~90       ; |Lab6_test|control_gold:inst|Decoder0~90       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~91       ; |Lab6_test|control_gold:inst|Decoder0~91       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~92       ; |Lab6_test|control_gold:inst|Decoder0~92       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~93       ; |Lab6_test|control_gold:inst|Decoder0~93       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~94       ; |Lab6_test|control_gold:inst|Decoder0~94       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~95       ; |Lab6_test|control_gold:inst|Decoder0~95       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~96       ; |Lab6_test|control_gold:inst|Decoder0~96       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~97       ; |Lab6_test|control_gold:inst|Decoder0~97       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~98       ; |Lab6_test|control_gold:inst|Decoder0~98       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~99       ; |Lab6_test|control_gold:inst|Decoder0~99       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~100      ; |Lab6_test|control_gold:inst|Decoder0~100      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~101      ; |Lab6_test|control_gold:inst|Decoder0~101      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~102      ; |Lab6_test|control_gold:inst|Decoder0~102      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~103      ; |Lab6_test|control_gold:inst|Decoder0~103      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~104      ; |Lab6_test|control_gold:inst|Decoder0~104      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~105      ; |Lab6_test|control_gold:inst|Decoder0~105      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~106      ; |Lab6_test|control_gold:inst|Decoder0~106      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~107      ; |Lab6_test|control_gold:inst|Decoder0~107      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~108      ; |Lab6_test|control_gold:inst|Decoder0~108      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~109      ; |Lab6_test|control_gold:inst|Decoder0~109      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~110      ; |Lab6_test|control_gold:inst|Decoder0~110      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~111      ; |Lab6_test|control_gold:inst|Decoder0~111      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~112      ; |Lab6_test|control_gold:inst|Decoder0~112      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~113      ; |Lab6_test|control_gold:inst|Decoder0~113      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~114      ; |Lab6_test|control_gold:inst|Decoder0~114      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~115      ; |Lab6_test|control_gold:inst|Decoder0~115      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~116      ; |Lab6_test|control_gold:inst|Decoder0~116      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~117      ; |Lab6_test|control_gold:inst|Decoder0~117      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~118      ; |Lab6_test|control_gold:inst|Decoder0~118      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~119      ; |Lab6_test|control_gold:inst|Decoder0~119      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~120      ; |Lab6_test|control_gold:inst|Decoder0~120      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~121      ; |Lab6_test|control_gold:inst|Decoder0~121      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~122      ; |Lab6_test|control_gold:inst|Decoder0~122      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~123      ; |Lab6_test|control_gold:inst|Decoder0~123      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~124      ; |Lab6_test|control_gold:inst|Decoder0~124      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~125      ; |Lab6_test|control_gold:inst|Decoder0~125      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~126      ; |Lab6_test|control_gold:inst|Decoder0~126      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~127      ; |Lab6_test|control_gold:inst|Decoder0~127      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~131      ; |Lab6_test|control_gold:inst|Decoder0~131      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~133      ; |Lab6_test|control_gold:inst|Decoder0~133      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~134      ; |Lab6_test|control_gold:inst|Decoder0~134      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~135      ; |Lab6_test|control_gold:inst|Decoder0~135      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~137      ; |Lab6_test|control_gold:inst|Decoder0~137      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~138      ; |Lab6_test|control_gold:inst|Decoder0~138      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~139      ; |Lab6_test|control_gold:inst|Decoder0~139      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~140      ; |Lab6_test|control_gold:inst|Decoder0~140      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~141      ; |Lab6_test|control_gold:inst|Decoder0~141      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~142      ; |Lab6_test|control_gold:inst|Decoder0~142      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~143      ; |Lab6_test|control_gold:inst|Decoder0~143      ; out              ;
+; |Lab6_test|error_detector:inst2|Equal0~0       ; |Lab6_test|error_detector:inst2|Equal0~0       ; out0             ;
+; |Lab6_test|error_detector:inst2|Equal0~1       ; |Lab6_test|error_detector:inst2|Equal0~1       ; out0             ;
+; |Lab6_test|error_detector:inst2|Equal0~2       ; |Lab6_test|error_detector:inst2|Equal0~2       ; out0             ;
+; |Lab6_test|error_detector:inst2|Equal0~3       ; |Lab6_test|error_detector:inst2|Equal0~3       ; out0             ;
+; |Lab6_test|error_detector:inst2|Equal0~4       ; |Lab6_test|error_detector:inst2|Equal0~4       ; out0             ;
+; |Lab6_test|error_detector:inst2|Equal0~5       ; |Lab6_test|error_detector:inst2|Equal0~5       ; out0             ;
+; |Lab6_test|error_detector:inst2|Equal0~6       ; |Lab6_test|error_detector:inst2|Equal0~6       ; out0             ;
+; |Lab6_test|error_detector:inst2|Equal0~7       ; |Lab6_test|error_detector:inst2|Equal0~7       ; out0             ;
++------------------------------------------------+------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                           ;
++------------------------------------------------+------------------------------------------------+------------------+
+; Node Name                                      ; Output Port Name                               ; Output Port Type ;
++------------------------------------------------+------------------------------------------------+------------------+
+; |Lab6_test|state_error                         ; |Lab6_test|state_error                         ; pin_out          ;
+; |Lab6_test|output_error                        ; |Lab6_test|output_error                        ; pin_out          ;
+; |Lab6_test|error_detector:inst2|output_error   ; |Lab6_test|error_detector:inst2|output_error   ; regout           ;
+; |Lab6_test|error_detector:inst2|output_error~0 ; |Lab6_test|error_detector:inst2|output_error~0 ; out0             ;
+; |Lab6_test|error_detector:inst2|output_error~1 ; |Lab6_test|error_detector:inst2|output_error~1 ; out0             ;
+; |Lab6_test|error_detector:inst2|output_error~2 ; |Lab6_test|error_detector:inst2|output_error~2 ; out0             ;
+; |Lab6_test|error_detector:inst2|state_error    ; |Lab6_test|error_detector:inst2|state_error    ; regout           ;
+; |Lab6_test|control_gold:inst|Selector3~3       ; |Lab6_test|control_gold:inst|Selector3~3       ; out0             ;
+; |Lab6_test|control_gold:inst|Selector4~3       ; |Lab6_test|control_gold:inst|Selector4~3       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~3        ; |Lab6_test|control_gold:inst|Decoder0~3        ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~5        ; |Lab6_test|control_gold:inst|Decoder0~5        ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~6        ; |Lab6_test|control_gold:inst|Decoder0~6        ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~7        ; |Lab6_test|control_gold:inst|Decoder0~7        ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~9        ; |Lab6_test|control_gold:inst|Decoder0~9        ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~10       ; |Lab6_test|control_gold:inst|Decoder0~10       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~11       ; |Lab6_test|control_gold:inst|Decoder0~11       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~12       ; |Lab6_test|control_gold:inst|Decoder0~12       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~13       ; |Lab6_test|control_gold:inst|Decoder0~13       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~14       ; |Lab6_test|control_gold:inst|Decoder0~14       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~15       ; |Lab6_test|control_gold:inst|Decoder0~15       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~17       ; |Lab6_test|control_gold:inst|Decoder0~17       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~18       ; |Lab6_test|control_gold:inst|Decoder0~18       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~19       ; |Lab6_test|control_gold:inst|Decoder0~19       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~21       ; |Lab6_test|control_gold:inst|Decoder0~21       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~22       ; |Lab6_test|control_gold:inst|Decoder0~22       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~23       ; |Lab6_test|control_gold:inst|Decoder0~23       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~24       ; |Lab6_test|control_gold:inst|Decoder0~24       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~25       ; |Lab6_test|control_gold:inst|Decoder0~25       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~26       ; |Lab6_test|control_gold:inst|Decoder0~26       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~27       ; |Lab6_test|control_gold:inst|Decoder0~27       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~28       ; |Lab6_test|control_gold:inst|Decoder0~28       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~29       ; |Lab6_test|control_gold:inst|Decoder0~29       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~30       ; |Lab6_test|control_gold:inst|Decoder0~30       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~31       ; |Lab6_test|control_gold:inst|Decoder0~31       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~33       ; |Lab6_test|control_gold:inst|Decoder0~33       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~34       ; |Lab6_test|control_gold:inst|Decoder0~34       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~35       ; |Lab6_test|control_gold:inst|Decoder0~35       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~37       ; |Lab6_test|control_gold:inst|Decoder0~37       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~38       ; |Lab6_test|control_gold:inst|Decoder0~38       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~39       ; |Lab6_test|control_gold:inst|Decoder0~39       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~40       ; |Lab6_test|control_gold:inst|Decoder0~40       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~41       ; |Lab6_test|control_gold:inst|Decoder0~41       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~42       ; |Lab6_test|control_gold:inst|Decoder0~42       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~43       ; |Lab6_test|control_gold:inst|Decoder0~43       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~44       ; |Lab6_test|control_gold:inst|Decoder0~44       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~45       ; |Lab6_test|control_gold:inst|Decoder0~45       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~46       ; |Lab6_test|control_gold:inst|Decoder0~46       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~47       ; |Lab6_test|control_gold:inst|Decoder0~47       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~48       ; |Lab6_test|control_gold:inst|Decoder0~48       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~49       ; |Lab6_test|control_gold:inst|Decoder0~49       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~50       ; |Lab6_test|control_gold:inst|Decoder0~50       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~51       ; |Lab6_test|control_gold:inst|Decoder0~51       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~52       ; |Lab6_test|control_gold:inst|Decoder0~52       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~53       ; |Lab6_test|control_gold:inst|Decoder0~53       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~54       ; |Lab6_test|control_gold:inst|Decoder0~54       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~55       ; |Lab6_test|control_gold:inst|Decoder0~55       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~56       ; |Lab6_test|control_gold:inst|Decoder0~56       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~57       ; |Lab6_test|control_gold:inst|Decoder0~57       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~58       ; |Lab6_test|control_gold:inst|Decoder0~58       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~59       ; |Lab6_test|control_gold:inst|Decoder0~59       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~60       ; |Lab6_test|control_gold:inst|Decoder0~60       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~61       ; |Lab6_test|control_gold:inst|Decoder0~61       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~62       ; |Lab6_test|control_gold:inst|Decoder0~62       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~63       ; |Lab6_test|control_gold:inst|Decoder0~63       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~65       ; |Lab6_test|control_gold:inst|Decoder0~65       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~67       ; |Lab6_test|control_gold:inst|Decoder0~67       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~68       ; |Lab6_test|control_gold:inst|Decoder0~68       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~69       ; |Lab6_test|control_gold:inst|Decoder0~69       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~70       ; |Lab6_test|control_gold:inst|Decoder0~70       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~71       ; |Lab6_test|control_gold:inst|Decoder0~71       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~72       ; |Lab6_test|control_gold:inst|Decoder0~72       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~73       ; |Lab6_test|control_gold:inst|Decoder0~73       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~74       ; |Lab6_test|control_gold:inst|Decoder0~74       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~75       ; |Lab6_test|control_gold:inst|Decoder0~75       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~76       ; |Lab6_test|control_gold:inst|Decoder0~76       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~77       ; |Lab6_test|control_gold:inst|Decoder0~77       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~78       ; |Lab6_test|control_gold:inst|Decoder0~78       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~79       ; |Lab6_test|control_gold:inst|Decoder0~79       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~80       ; |Lab6_test|control_gold:inst|Decoder0~80       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~81       ; |Lab6_test|control_gold:inst|Decoder0~81       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~82       ; |Lab6_test|control_gold:inst|Decoder0~82       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~83       ; |Lab6_test|control_gold:inst|Decoder0~83       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~84       ; |Lab6_test|control_gold:inst|Decoder0~84       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~85       ; |Lab6_test|control_gold:inst|Decoder0~85       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~86       ; |Lab6_test|control_gold:inst|Decoder0~86       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~87       ; |Lab6_test|control_gold:inst|Decoder0~87       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~88       ; |Lab6_test|control_gold:inst|Decoder0~88       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~89       ; |Lab6_test|control_gold:inst|Decoder0~89       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~90       ; |Lab6_test|control_gold:inst|Decoder0~90       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~91       ; |Lab6_test|control_gold:inst|Decoder0~91       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~92       ; |Lab6_test|control_gold:inst|Decoder0~92       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~93       ; |Lab6_test|control_gold:inst|Decoder0~93       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~94       ; |Lab6_test|control_gold:inst|Decoder0~94       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~95       ; |Lab6_test|control_gold:inst|Decoder0~95       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~96       ; |Lab6_test|control_gold:inst|Decoder0~96       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~97       ; |Lab6_test|control_gold:inst|Decoder0~97       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~98       ; |Lab6_test|control_gold:inst|Decoder0~98       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~99       ; |Lab6_test|control_gold:inst|Decoder0~99       ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~100      ; |Lab6_test|control_gold:inst|Decoder0~100      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~101      ; |Lab6_test|control_gold:inst|Decoder0~101      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~102      ; |Lab6_test|control_gold:inst|Decoder0~102      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~103      ; |Lab6_test|control_gold:inst|Decoder0~103      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~104      ; |Lab6_test|control_gold:inst|Decoder0~104      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~105      ; |Lab6_test|control_gold:inst|Decoder0~105      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~106      ; |Lab6_test|control_gold:inst|Decoder0~106      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~107      ; |Lab6_test|control_gold:inst|Decoder0~107      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~108      ; |Lab6_test|control_gold:inst|Decoder0~108      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~109      ; |Lab6_test|control_gold:inst|Decoder0~109      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~110      ; |Lab6_test|control_gold:inst|Decoder0~110      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~111      ; |Lab6_test|control_gold:inst|Decoder0~111      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~112      ; |Lab6_test|control_gold:inst|Decoder0~112      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~113      ; |Lab6_test|control_gold:inst|Decoder0~113      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~114      ; |Lab6_test|control_gold:inst|Decoder0~114      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~115      ; |Lab6_test|control_gold:inst|Decoder0~115      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~116      ; |Lab6_test|control_gold:inst|Decoder0~116      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~117      ; |Lab6_test|control_gold:inst|Decoder0~117      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~118      ; |Lab6_test|control_gold:inst|Decoder0~118      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~119      ; |Lab6_test|control_gold:inst|Decoder0~119      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~120      ; |Lab6_test|control_gold:inst|Decoder0~120      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~121      ; |Lab6_test|control_gold:inst|Decoder0~121      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~122      ; |Lab6_test|control_gold:inst|Decoder0~122      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~123      ; |Lab6_test|control_gold:inst|Decoder0~123      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~124      ; |Lab6_test|control_gold:inst|Decoder0~124      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~125      ; |Lab6_test|control_gold:inst|Decoder0~125      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~126      ; |Lab6_test|control_gold:inst|Decoder0~126      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~127      ; |Lab6_test|control_gold:inst|Decoder0~127      ; out0             ;
+; |Lab6_test|control_gold:inst|Decoder0~131      ; |Lab6_test|control_gold:inst|Decoder0~131      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~133      ; |Lab6_test|control_gold:inst|Decoder0~133      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~134      ; |Lab6_test|control_gold:inst|Decoder0~134      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~135      ; |Lab6_test|control_gold:inst|Decoder0~135      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~137      ; |Lab6_test|control_gold:inst|Decoder0~137      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~138      ; |Lab6_test|control_gold:inst|Decoder0~138      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~139      ; |Lab6_test|control_gold:inst|Decoder0~139      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~140      ; |Lab6_test|control_gold:inst|Decoder0~140      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~141      ; |Lab6_test|control_gold:inst|Decoder0~141      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~142      ; |Lab6_test|control_gold:inst|Decoder0~142      ; out              ;
+; |Lab6_test|control_gold:inst|Decoder0~143      ; |Lab6_test|control_gold:inst|Decoder0~143      ; out              ;
+; |Lab6_test|error_detector:inst2|Equal0~0       ; |Lab6_test|error_detector:inst2|Equal0~0       ; out0             ;
+; |Lab6_test|error_detector:inst2|Equal0~1       ; |Lab6_test|error_detector:inst2|Equal0~1       ; out0             ;
+; |Lab6_test|error_detector:inst2|Equal0~2       ; |Lab6_test|error_detector:inst2|Equal0~2       ; out0             ;
+; |Lab6_test|error_detector:inst2|Equal0~3       ; |Lab6_test|error_detector:inst2|Equal0~3       ; out0             ;
+; |Lab6_test|error_detector:inst2|Equal0~4       ; |Lab6_test|error_detector:inst2|Equal0~4       ; out0             ;
+; |Lab6_test|error_detector:inst2|Equal0~5       ; |Lab6_test|error_detector:inst2|Equal0~5       ; out0             ;
+; |Lab6_test|error_detector:inst2|Equal0~6       ; |Lab6_test|error_detector:inst2|Equal0~6       ; out0             ;
+; |Lab6_test|error_detector:inst2|Equal0~7       ; |Lab6_test|error_detector:inst2|Equal0~7       ; out0             ;
++------------------------------------------------+------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Feb 04 20:32:29 2018
+Info: Command: quartus_sim --simulation_results_format=VWF Lab6_test -c Lab6_test
+Info (324025): Using vector source file "C:/altera/13.0sp1/Base_Quartus_Project/Lab 6 Distribution/Lab6_test/Lab6_test.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Warning (324036): Found clock-sensitive change during active clock edge at time 110.0 ns on register "|Lab6_test|control_gold:inst|STATE[3]"
+Warning (324036): Found clock-sensitive change during active clock edge at time 110.0 ns on register "|Lab6_test|control_gold:inst|STATE[2]"
+Warning (324036): Found clock-sensitive change during active clock edge at time 110.0 ns on register "|Lab6_test|control:inst1|inst12"
+Warning (324036): Found clock-sensitive change during active clock edge at time 110.0 ns on register "|Lab6_test|control:inst1|inst9"
+Warning (324036): Found clock-sensitive change during active clock edge at time 230.0 ns on register "|Lab6_test|control_gold:inst|STATE[4]"
+Warning (324036): Found clock-sensitive change during active clock edge at time 230.0 ns on register "|Lab6_test|control:inst1|inst8"
+Warning (324036): Found clock-sensitive change during active clock edge at time 350.0 ns on register "|Lab6_test|control_gold:inst|STATE[5]"
+Warning (324036): Found clock-sensitive change during active clock edge at time 350.0 ns on register "|Lab6_test|control:inst1|inst11"
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      52.13 %
+Info (328052): Number of transitions in simulation is 1178
+Info (324045): Vector file Lab6_test.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 365 megabytes
+    Info: Processing ended: Sun Feb 04 20:32:29 2018
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

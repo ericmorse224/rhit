@@ -1,0 +1,66 @@
+
+**** 10/28/18 18:45:35 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ece351hw8"  [ C:\Cadence\Pspice Work\ece351hw8-PSpiceFiles\SCHEMATIC1\ece351hw8.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ece351hw8.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ece351hw8-pspicefiles/ece351hw8.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ECE351HW8
+Q_Q1         N00245 N00826 N00280 QbreakN 
+Q_Q2         N00273 N00280 N00308 Qx 
+M_M1         N00245 N00273 N00312 N00312 Mx           
+V_V1         N00245 0  DC 15
+V_V2         0 N00209  DC 15
+I_I1         N00312 N00209 DC 10m
+I_I2         N00308 N00209 DC 1m
+I_I3         N00280 N00209 DC 39u
+R_RC2         N00245 N00273 7.5k 
+R_REE3         N00280 N00209 10Meg 
+R_REE2         N00308 N00209 10Meg 
+R_REE1         N00312 N00209 10Meg 
+R_Rs         N00830 N00826 1k 
+V_V3         N00830 0  AC 1 0
+C_C1         N00312 N00807 1000u 
+C_C2         N00308 0 1000u 
+R_RL         N00807 0 1k 
+
+**** RESUMING ece351hw8.cir ****
+.END
+
+WARNING(ORPSIM-15223): Library file "C:\Cadence\Pspice Work\ece351hw8-pspicefiles\ece351hw8.lib" has changed since index file ece351hw8.ind was created.
+
+WARNING(ORPSIM-15227): The timestamp changed from Sun Oct 28 18:44:15 2018 to Sun Oct 28 18:45:30 2018.
+
+INFO(ORPSIM-15422): Making new index file ece351hw8.ind for library file ece351hw8.lib.
+
+Index has 2 entries from 1 file(s).
+
+.model Qx NPN (B=100)
+---------------$
+ERROR -- 'B' is not a model parameter name
+

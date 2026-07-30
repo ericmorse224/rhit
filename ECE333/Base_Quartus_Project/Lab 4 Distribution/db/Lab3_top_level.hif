@@ -1,0 +1,110 @@
+Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+11
+1000
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+Lab3_top_level
+# storage
+db|Lab3_top_level.(0).cnf
+db|Lab3_top_level.(0).cnf
+# case_insensitive
+# source_file
+||MyDocs|MyDocs|chang1|Documents|Teaching|2014 - 2015|Spring 2015|ECE 233|Labs|Lab #3|Lab3_Distribution|Lab3_top_level.bdf
+50cf61326248a970ccbd7453ade3ed69
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+bcd_count2
+# storage
+db|Lab3_top_level.(1).cnf
+db|Lab3_top_level.(1).cnf
+# case_insensitive
+# source_file
+||MyDocs|MyDocs|chang1|Documents|Teaching|2014 - 2015|Spring 2015|ECE 233|Labs|Lab #3|Lab3_Distribution|bcd_count2.bdf
+5977f5d98d2ae07850ce4bb3b0d91769
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+bcd_count2:inst2
+}
+# macro_sequence
+
+# end
+# entity
+dff_enrst
+# storage
+db|Lab3_top_level.(2).cnf
+db|Lab3_top_level.(2).cnf
+# case_insensitive
+# source_file
+||MyDocs|MyDocs|chang1|Documents|Teaching|2014 - 2015|Spring 2015|ECE 233|Labs|Lab #3|Lab3_Distribution|dff_enrst.bdf
+2a38756b5f2d5fe661baa173cd5fafa4
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+bcd_count2:inst2|dff_enrst:inst15
+bcd_count2:inst2|dff_enrst:inst7
+bcd_count2:inst2|dff_enrst:inst14
+bcd_count2:inst2|dff_enrst:inst5
+bcd_count2:inst2|dff_enrst:inst19
+bcd_count2:inst2|dff_enrst:inst8
+bcd_count2:inst2|dff_enrst:inst18
+bcd_count2:inst2|dff_enrst:inst20
+}
+# macro_sequence
+
+# end
+# entity
+edge_det
+# storage
+db|Lab3_top_level.(3).cnf
+db|Lab3_top_level.(3).cnf
+# case_insensitive
+# source_file
+||MyDocs|MyDocs|chang1|Documents|Teaching|2014 - 2015|Spring 2015|ECE 233|Labs|Lab #3|Lab3_Distribution|edge_det.bdf
+878462834a969232bff226a283fe8fe6
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+edge_det:inst8
+edge_det:inst9
+}
+# macro_sequence
+
+# end
+# complete
+

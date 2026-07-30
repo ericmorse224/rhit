@@ -1,0 +1,11 @@
+* source ECE250HW7
+V_V10         N09269 0  DC 15
+R_R15         0 N09211 1.6k 
+R_R16         N09211 N09269 10k 
+R_R17         VOUT N09269 1.8k 
+M_M1         VOUT N09211 0 0 Mx           
+R_R1         VOUT2 N09707 1.8k 
+V_V1         N09707 0  DC 15
+M_M2         VOUT2 0 N10153 N10153 Mx           
+V_V2         0 N09877  DC 15
+I_I1         N10153 N09877 DC 0.005Adc  

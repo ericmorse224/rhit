@@ -1,0 +1,35 @@
+* source PRELAB 3
+V_V1         VIN 0 PWL
++ TIME_SCALE_FACTOR={1/60}
++ VALUE_SCALE_FACTOR=10
++repeat forever
++(0,0) (0.25,1) (0.75,-1) (1,0)
++endrepeat
+R_R6         VIN VOUT 1k 
+R_R14         0 VOUT4 1k 
+V_V9         VIN4 0 PWL
++ TIME_SCALE_FACTOR={1/60}
++ VALUE_SCALE_FACTOR=10
++repeat forever
++(0,0) (0.25,1) (0.75,-1) (1,0)
++endrepeat
+D_D18         N09987 VOUT4 D1N4733 
+D_D20         0 VOUT D1N4733 
+D_D21         VOUT2 0 D1N4733 
+V_V11         VIN3 0 PWL
++ TIME_SCALE_FACTOR={1/60}
++ VALUE_SCALE_FACTOR=10
++repeat forever
++(0,0) (0.25,1) (0.75,-1) (1,0)
++endrepeat
+R_R16         VIN3 VOUT3 1k 
+D_D22         N09889 0 D1N4733 
+D_D23         N09889 VOUT3 D1N4733 
+D_D19         N09987 VIN4 D1N4733 
+V_V12         VIN2 0 PWL
++ TIME_SCALE_FACTOR={1/60}
++ VALUE_SCALE_FACTOR=10
++repeat forever
++(0,0) (0.25,1) (0.75,-1) (1,0)
++endrepeat
+R_R17         VIN2 VOUT2 1k 

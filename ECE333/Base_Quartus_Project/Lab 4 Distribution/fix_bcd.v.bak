@@ -1,0 +1,9 @@
+// Implement your fix_bcd module using Verilog
+
+module fix_bcd
+(
+	input P, T,
+	output S
+);
+
+endmodule

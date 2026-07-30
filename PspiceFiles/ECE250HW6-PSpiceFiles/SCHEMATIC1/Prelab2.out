@@ -1,0 +1,188 @@
+
+**** 04/22/18 21:04:58 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Prelab2"  [ C:\Cadence\Pspice Work\ece250hw6-pspicefiles\schematic1\prelab2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Prelab2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ece250hw6-pspicefiles/ece250hw6.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.05 0 10u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ECE250HW6
+R_R14         VOUT4N VOUT4P 1k 
+V_V9         VIN4 0 PWL
++ TIME_SCALE_FACTOR={1/60}
++ VALUE_SCALE_FACTOR=15
++repeat forever
++(0,0) (0.25,1) (0.75,-1) (1,0)
++endrepeat
+D_D18         VIN4 VOUT4P D1N4733 
+D_D19         0 VOUT4N D1N4733 
+V_Vcc         N09091 0  DC 5
+M_M1         VOUT VIN 0 0 Mn           
+M_M2         N09091 VIN VOUT VOUT Mp           
+V_Vcc1         N10654 0  DC 5
+C_C1         0 VOUT2 100u 
+M_M3         VOUT2 VIN2 0 0 Mn2           
+M_M4         N10654 VIN2 VOUT2 VOUT2 Mp2           
+V_Vin         VIN 0  DC 0
+R_R15         VIN3 VOUT3 3186 
+C_C2         0 VOUT3 100u 
+V_V12         VIN2 0  
++PULSE 0 5 5u 0.7m 0.7m 30m 50m
+V_V13         VIN3 0  
++PULSE 0 5 5u 0.7m 0.7m 30m 50m
+
+**** RESUMING Prelab2.cir ****
+.END
+
+**** 04/22/18 21:04:58 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Prelab2"  [ C:\Cadence\Pspice Work\ece250hw6-pspicefiles\schematic1\prelab2.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4733         
+          IS    1.214000E-15 
+         ISR    2.601000E-09 
+          BV    5.1          
+         IBV     .70507      
+         NBV     .74348      
+        IBVL    4.827400E-03 
+        NBVL    6.7393       
+          RS    1.078        
+         CJO  185.000000E-12 
+          VJ     .75         
+           M     .3509       
+        TBV1  176.471000E-06 
+
+
+**** 04/22/18 21:04:58 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Prelab2"  [ C:\Cadence\Pspice Work\ece250hw6-pspicefiles\schematic1\prelab2.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Mn              Mp              Mn2             Mp2             
+               NMOS            PMOS            NMOS            PMOS            
+       LEVEL    1               1               1               1            
+           L  100.000000E-06  100.000000E-06  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06  100.000000E-06  100.000000E-06 
+         VTO    1.5            -1.5             1.5            -1.5          
+          KP  300.000000E-06  100.000000E-06  300.000000E-06  100.000000E-06 
+       GAMMA    0               0               0               0            
+         PHI     .6              .6              .6              .6          
+      LAMBDA     .05             .01             .05             .01         
+          IS   10.000000E-15   10.000000E-15   10.000000E-15   10.000000E-15 
+          JS    0               0               0               0            
+          PB     .8              .8              .8              .8          
+        PBSW     .8              .8              .8              .8          
+          CJ    0               0               0               0            
+        CJSW    0               0               0               0            
+        CGSO    0               0               0               0            
+        CGDO    0               0               0               0            
+        CGBO    0               0               0               0            
+         TOX    0               0               0               0            
+          XJ    0               0               0               0            
+       UCRIT   10.000000E+03   10.000000E+03   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1               1               1            
+         VFB    0               0               0               0            
+        LETA    0               0               0               0            
+        WETA    0               0               0               0            
+          U0    0               0               0               0            
+        TEMP    0               0               0               0            
+         VDD    5               5               5               5            
+       XPART    0               0               0               0            
+
+
+**** 04/22/18 21:04:58 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Prelab2"  [ C:\Cadence\Pspice Work\ece250hw6-pspicefiles\schematic1\prelab2.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VIN)    0.0000  ( VIN2)    0.0000  ( VIN3)    0.0000  ( VIN4)    0.0000      
+
+( VOUT)    5.0000  (VOUT2)    5.0000  (VOUT3)    0.0000  (N09091)    5.0000     
+
+(N10654)    5.0000 (VOUT4N) 891.0E-21 (VOUT4P) 891.0E-21 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V9         0.000E+00
+    V_Vcc       -5.010E-12
+    V_Vcc1      -5.010E-12
+    V_Vin        0.000E+00
+    V_V12        0.000E+00
+    V_V13        0.000E+00
+
+    TOTAL POWER DISSIPATION   5.01E-11  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 04/22/18 21:04:58 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Prelab2"  [ C:\Cadence\Pspice Work\ece250hw6-pspicefiles\schematic1\prelab2.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .09
+

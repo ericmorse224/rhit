@@ -1,0 +1,11 @@
+* PSpice Model Editor - Version 17.2.0
+*$
+.model Qb800 NPN (Bf=100 Va=100)
+*$
+.model power_Mb200 NMOS W=1 L=1u LEVEL=3 CBD=1E-9 RDS=1E+06 TT=1n VTO=2.0 Kp=20u
++  RD=0.1 RS=10E-3 RG=0.5 CGSO=1E-9 CGDO=100E-12 
+*$
+.model Qb200 NPN (Bf = 350)
+*$
+.model Qb400 NPN (Bf = 50)
+*$

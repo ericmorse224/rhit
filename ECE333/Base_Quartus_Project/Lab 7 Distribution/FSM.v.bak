@@ -1,0 +1,24 @@
+module FSM
+(
+	input X, clk, rst,
+	output reg detect,
+	output reg [3:0] CurrentState,
+	output reg [3:0] NextState
+);
+
+	// State Encoding
+	parameter State0 = 4'b0000, State1 = 4'b0001, State2 = 4'b0010, 
+			  State3 = 4'b0011, State4 = 4'b0100, State5 = 4'b0101;
+
+	// Write the Current State logic here. This includes the current 
+	// state assignment and reset logic. Reset is active low.
+
+	
+	// Write the Output (detect) logic here.
+
+			
+	// Write the Next State logic here. This includes your state
+	// transitions within a case statement.
+
+
+endmodule

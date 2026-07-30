@@ -1,0 +1,5 @@
+ lib="C:\Cadence\Pspice Work\ece250hw6-pspicefiles\ece250hw6.lib", offset=189, size=47
+ lib="C:\Cadence\Pspice Work\ece250hw6-pspicefiles\ece250hw6.lib", offset=140, size=48
+ lib="C:\Cadence\Pspice Work\ece250hw6-pspicefiles\ece250hw6.lib", offset=92, size=47
+ lib="C:\Cadence\Pspice Work\ece250hw6-pspicefiles\ece250hw6.lib", offset=42, size=49
+ lib=C:\Cadence\SPB_17.2\tools\PSpice\Library\diode.lib, offset=586174, size=307

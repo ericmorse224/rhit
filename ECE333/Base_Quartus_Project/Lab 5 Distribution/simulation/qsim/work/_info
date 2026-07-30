@@ -1,0 +1,157 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\Base_Quartus_Project\Lab 5 Distribution\simulation\qsim
+vshift_cell
+Z1 I=M]Z>Zl>0CdEj?ANC4kc`1
+Z2 V`7Bb=IA02Dm6U476YzLLj2
+Z3 dC:\altera\13.0sp1\Base_Quartus_Project\Lab 5 Distribution\simulation\qsim
+Z4 w1516577034
+Z5 8Lab5_top_level.vo
+Z6 FLab5_top_level.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 !s100 :4n=[U9K:GM<QDIcHU7@Q3
+Z10 !s108 1516577034.706000
+Z11 !s107 Lab5_top_level.vo|
+Z12 !s90 -work|work|Lab5_top_level.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vshift_cell_vlg_check_tst
+Z13 I@?]F6bGkh3=97S_E2h?z=1
+Z14 V7_4kMS7;A_N3zT4FEdIjn3
+R3
+Z15 w1516577033
+Z16 8Lab5_top_level.vt
+Z17 FLab5_top_level.vt
+L0 71
+R7
+r1
+31
+Z18 !s108 1516577034.816000
+Z19 !s107 Lab5_top_level.vt|
+Z20 !s90 -work|work|Lab5_top_level.vt|
+R8
+Z21 !s100 :G>o4F8bY7:3I@GN0ebo:3
+!i10b 1
+!s85 0
+!s101 -O0
+vshift_cell_vlg_sample_tst
+Z22 If`He<R04P4:6n4bT9Z6R?1
+Z23 VdESBo:]b6@S8fRkVJ?79B2
+R3
+R15
+R16
+R17
+L0 29
+R7
+r1
+31
+R18
+R19
+R20
+R8
+Z24 !s100 lfLnenhl0<Jbi9BRHGQn70
+!i10b 1
+!s85 0
+!s101 -O0
+vshift_cell_vlg_vec_tst
+Z25 I6i1PEgXUnKDG[JMaCfhDD1
+Z26 V1XhAYUdah[n;hRI7<m0mR3
+R3
+R15
+R16
+R17
+Z27 L0 166
+R7
+r1
+31
+R18
+R19
+R20
+R8
+Z28 !s100 V0k]OJDWGS0ieNB3o==5;3
+!i10b 1
+!s85 0
+!s101 -O0
+vshift_reg
+Z29 Ie3nYk[^o<Qc_aUGGZaNI@0
+Z30 V1I[n4VoQ<2CIK8CTWNZAU0
+R3
+Z31 w1516579201
+R5
+R6
+L0 31
+R7
+r1
+31
+R12
+R8
+!i10b 1
+Z32 !s100 IdX9KnFU`b7HUS<l?X;862
+!s85 0
+Z33 !s108 1516579201.912000
+R11
+!s101 -O0
+vshift_reg_vlg_check_tst
+!i10b 1
+Z34 !s100 e@ePo<1?08dg7:k3>4Nj`1
+Z35 IKd8_=2geG9Vl;Da<`Fckc1
+Z36 V^0@IGcC_4I3FK1=Wf_lg<1
+R3
+Z37 w1516579200
+R16
+R17
+L0 69
+R7
+r1
+!s85 0
+31
+Z38 !s108 1516579202.022000
+Z39 !s107 Lab5_top_level.vt|
+R20
+!s101 -O0
+R8
+vshift_reg_vlg_sample_tst
+!i10b 1
+Z40 !s100 2^54M3U:b=R4h]hN6?^N03
+Z41 IV471:OZVMW8IlVNfSZg?T3
+Z42 VT9h:o`IH^[]CeTf_Oe1@n3
+R3
+R37
+R16
+R17
+L0 29
+R7
+r1
+!s85 0
+31
+R38
+R39
+R20
+!s101 -O0
+R8
+vshift_reg_vlg_vec_tst
+!i10b 1
+Z43 !s100 :lAVi4?F7o6VhkDSaj;AJ0
+Z44 Imo;ZVPhMJ?kk;h:EdVP:B2
+Z45 VzlXJ;:;F<20g0lUBIk5PN3
+R3
+R37
+R16
+R17
+Z46 L0 217
+R7
+r1
+!s85 0
+31
+R38
+R39
+R20
+!s101 -O0
+R8

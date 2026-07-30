@@ -1,0 +1,148 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 240 240)
+	(text "control_gold" (rect 5 0 85 15)(font "Arial" ))
+	(text "inst" (rect 8 205 31 220)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "LEFT" (rect 0 0 34 15)(font "Arial" ))
+		(text "LEFT" (rect 21 27 55 42)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "MID" (rect 0 0 24 15)(font "Arial" ))
+		(text "MID" (rect 21 43 45 58)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "RIGHT" (rect 0 0 43 15)(font "Arial" ))
+		(text "RIGHT" (rect 21 59 64 74)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "START" (rect 0 0 44 15)(font "Arial" ))
+		(text "START" (rect 21 75 65 90)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "nOVER" (rect 0 0 47 15)(font "Arial" ))
+		(text "nOVER" (rect 21 91 68 106)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "TIME" (rect 0 0 31 15)(font "Arial" ))
+		(text "TIME" (rect 21 107 52 122)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "END_LEFT" (rect 0 0 73 15)(font "Arial" ))
+		(text "END_LEFT" (rect 21 123 94 138)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "END_MID" (rect 0 0 63 15)(font "Arial" ))
+		(text "END_MID" (rect 21 139 84 154)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "END_RIGHT" (rect 0 0 82 15)(font "Arial" ))
+		(text "END_RIGHT" (rect 21 155 103 170)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 1))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "CLK" (rect 0 0 28 15)(font "Arial" ))
+		(text "CLK" (rect 21 171 49 186)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176)(line_width 1))
+	)
+	(port
+		(pt 0 192)
+		(input)
+		(text "RESET" (rect 0 0 47 15)(font "Arial" ))
+		(text "RESET" (rect 21 187 68 202)(font "Arial" ))
+		(line (pt 0 192)(pt 16 192)(line_width 1))
+	)
+	(port
+		(pt 224 32)
+		(output)
+		(text "LOAD_NOTE" (rect 0 0 84 15)(font "Arial" ))
+		(text "LOAD_NOTE" (rect 119 27 203 42)(font "Arial" ))
+		(line (pt 224 32)(pt 208 32)(line_width 1))
+	)
+	(port
+		(pt 224 48)
+		(output)
+		(text "SHIFT" (rect 0 0 40 15)(font "Arial" ))
+		(text "SHIFT" (rect 163 43 203 58)(font "Arial" ))
+		(line (pt 224 48)(pt 208 48)(line_width 1))
+	)
+	(port
+		(pt 224 64)
+		(output)
+		(text "INC_SCORE" (rect 0 0 83 15)(font "Arial" ))
+		(text "INC_SCORE" (rect 120 59 203 74)(font "Arial" ))
+		(line (pt 224 64)(pt 208 64)(line_width 1))
+	)
+	(port
+		(pt 224 80)
+		(output)
+		(text "INC_MISS" (rect 0 0 66 15)(font "Arial" ))
+		(text "INC_MISS" (rect 137 75 203 90)(font "Arial" ))
+		(line (pt 224 80)(pt 208 80)(line_width 1))
+	)
+	(port
+		(pt 224 96)
+		(output)
+		(text "nCLRPT" (rect 0 0 55 15)(font "Arial" ))
+		(text "nCLRPT" (rect 148 91 203 106)(font "Arial" ))
+		(line (pt 224 96)(pt 208 96)(line_width 1))
+	)
+	(port
+		(pt 224 112)
+		(output)
+		(text "STATE[6..0]" (rect 0 0 74 15)(font "Arial" ))
+		(text "STATE[6..0]" (rect 129 107 203 122)(font "Arial" ))
+		(line (pt 224 112)(pt 208 112)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 208 208)(line_width 1))
+	)
+)

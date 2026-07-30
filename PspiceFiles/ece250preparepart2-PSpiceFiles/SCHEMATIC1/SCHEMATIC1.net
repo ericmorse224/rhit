@@ -1,0 +1,9 @@
+* source ECE250PREPAREPART2
+M_M2         VO VIN 0 0 Mn  
++ L=1u  
++ W=1u         
+V_V1         VIN 0  DC 0
+V_V2         N02699 0  DC 5
+M_M4         VO VIN N02699 N02699 Mp  
++ L=1u  
++ W=3u         

@@ -1,0 +1,161 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\Base_Quartus_Project\Lab 6 Distribution\Lab6_test\simulation\qsim
+vcontrol
+Z1 !s100 XYOEAoFC@:Og@kBIZgW?S3
+Z2 I<Z;_2[_V;Ki9LiW8HT7]^0
+Z3 Vl]T4ZMQNS795JdjzO5?hm2
+Z4 dC:\altera\13.0sp1\Base_Quartus_Project\Lab 6 Distribution\Lab6_test\simulation\qsim
+Z5 w1517431763
+Z6 8Lab6_test.vo
+Z7 FLab6_test.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|Lab6_test.vo|
+Z10 o-work work -O0
+Z11 !s108 1517431763.727000
+Z12 !s107 Lab6_test.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vcontrol_vlg_check_tst
+Z13 !s100 4JJabMEbnQV[;KRE^fGk>2
+Z14 IhRb_F2XV8Pb`bLbebK`cd2
+Z15 VzBk[:1Ll^4k8`Y6ihWIe02
+R4
+Z16 w1517431762
+Z17 8Lab6_test.vt
+Z18 FLab6_test.vt
+L0 77
+R8
+r1
+31
+Z19 !s108 1517431763.789000
+Z20 !s107 Lab6_test.vt|
+Z21 !s90 -work|work|Lab6_test.vt|
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vcontrol_vlg_sample_tst
+Z22 !s100 Z9NW^VVCNUfU4R]dkM7g82
+Z23 INhHk0>[GC[YndAo59?=N30
+Z24 VMG]Fh0WB:fj]1Oc<Df?A72
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+31
+R19
+R20
+R21
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vcontrol_vlg_vec_tst
+Z25 !s100 7SRFmWcNckZNSaP09E8`e0
+Z26 IgSWZhcNLn4XbM?ng^L05I1
+Z27 V5NXK<oZgKCORaVm;a@7J`0
+R4
+R16
+R17
+R18
+Z28 L0 414
+R8
+r1
+31
+R19
+R20
+R21
+R10
+!i10b 1
+!s85 0
+!s101 -O0
+vLab6_test
+Z29 IHVL5FiPm@kWBW5hPNX`a12
+Z30 VTKRY=]<_Y771K=>ZmjZZG3
+R4
+Z31 w1517794333
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+Z32 n@lab6_test
+!i10b 1
+Z33 !s100 2DkbSgH7>4G<Zgz`0oQd82
+!s85 0
+Z34 !s108 1517794334.526000
+R12
+!s101 -O0
+vLab6_test_vlg_check_tst
+!i10b 1
+Z35 !s100 ?PU::C9=dC`e4i2WC0g6K3
+Z36 I_zie7];j0;mkhMKRzSoFn2
+Z37 ViXgh?M[5kE=GKK6:>Vb7H3
+R4
+R31
+R17
+R18
+L0 77
+R8
+r1
+!s85 0
+31
+Z38 !s108 1517794334.667000
+Z39 !s107 Lab6_test.vt|
+R21
+!s101 -O0
+R10
+Z40 n@lab6_test_vlg_check_tst
+vLab6_test_vlg_sample_tst
+!i10b 1
+Z41 !s100 X9d9ASPC?mh<iKbQNAf_g1
+Z42 II=0BBjP:Dkm@a>[oA6X]B3
+Z43 VT_]U;EBhYASW`knKg]UlF2
+R4
+R31
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R38
+R39
+R21
+!s101 -O0
+R10
+Z44 n@lab6_test_vlg_sample_tst
+vLab6_test_vlg_vec_tst
+!i10b 1
+Z45 !s100 `Q9dF9f]@hic:6TOGM[<F0
+Z46 I@[K5IcGE]@FPO>d2z?z0>3
+Z47 V7TRHW>]mY`HBFGAa5[Q@A1
+R4
+R31
+R17
+R18
+Z48 L0 737
+R8
+r1
+!s85 0
+31
+R38
+R39
+R21
+!s101 -O0
+R10
+Z49 n@lab6_test_vlg_vec_tst

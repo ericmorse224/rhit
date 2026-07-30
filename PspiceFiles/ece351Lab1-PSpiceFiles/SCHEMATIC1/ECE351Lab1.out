@@ -1,0 +1,72 @@
+
+**** 09/11/18 19:38:08 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ECE351Lab1"  [ C:\Cadence\Pspice Work\ece351Lab1-PSpiceFiles\SCHEMATIC1\ECE351Lab1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ECE351Lab1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "C:\Cadence\RHIT_Libraries\Class.lib" 
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 84ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ECE351LAB1
+V_V1         N09314 N09199  AC 12 0
+D_D1         N09314 N09281 D1N4004 
+D_D2         N09199 N09281 D1N4004 
+D_D3         N09214 N09314 D1N4004 
+D_D4         N09214 N09199 D1N4004 
+C_C1         N09281 N09214 680u 
+X_U1         N09281 N09274 N09214 LM7805C
+R_R1         N09214 N09274 10 
+
+**** RESUMING ECE351Lab1.cir ****
+.END
+
+ERROR(ORPSIM-15142): Node N09314 is floating
+
+ERROR(ORPSIM-15142): Node N09199 is floating
+
+ERROR(ORPSIM-15142): Node N09281 is floating
+
+ERROR(ORPSIM-15142): Node N09214 is floating
+
+ERROR(ORPSIM-15142): Node N09274 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.x1.9 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.x1.8 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.x1.5 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.x1.6 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.x1.7 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.x1.4 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.x1.55 is floating
+
+ERROR(ORPSIM-15142): Node X_U1.x1.56 is floating
+

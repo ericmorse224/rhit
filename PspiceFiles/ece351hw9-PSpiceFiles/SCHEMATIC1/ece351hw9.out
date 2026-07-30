@@ -1,0 +1,177 @@
+
+**** 11/05/18 18:36:49 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ece351hw9"  [ C:\Cadence\Pspice Work\ece351hw9-PSpiceFiles\SCHEMATIC1\ece351hw9.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ece351hw9.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 10 1 100Meg
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ECE351HW9
+E_U1         VO1 0 VALUE {LIMIT(V(N00125,N00129)*1E6,-15V,+15V)}
+R_R1         N00125 0 1k 
+R_R2         VIN1 N00129 1k 
+R_R3         N00129 0 1k 
+R_R4         N00129 VO1 10k 
+V_V1         VIN1 0  AC 1 0
+R_R5         N01013 0 1k 
+E_U2         VO2 0 VALUE {LIMIT(V(N01013,N01083)*1E6,-15V,+15V)}
+V_V2         VIN2 0  AC 1 0
+R_R6         VIN2 N01083 1k 
+R_R7         N01083 0 1k 
+R_R8         N01083 VO2 10k 
+R_R9         VIN2 N01013 10k 
+R_R10         N01650 0 1k 
+R_R12         VIN3 0 1k 
+E_U3         VO3 0 VALUE {LIMIT(V(N01650,VIN3)*1E6,-15V,+15V)}
+R_R13         VIN3 VO3 10k 
+I_I1         0 VIN3 AC 1  0
+E_U4         VO4 0 VALUE {LIMIT(V(VIN4,N02357)*1E6,-15V,+15V)}
+R_R16         N02357 0 1k 
+R_R15         N03031 N02357 1k 
+R_R17         N02357 VO4 10k 
+R_R19         N03202 0 1k 
+R_R20         N02862 0 1k 
+R_R18         N03202 VIN4 1k 
+E_U5         N03031 0 VALUE {LIMIT(V(N03202,N02862)*1E6,-15V,+15V)}
+V_V4         VIN4 0  AC 1 0
+R_R21         N02862 N03031 10k 
+R_R22         N03202 VO4 1k 
+R_R23         N03549 N03563 10k 
+R_R24         N03563 0 10k 
+R_R25         N03578 0 10k 
+R_R26         N03563 N03578 10k 
+R_R27         N03578 VO5 10k 
+R_R28         VIN5 N03549 10k 
+R_R29         0 N03605 1k 
+V_V5         VIN5 0  AC 1 0
+E_U6         VO5 0 VALUE {LIMIT(V(N03549,N03605)*1E6,-15V,+15V)}
+R_R30         N04361 0 1k 
+E_U7         VO6 0 VALUE {LIMIT(V(N04361,N04431)*1E6,-15V,+15V)}
+R_R33         N04431 VO6 80k 
+R_R31         VIN6 N04431 10k 
+V_V6         VIN6 0  AC 1 0
+I_I2         0 VIN7 AC 1  0
+R_R36         N04999 N05081 11k 
+R_R35         VIN7 N04999 5k 
+E_U8         VO7 0 VALUE {LIMIT(V(N04945,N04999)*1E6,-15V,+15V)}
+R_R34         N04945 0 1k 
+I_I3         0 VIN7 DC 5m
+R_R38         N05081 0 1k 
+D_D1         N05081 VO7 D1N4004 
+
+**** RESUMING ece351hw9.cir ****
+.END
+
+**** 11/05/18 18:36:49 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ece351hw9"  [ C:\Cadence\Pspice Work\ece351hw9-PSpiceFiles\SCHEMATIC1\ece351hw9.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4004         D1N4001         
+          IS   14.110000E-09   14.110000E-09 
+           N    1.984           1.984        
+         IKF   94.81           94.81         
+          BV  600              75            
+         IBV   10.000000E-06   10.000000E-06 
+          RS     .03389          .03389      
+          TT    5.700000E-06    5.700000E-06 
+         CJO   25.890000E-12   25.890000E-12 
+          VJ     .3245           .3245       
+           M     .44             .44         
+
+
+**** 11/05/18 18:36:49 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ece351hw9"  [ C:\Cadence\Pspice Work\ece351hw9-PSpiceFiles\SCHEMATIC1\ece351hw9.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VO1)    0.0000  (  VO2)    0.0000  (  VO3)    0.0000  (  VO4)    0.0000      
+
+(  VO5)    0.0000  (  VO6)    0.0000  (  VO7)  -15.0000  ( VIN1)    0.0000      
+
+( VIN2)    0.0000  ( VIN3)    0.0000  ( VIN4)    0.0000  ( VIN5)    0.0000      
+
+( VIN6)    0.0000  ( VIN7)   65.7260  (N00125)    0.0000 (N00129)    0.0000     
+
+(N01013)    0.0000 (N01083)    0.0000 (N01650)    0.0000 (N02357)    0.0000     
+
+(N02862)    0.0000 (N03031)    0.0000 (N03202)    0.0000 (N03549)    0.0000     
+
+(N03563)    0.0000 (N03578)    0.0000 (N03605)    0.0000 (N04361)    0.0000     
+
+(N04431)    0.0000 (N04945)    0.0000 (N04999)   40.7260 (N05081)  -14.2740 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+    V_V4         0.000E+00
+    V_V5         0.000E+00
+    V_V6         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/05/18 18:36:49 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ece351hw9"  [ C:\Cadence\Pspice Work\ece351hw9-PSpiceFiles\SCHEMATIC1\ece351hw9.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

@@ -1,0 +1,9 @@
+* source ECE362BANDPASS
+R_R1         VIN N00721 4k 
+C_C2         N00721 N00725 10n 
+R_R2         N00725 VOUT 156k 
+R_RL         VOUT 0 2.5k 
+R_R3         0 N00721 2.5k 
+E_U2         VOUT 0 VALUE {LIMIT(V(0,N00725)*1E6,-15V,+15V)}
+V_V1         VIN 0  AC 1 0
+C_C1         N00721 VOUT 10n 

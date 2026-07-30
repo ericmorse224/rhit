@@ -1,0 +1,10 @@
+* PSpice Model Editor - Version 17.2.0
+*$
+.model Qn4 NPN (Bf=100)
+*$
+.model Qn3 NPN (Bf=100)
+*$
+.model Qn2 NPN (Bf=100)
+*$
+.model Qn1 NPN (Bf=100)
+*$

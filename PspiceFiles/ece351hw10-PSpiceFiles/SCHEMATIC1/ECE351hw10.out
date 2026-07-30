@@ -1,0 +1,250 @@
+
+**** 11/10/18 15:24:07 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ECE351hw10"  [ C:\Cadence\Pspice Work\ece351hw10-PSpiceFiles\SCHEMATIC1\ECE351hw10.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ECE351hw10.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10s 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ECE351HW10
+V_V1         VIN 0 
++SIN 0 14 1 0 0 0
+X_U1         N00547 VIN VCC VEE VO LF411C/301/TI
+V_V2         VCC 0  DC 15
+V_V3         0 VEE  DC 15
+D_D1         N00532 VO D1N914 
+R_R1         N00532 N00547 10k 
+R_R2         N00547 0 5k 
+V_V4         VIN2 N01036 
++SIN 0 2.4 1 0 0 0
+V_V5         VCC2 0  DC 5
+X_U2A         N01076 VIN2 VCC2 0 VO2 LM324
+D_D2         VO2 N01076 D1N914 
+R_R3         N01076 VCC2 40k 
+R_R4         N01076 0 10k 
+V_V6         N01036 0  DC 2.5
+
+**** RESUMING ECE351hw10.cir ****
+.END
+
+**** 11/10/18 15:24:07 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ECE351hw10"  [ C:\Cadence\Pspice Work\ece351hw10-PSpiceFiles\SCHEMATIC1\ECE351hw10.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N914          X_U1.DX         X_U2A.dx        X_U2A.dy        
+          IS  168.100000E-21  800.000000E-18  800.000000E-18  800.000000E-18 
+         ISR  100.000000E-12                                                 
+          BV  100                                                            
+         IBV  100.000000E-06                                                 
+          RS     .1                             1               1.000000E-03 
+          TT   11.540000E-09                                                 
+         CJO    4.000000E-12                                   10.000000E-12 
+          VJ     .75                                                         
+           M     .3333                                                       
+
+
+**** 11/10/18 15:24:07 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ECE351hw10"  [ C:\Cadence\Pspice Work\ece351hw10-PSpiceFiles\SCHEMATIC1\ECE351hw10.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2A.qx        
+               PNP             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF  166.7          
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.2          
+           D     .52         
+
+
+**** 11/10/18 15:24:07 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ECE351hw10"  [ C:\Cadence\Pspice Work\ece351hw10-PSpiceFiles\SCHEMATIC1\ECE351hw10.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.JX         
+               PJF             
+         VTO   -1            
+        BETA  250.100000E-06 
+          IS   12.500000E-12 
+
+
+**** 11/10/18 15:24:07 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ECE351hw10"  [ C:\Cadence\Pspice Work\ece351hw10-PSpiceFiles\SCHEMATIC1\ECE351hw10.sim ] 
+
+
+ ****     Current Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2A.sw2       X_U2A.sw1       X_U2A.sw3       X_U2A.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+**** 11/10/18 15:24:07 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ECE351hw10"  [ C:\Cadence\Pspice Work\ece351hw10-PSpiceFiles\SCHEMATIC1\ECE351hw10.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VO)     .5081  (  VCC)   15.0000  (  VEE)  -15.0000  (  VIN)    0.0000      
+
+(  VO2)    3.2886  ( VCC2)    5.0000  ( VIN2)    2.5000  (N00532) 1.583E-06     
+
+(N00547) 394.1E-09 (N01036)    2.5000 (N01076)    2.5002 (X_U1.6)-71.95E-06     
+
+(X_U1.7)     .5081 (X_U1.8)     .5081 (X_U1.9)    0.0000 (X_U1.10)    -.3750    
+
+(X_U1.11)  -14.6550                   (X_U1.12)  -14.6550                       
+
+(X_U1.53)   12.8000                   (X_U1.54)  -12.8000                       
+
+(X_U1.90) 119.9E-09                   (X_U1.91)   30.0000                       
+
+(X_U1.92)  -30.0000                   (X_U1.99)    0.0000                       
+
+(X_U2A.6)-151.3E-06                   (X_U2A.7)    3.2980                       
+
+(X_U2A.8)    3.2980                   (X_U2A.9)    0.0000                       
+
+(X_U2A.a)    4.9998                   (X_U2A.b)-187.5E-06                       
+
+(X_U2A.10)    3.1078                  (X_U2A.11)     .0398                      
+
+(X_U2A.12)     .0396                  (X_U2A.13)    3.0939                      
+
+(X_U2A.14)    3.0939                  (X_U2A.53)    3.5000                      
+
+(X_U2A.54)     .8220                  (X_U2A.90)     .1875                      
+
+(X_U2A.91)   40.0000                  (X_U2A.92)  -40.0000                      
+
+(X_U2A.99)    2.5000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.003E-11
+    V_V2        -2.195E-03
+    V_V3        -2.195E-03
+    V_V4         4.497E-08
+    V_V5        -8.161E-04
+    V_V6         4.497E-08
+    X_U1.VB     -7.195E-10
+    X_U1.VC      1.229E-11
+    X_U1.VE      1.331E-11
+    X_U1.VLIM    1.199E-10
+    X_U1.VLP    -3.000E-11
+    X_U1.VLN    -3.000E-11
+    X_U2A.vb    -1.513E-09
+    X_U2A.vc     2.122E-13
+    X_U2A.ve     2.355E-12
+    X_U2A.vlim   1.875E-04
+    X_U2A.vlp   -3.981E-11
+    X_U2A.vln   -4.019E-11
+
+    TOTAL POWER DISSIPATION   6.99E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/10/18 15:24:07 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ECE351hw10"  [ C:\Cadence\Pspice Work\ece351hw10-PSpiceFiles\SCHEMATIC1\ECE351hw10.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .45
+

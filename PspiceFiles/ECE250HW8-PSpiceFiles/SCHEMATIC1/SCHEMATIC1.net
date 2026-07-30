@@ -1,0 +1,9 @@
+* source ECE250HW8
+R_R1         VOUT N00331 9k 
+C_C1         N00289 N00359 1000u 
+I_I1         N00289 N00296 DC 1m
+V_V1         N00366 0  DC 3
+V_V2         N00331 0  DC 15
+V_V3         0 N00296  DC 15
+V_Vin         N00359 0  AC 1 0
+Q_Q1         VOUT N00366 N00289 Qx 

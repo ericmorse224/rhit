@@ -1,0 +1,35 @@
+# do ECE233_Base.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fa4
+# 
+# Top level modules:
+# 	fa4
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fa4_vlg_sample_tst
+# -- Compiling module fa4_vlg_check_tst
+# -- Compiling module fa4_vlg_vec_tst
+# 
+# Top level modules:
+# 	fa4_vlg_vec_tst
+# vsim -L cycloneii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.fa4_vlg_vec_tst 
+# Loading work.fa4_vlg_vec_tst
+# Loading work.fa4
+# Loading cycloneii_ver.cycloneii_io
+# Loading cycloneii_ver.cycloneii_mux21
+# Loading cycloneii_ver.cycloneii_dffe
+# Loading cycloneii_ver.cycloneii_asynch_io
+# Loading cycloneii_ver.cycloneii_lcell_comb
+# Loading work.fa4_vlg_sample_tst
+# Loading work.fa4_vlg_check_tst
+# SDF 10.1d Compiler 2012.11 Nov  2 2012
+# 
+# Loading instances from ECE233_Base_v.sdo
+# Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
+# Loading timing data from ECE233_Base_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /fa4_vlg_vec_tst File: ECE233_Base.vt
+# Simulation passed !
+# ** Note: $finish    : ECE233_Base.vt(232)
+#    Time: 1 us  Iteration: 0  Instance: /fa4_vlg_vec_tst/tb_out

@@ -1,0 +1,3 @@
+ lib="C:\Cadence\Pspice Work\ece351hw8-pspicefiles\ece351hw8.lib", offset=68, size=32
+ lib="C:\Cadence\Pspice Work\ece351hw8-pspicefiles\ece351hw8.lib", offset=42, size=25
+ lib=C:\Cadence\SPB_17.2\tools\PSpice\Library\breakout.lib, offset=1006, size=23

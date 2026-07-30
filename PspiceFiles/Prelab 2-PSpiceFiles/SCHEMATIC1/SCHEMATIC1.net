@@ -1,0 +1,52 @@
+* source ECE250HW3
+V_V1         VIN 0 PWL
++ TIME_SCALE_FACTOR={1/60}
++ VALUE_SCALE_FACTOR=15
++repeat forever
++(0,0) (0.25,1) (0.75,-1) (1,0)
++endrepeat
+R_R1         0 VOUT 1k 
+V_V2         VIN2 0 PWL
++ TIME_SCALE_FACTOR={1/60}
++ VALUE_SCALE_FACTOR=30
++repeat forever
++(0,0) (0.25,1) (0.75,-1) (1,0)
++endrepeat
+V_V3         VIN3 0 PWL
++ TIME_SCALE_FACTOR={1/60}
++ VALUE_SCALE_FACTOR=15
++repeat forever
++(0,0) (0.25,1) (0.75,-1) (1,0)
++endrepeat
+R_R6         VIN VOUT 1k 
+D_D9         VIN VOUT D1N4733 
+R_R7         VIN2 VX 1k 
+C_C1         N05391 0 100u 
+C_C2         0 N05395 100u 
+V_V7         N05391 0  DC 15
+V_V8         0 N05395  DC 15
+X_U1A         VX 0 N05391 N05395 VOUT2 TL084/301/TI
+D_D12         VX N05391 D1N4004 
+D_D13         N05395 VX D1N4004 
+R_R8         VIN3 N07041 1k 
+R_R9         N06975 0 500 
+R_R10         N07003 0 1k 
+R_R11         N07011 VOUT3N 500 
+R_R12         VOUT3P VOUT3N 1k 
+R_R14         VOUT4N VOUT4P 1k 
+V_V9         VIN4 0 PWL
++ TIME_SCALE_FACTOR={1/60}
++ VALUE_SCALE_FACTOR=15
++repeat forever
++(0,0) (0.25,1) (0.75,-1) (1,0)
++endrepeat
+D_D18         VIN4 VOUT4P D1N4733 
+D_D19         0 VOUT4N D1N4733 
+.model         S_D14 VSWITCH Roff=1e6 Ron=0.1 Voff=0 Von=1m
+S_SD14         N07041 VOUT3P N07041 VOUT3P S_D14
+.model         S_D15 VSWITCH Roff=1e6 Ron=0.1 Voff=0 Von=1m
+S_SD15         N06975 VOUT3P N06975 VOUT3P S_D15
+.model         S_D16 VSWITCH Roff=1e6 Ron=0.1 Voff=0 Von=1m
+S_SD16         N07011 VIN3 N07011 VIN3 S_D16
+.model         S_D17 VSWITCH Roff=1e6 Ron=0.1 Voff=0 Von=1m
+S_SD17         VOUT3N N07003 VOUT3N N07003 S_D17

@@ -1,0 +1,91 @@
+
+**** 12/06/18 12:40:34 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ece362"  [ C:\Cadence\Pspice Work\ECE362bandpass-PSpiceFiles\SCHEMATIC1\ece362.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ece362.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "C:\Cadence\RHIT_Libraries\Class.lib" 
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 10 1 100Meg
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ECE362BANDPASS
+R_R1         VIN N00721 4k 
+C_C2         N00721 N00725 10n 
+R_R2         N00725 VOUT 156k 
+R_RL         VOUT 0 2.5k 
+R_R3         0 N00721 2.5k 
+E_U2         VOUT 0 VALUE {LIMIT(V(0,N00725)*1E6,-15V,+15V)}
+V_V1         VIN 0  AC 1 0
+C_C1         N00721 VOUT 10n 
+
+**** RESUMING ece362.cir ****
+.END
+
+**** 12/06/18 12:40:34 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ece362"  [ C:\Cadence\Pspice Work\ECE362bandpass-PSpiceFiles\SCHEMATIC1\ece362.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VIN)    0.0000  ( VOUT)    0.0000  (N00721)    0.0000 (N00725)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 12/06/18 12:40:34 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ece362"  [ C:\Cadence\Pspice Work\ECE362bandpass-PSpiceFiles\SCHEMATIC1\ece362.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

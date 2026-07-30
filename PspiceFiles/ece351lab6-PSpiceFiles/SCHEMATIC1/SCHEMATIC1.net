@@ -1,0 +1,19 @@
+* source ECE351LAB6
+R_Rinternal         N00815 VIN 50 
+R_R1         N00496 N00307 10.2k 
+R_RC1         N00496 V1 820 
+R_R2         N00307 N00436 1960 
+R_RE1         N00348 N00436 180 
+R_R3         N00496 N00352 10.2k 
+R_R4         N00352 N00436 1960 
+R_RE2         N00374 N00436 180 
+R_Rload         VO 0 100 
+C_C1         VIN N00307 100u 
+C_C2         V1 N00352 100u 
+C_C3         VO N00374 100u 
+Q_Q1         N00496 N00352 N00374 Q2N3904
+Q_Q2         V1 N00307 N00348 Q2N3904
+V_Vcc         N00496 0  DC 15
+V_Vee         0 N00436  DC 15
+V_V3         N00815 0  AC 1 0
+C_C4         N00348 0 1000u 

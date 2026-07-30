@@ -1,0 +1,53 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'edge_det:inst|inst'
+Slack : -0.755
+TNS   : -1.950
+
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : 0.244
+TNS   : 0.000
+
+Type  : Slow Model Hold 'CLOCK_50'
+Slack : 0.526
+TNS   : 0.000
+
+Type  : Slow Model Hold 'edge_det:inst|inst'
+Slack : 1.104
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -3.380
+
+Type  : Slow Model Minimum Pulse Width 'edge_det:inst|inst'
+Slack : -0.500
+TNS   : -3.000
+
+Type  : Fast Model Setup 'edge_det:inst|inst'
+Slack : 0.176
+TNS   : 0.000
+
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : 0.637
+TNS   : 0.000
+
+Type  : Fast Model Hold 'CLOCK_50'
+Slack : 0.243
+TNS   : 0.000
+
+Type  : Fast Model Hold 'edge_det:inst|inst'
+Slack : 0.514
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -3.380
+
+Type  : Fast Model Minimum Pulse Width 'edge_det:inst|inst'
+Slack : -0.500
+TNS   : -3.000
+
+------------------------------------------------------------

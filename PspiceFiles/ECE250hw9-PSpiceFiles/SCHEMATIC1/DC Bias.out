@@ -1,0 +1,175 @@
+
+**** 05/13/18 21:28:05 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-DC Bias"  [ c:\cadence\pspice work\ece250hw9-PSpiceFiles\SCHEMATIC1\DC Bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "DC Bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ece250hw9-pspicefiles/ece250hw9.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OP
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ECE250HW9
+Q_Q1         VOUT N00250 0 Q1 
+R_Rc         VOUT N00222 6.2k 
+R_R1         N00250 N00222 1500k 
+R_R2         0 N00250 750k 
+V_Vcc         N00222 0  DC 12
+V_V1         N00631 0  DC 13
+V_V2         0 N00642  DC 13
+V_V3         N00620 0  DC 3
+R_R3         N00627 N00631 5.1k 
+Q_Q2         N00627 N00620 N00682 Q2 
+I_I1         N00682 N00642 DC 1mA  
+
+**** RESUMING "DC Bias.cir" ****
+.END
+
+**** 05/13/18 21:28:05 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-DC Bias"  [ c:\cadence\pspice work\ece250hw9-PSpiceFiles\SCHEMATIC1\DC Bias.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q1              Q2              
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  100.000000E-18  100.000000E-18 
+          BF  150             150            
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 05/13/18 21:28:05 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-DC Bias"  [ c:\cadence\pspice work\ece250hw9-PSpiceFiles\SCHEMATIC1\DC Bias.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( VOUT)    5.9985  (N00222)   12.0000 (N00250)     .7734 (N00620)    3.0000     
+
+(N00627)    7.9338 (N00631)   13.0000 (N00642)  -13.0000 (N00682)    2.2260 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vcc       -9.755E-04
+    V_V1        -9.934E-04
+    V_V2        -1.000E-03
+    V_V3        -6.623E-06
+
+    TOTAL POWER DISSIPATION   3.76E-02  WATTS
+
+
+**** 05/13/18 21:28:05 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-DC Bias"  [ c:\cadence\pspice work\ece250hw9-PSpiceFiles\SCHEMATIC1\DC Bias.sim ] 
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         Q_Q1        Q_Q2      
+MODEL        Q1          Q2        
+IB           6.45E-06    6.62E-06 
+IC           9.68E-04    9.93E-04 
+VBE          7.73E-01    7.74E-01 
+VBC         -5.23E+00   -4.93E+00 
+VCE          6.00E+00    5.71E+00 
+BETADC       1.50E+02    1.50E+02 
+GM           3.74E-02    3.84E-02 
+RPI          4.01E+03    3.91E+03 
+RX           0.00E+00    0.00E+00 
+RO           1.00E+12    1.00E+12 
+CBE          0.00E+00    0.00E+00 
+CBC          0.00E+00    0.00E+00 
+CJS          0.00E+00    0.00E+00 
+BETAAC       1.50E+02    1.50E+02 
+CBX/CBX2     0.00E+00    0.00E+00 
+FT/FT2       5.96E+17    6.11E+17 
+
+
+
+          JOB CONCLUDED
+
+**** 05/13/18 21:28:05 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-DC Bias"  [ c:\cadence\pspice work\ece250hw9-PSpiceFiles\SCHEMATIC1\DC Bias.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

@@ -1,0 +1,17 @@
+* source ECE351HW10
+V_V1         VIN 0 
++SIN 0 14 1 0 0 0
+X_U1         N00547 VIN VCC VEE VO LF411C/301/TI
+V_V2         VCC 0  DC 15
+V_V3         0 VEE  DC 15
+D_D1         N00532 VO D1N914 
+R_R1         N00532 N00547 10k 
+R_R2         N00547 0 5k 
+V_V4         VIN2 N01036 
++SIN 0 2.4 1 0 0 0
+V_V5         VCC2 0  DC 5
+X_U2A         N01076 VIN2 VCC2 0 VO2 LM324
+D_D2         VO2 N01076 D1N914 
+R_R3         N01076 VCC2 40k 
+R_R4         N01076 0 10k 
+V_V6         N01036 0  DC 2.5

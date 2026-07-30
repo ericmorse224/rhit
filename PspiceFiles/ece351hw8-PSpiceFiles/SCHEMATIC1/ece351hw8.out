@@ -1,0 +1,189 @@
+
+**** 10/28/18 18:50:52 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ece351hw8"  [ C:\Cadence\Pspice Work\ece351hw8-PSpiceFiles\SCHEMATIC1\ece351hw8.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ece351hw8.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ece351hw8-pspicefiles/ece351hw8.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 10 0.01 10000000
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ECE351HW8
+Q_Q1         N00245 N00826 N00280 QbreakN 
+Q_Q2         N00273 N00280 N00308 Qx 
+M_M1         N00245 N00273 N00312 N00312 Mx           
+V_V1         N00245 0  DC 15
+V_V2         0 N00209  DC 15
+I_I1         N00312 N00209 DC 10m
+I_I2         N00308 N00209 DC 1m
+I_I3         N00280 N00209 DC 39u
+R_RC2         N00245 N00273 7.5k 
+R_REE3         N00280 N00209 10Meg 
+R_REE2         N00308 N00209 10Meg 
+R_REE1         N00312 N00209 10Meg 
+R_Rs         VIN N00826 1k 
+V_V3         VIN 0  AC 1 0
+C_C1         N00312 VOUT 1000u 
+C_C2         N00308 0 1000u 
+R_RL         VOUT 0 1k 
+
+**** RESUMING ece351hw8.cir ****
+.END
+
+**** 10/28/18 18:50:52 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ece351hw8"  [ C:\Cadence\Pspice Work\ece351hw8-PSpiceFiles\SCHEMATIC1\ece351hw8.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Qx              QbreakN         
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  100.000000E-18  100.000000E-18 
+          BF  100             100            
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 10/28/18 18:50:52 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ece351hw8"  [ C:\Cadence\Pspice Work\ece351hw8-PSpiceFiles\SCHEMATIC1\ece351hw8.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Mx              
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    2            
+          KP     .01         
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 10/28/18 18:50:52 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ece351hw8"  [ C:\Cadence\Pspice Work\ece351hw8-PSpiceFiles\SCHEMATIC1\ece351hw8.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VIN)    0.0000  ( VOUT)    0.0000  (N00209)  -15.0000 (N00245)   15.0000     
+
+(N00273)    7.5642 (N00280)    -.6971 (N00308)   -1.4711 (N00312)    4.1499     
+
+(N00826)-498.4E-06 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.104E-02
+    V_V2        -1.104E-02
+    V_V3        -4.984E-07
+
+    TOTAL POWER DISSIPATION   3.31E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/28/18 18:50:52 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ece351hw8"  [ C:\Cadence\Pspice Work\ece351hw8-PSpiceFiles\SCHEMATIC1\ece351hw8.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

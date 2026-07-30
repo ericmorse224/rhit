@@ -1,0 +1,941 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "02/04/2018 20:32:13"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    Lab6_test
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module Lab6_test_vlg_sample_tst(
+	CLK,
+	END_LEFT,
+	END_MID,
+	END_RIGHT,
+	LEFT,
+	MID,
+	nOVER,
+	RESET,
+	RIGHT,
+	START,
+	TIME,
+	sampler_tx
+);
+input  CLK;
+input  END_LEFT;
+input  END_MID;
+input  END_RIGHT;
+input  LEFT;
+input  MID;
+input  nOVER;
+input  RESET;
+input  RIGHT;
+input  START;
+input  TIME;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(CLK or END_LEFT or END_MID or END_RIGHT or LEFT or MID or nOVER or RESET or RIGHT or START or TIME)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module Lab6_test_vlg_check_tst (
+	G_INC_MISS,
+	G_INC_SCORE,
+	G_LOAD_NOTE,
+	G_nCLRPT,
+	G_SHIFT,
+	G_STATE,
+	INC_MISS,
+	INC_SCORE,
+	LOAD_NOTE,
+	nCLRPT,
+	output_error,
+	SHIFT,
+	STATE,
+	state_error,
+	sampler_rx
+);
+input  G_INC_MISS;
+input  G_INC_SCORE;
+input  G_LOAD_NOTE;
+input  G_nCLRPT;
+input  G_SHIFT;
+input [6:0] G_STATE;
+input  INC_MISS;
+input  INC_SCORE;
+input  LOAD_NOTE;
+input  nCLRPT;
+input  output_error;
+input  SHIFT;
+input [6:0] STATE;
+input  state_error;
+input sampler_rx;
+
+reg  G_INC_MISS_expected;
+reg  G_INC_SCORE_expected;
+reg  G_LOAD_NOTE_expected;
+reg  G_nCLRPT_expected;
+reg  G_SHIFT_expected;
+reg [6:0] G_STATE_expected;
+reg  INC_MISS_expected;
+reg  INC_SCORE_expected;
+reg  LOAD_NOTE_expected;
+reg  nCLRPT_expected;
+reg  output_error_expected;
+reg  SHIFT_expected;
+reg [6:0] STATE_expected;
+reg  state_error_expected;
+
+reg  G_INC_MISS_prev;
+reg  G_INC_SCORE_prev;
+reg  G_LOAD_NOTE_prev;
+reg  G_nCLRPT_prev;
+reg  G_SHIFT_prev;
+reg [6:0] G_STATE_prev;
+reg  INC_MISS_prev;
+reg  INC_SCORE_prev;
+reg  LOAD_NOTE_prev;
+reg  nCLRPT_prev;
+reg  output_error_prev;
+reg  SHIFT_prev;
+reg [6:0] STATE_prev;
+reg  state_error_prev;
+
+reg  G_INC_MISS_expected_prev;
+reg  G_INC_SCORE_expected_prev;
+reg  G_LOAD_NOTE_expected_prev;
+reg  G_nCLRPT_expected_prev;
+reg  G_SHIFT_expected_prev;
+reg [6:0] G_STATE_expected_prev;
+reg  INC_MISS_expected_prev;
+reg  INC_SCORE_expected_prev;
+reg  LOAD_NOTE_expected_prev;
+reg  nCLRPT_expected_prev;
+reg  output_error_expected_prev;
+reg  SHIFT_expected_prev;
+reg [6:0] STATE_expected_prev;
+reg  state_error_expected_prev;
+
+reg  last_G_INC_MISS_exp;
+reg  last_G_INC_SCORE_exp;
+reg  last_G_LOAD_NOTE_exp;
+reg  last_G_nCLRPT_exp;
+reg  last_G_SHIFT_exp;
+reg [6:0] last_G_STATE_exp;
+reg  last_INC_MISS_exp;
+reg  last_INC_SCORE_exp;
+reg  last_LOAD_NOTE_exp;
+reg  last_nCLRPT_exp;
+reg  last_output_error_exp;
+reg  last_SHIFT_exp;
+reg [6:0] last_STATE_exp;
+reg  last_state_error_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:14] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 14'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	G_INC_MISS_prev = G_INC_MISS;
+	G_INC_SCORE_prev = G_INC_SCORE;
+	G_LOAD_NOTE_prev = G_LOAD_NOTE;
+	G_nCLRPT_prev = G_nCLRPT;
+	G_SHIFT_prev = G_SHIFT;
+	G_STATE_prev = G_STATE;
+	INC_MISS_prev = INC_MISS;
+	INC_SCORE_prev = INC_SCORE;
+	LOAD_NOTE_prev = LOAD_NOTE;
+	nCLRPT_prev = nCLRPT;
+	output_error_prev = output_error;
+	SHIFT_prev = SHIFT;
+	STATE_prev = STATE;
+	state_error_prev = state_error;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	G_INC_MISS_expected_prev = G_INC_MISS_expected;
+	G_INC_SCORE_expected_prev = G_INC_SCORE_expected;
+	G_LOAD_NOTE_expected_prev = G_LOAD_NOTE_expected;
+	G_nCLRPT_expected_prev = G_nCLRPT_expected;
+	G_SHIFT_expected_prev = G_SHIFT_expected;
+	G_STATE_expected_prev = G_STATE_expected;
+	INC_MISS_expected_prev = INC_MISS_expected;
+	INC_SCORE_expected_prev = INC_SCORE_expected;
+	LOAD_NOTE_expected_prev = LOAD_NOTE_expected;
+	nCLRPT_expected_prev = nCLRPT_expected;
+	output_error_expected_prev = output_error_expected;
+	SHIFT_expected_prev = SHIFT_expected;
+	STATE_expected_prev = STATE_expected;
+	state_error_expected_prev = state_error_expected;
+end
+
+
+// expected STATE[ 6 ]
+initial
+begin
+	STATE_expected[6] = 1'bX;
+end 
+// expected STATE[ 5 ]
+initial
+begin
+	STATE_expected[5] = 1'bX;
+end 
+// expected STATE[ 4 ]
+initial
+begin
+	STATE_expected[4] = 1'bX;
+end 
+// expected STATE[ 3 ]
+initial
+begin
+	STATE_expected[3] = 1'bX;
+end 
+// expected STATE[ 2 ]
+initial
+begin
+	STATE_expected[2] = 1'bX;
+end 
+// expected STATE[ 1 ]
+initial
+begin
+	STATE_expected[1] = 1'bX;
+end 
+// expected STATE[ 0 ]
+initial
+begin
+	STATE_expected[0] = 1'bX;
+end 
+// expected G_STATE[ 6 ]
+initial
+begin
+	G_STATE_expected[6] = 1'bX;
+end 
+// expected G_STATE[ 5 ]
+initial
+begin
+	G_STATE_expected[5] = 1'bX;
+end 
+// expected G_STATE[ 4 ]
+initial
+begin
+	G_STATE_expected[4] = 1'bX;
+end 
+// expected G_STATE[ 3 ]
+initial
+begin
+	G_STATE_expected[3] = 1'bX;
+end 
+// expected G_STATE[ 2 ]
+initial
+begin
+	G_STATE_expected[2] = 1'bX;
+end 
+// expected G_STATE[ 1 ]
+initial
+begin
+	G_STATE_expected[1] = 1'bX;
+end 
+// expected G_STATE[ 0 ]
+initial
+begin
+	G_STATE_expected[0] = 1'bX;
+end 
+
+// expected output_error
+initial
+begin
+	output_error_expected = 1'bX;
+end 
+
+// expected state_error
+initial
+begin
+	state_error_expected = 1'bX;
+end 
+
+// expected LOAD_NOTE
+initial
+begin
+	LOAD_NOTE_expected = 1'bX;
+end 
+
+// expected G_LOAD_NOTE
+initial
+begin
+	G_LOAD_NOTE_expected = 1'bX;
+end 
+
+// expected SHIFT
+initial
+begin
+	SHIFT_expected = 1'bX;
+end 
+
+// expected G_SHIFT
+initial
+begin
+	G_SHIFT_expected = 1'bX;
+end 
+
+// expected INC_SCORE
+initial
+begin
+	INC_SCORE_expected = 1'bX;
+end 
+
+// expected G_INC_SCORE
+initial
+begin
+	G_INC_SCORE_expected = 1'bX;
+end 
+
+// expected INC_MISS
+initial
+begin
+	INC_MISS_expected = 1'bX;
+end 
+
+// expected G_INC_MISS
+initial
+begin
+	G_INC_MISS_expected = 1'bX;
+end 
+
+// expected nCLRPT
+initial
+begin
+	nCLRPT_expected = 1'bX;
+end 
+
+// expected G_nCLRPT
+initial
+begin
+	G_nCLRPT_expected = 1'bX;
+end 
+// generate trigger
+always @(G_INC_MISS_expected or G_INC_MISS or G_INC_SCORE_expected or G_INC_SCORE or G_LOAD_NOTE_expected or G_LOAD_NOTE or G_nCLRPT_expected or G_nCLRPT or G_SHIFT_expected or G_SHIFT or G_STATE_expected or G_STATE or INC_MISS_expected or INC_MISS or INC_SCORE_expected or INC_SCORE or LOAD_NOTE_expected or LOAD_NOTE or nCLRPT_expected or nCLRPT or output_error_expected or output_error or SHIFT_expected or SHIFT or STATE_expected or STATE or state_error_expected or state_error)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected G_INC_MISS = %b | expected G_INC_SCORE = %b | expected G_LOAD_NOTE = %b | expected G_nCLRPT = %b | expected G_SHIFT = %b | expected G_STATE = %b | expected INC_MISS = %b | expected INC_SCORE = %b | expected LOAD_NOTE = %b | expected nCLRPT = %b | expected output_error = %b | expected SHIFT = %b | expected STATE = %b | expected state_error = %b | ",G_INC_MISS_expected_prev,G_INC_SCORE_expected_prev,G_LOAD_NOTE_expected_prev,G_nCLRPT_expected_prev,G_SHIFT_expected_prev,G_STATE_expected_prev,INC_MISS_expected_prev,INC_SCORE_expected_prev,LOAD_NOTE_expected_prev,nCLRPT_expected_prev,output_error_expected_prev,SHIFT_expected_prev,STATE_expected_prev,state_error_expected_prev);
+	$display("| real G_INC_MISS = %b | real G_INC_SCORE = %b | real G_LOAD_NOTE = %b | real G_nCLRPT = %b | real G_SHIFT = %b | real G_STATE = %b | real INC_MISS = %b | real INC_SCORE = %b | real LOAD_NOTE = %b | real nCLRPT = %b | real output_error = %b | real SHIFT = %b | real STATE = %b | real state_error = %b | ",G_INC_MISS_prev,G_INC_SCORE_prev,G_LOAD_NOTE_prev,G_nCLRPT_prev,G_SHIFT_prev,G_STATE_prev,INC_MISS_prev,INC_SCORE_prev,LOAD_NOTE_prev,nCLRPT_prev,output_error_prev,SHIFT_prev,STATE_prev,state_error_prev);
+`endif
+	if (
+		( G_INC_MISS_expected_prev !== 1'bx ) && ( G_INC_MISS_prev !== G_INC_MISS_expected_prev )
+		&& ((G_INC_MISS_expected_prev !== last_G_INC_MISS_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port G_INC_MISS :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", G_INC_MISS_expected_prev);
+		$display ("     Real value = %b", G_INC_MISS_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_G_INC_MISS_exp = G_INC_MISS_expected_prev;
+	end
+	if (
+		( G_INC_SCORE_expected_prev !== 1'bx ) && ( G_INC_SCORE_prev !== G_INC_SCORE_expected_prev )
+		&& ((G_INC_SCORE_expected_prev !== last_G_INC_SCORE_exp) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port G_INC_SCORE :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", G_INC_SCORE_expected_prev);
+		$display ("     Real value = %b", G_INC_SCORE_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_G_INC_SCORE_exp = G_INC_SCORE_expected_prev;
+	end
+	if (
+		( G_LOAD_NOTE_expected_prev !== 1'bx ) && ( G_LOAD_NOTE_prev !== G_LOAD_NOTE_expected_prev )
+		&& ((G_LOAD_NOTE_expected_prev !== last_G_LOAD_NOTE_exp) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port G_LOAD_NOTE :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", G_LOAD_NOTE_expected_prev);
+		$display ("     Real value = %b", G_LOAD_NOTE_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_G_LOAD_NOTE_exp = G_LOAD_NOTE_expected_prev;
+	end
+	if (
+		( G_nCLRPT_expected_prev !== 1'bx ) && ( G_nCLRPT_prev !== G_nCLRPT_expected_prev )
+		&& ((G_nCLRPT_expected_prev !== last_G_nCLRPT_exp) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port G_nCLRPT :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", G_nCLRPT_expected_prev);
+		$display ("     Real value = %b", G_nCLRPT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_G_nCLRPT_exp = G_nCLRPT_expected_prev;
+	end
+	if (
+		( G_SHIFT_expected_prev !== 1'bx ) && ( G_SHIFT_prev !== G_SHIFT_expected_prev )
+		&& ((G_SHIFT_expected_prev !== last_G_SHIFT_exp) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port G_SHIFT :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", G_SHIFT_expected_prev);
+		$display ("     Real value = %b", G_SHIFT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_G_SHIFT_exp = G_SHIFT_expected_prev;
+	end
+	if (
+		( G_STATE_expected_prev[0] !== 1'bx ) && ( G_STATE_prev[0] !== G_STATE_expected_prev[0] )
+		&& ((G_STATE_expected_prev[0] !== last_G_STATE_exp[0]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port G_STATE[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", G_STATE_expected_prev);
+		$display ("     Real value = %b", G_STATE_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_G_STATE_exp[0] = G_STATE_expected_prev[0];
+	end
+	if (
+		( G_STATE_expected_prev[1] !== 1'bx ) && ( G_STATE_prev[1] !== G_STATE_expected_prev[1] )
+		&& ((G_STATE_expected_prev[1] !== last_G_STATE_exp[1]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port G_STATE[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", G_STATE_expected_prev);
+		$display ("     Real value = %b", G_STATE_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_G_STATE_exp[1] = G_STATE_expected_prev[1];
+	end
+	if (
+		( G_STATE_expected_prev[2] !== 1'bx ) && ( G_STATE_prev[2] !== G_STATE_expected_prev[2] )
+		&& ((G_STATE_expected_prev[2] !== last_G_STATE_exp[2]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port G_STATE[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", G_STATE_expected_prev);
+		$display ("     Real value = %b", G_STATE_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_G_STATE_exp[2] = G_STATE_expected_prev[2];
+	end
+	if (
+		( G_STATE_expected_prev[3] !== 1'bx ) && ( G_STATE_prev[3] !== G_STATE_expected_prev[3] )
+		&& ((G_STATE_expected_prev[3] !== last_G_STATE_exp[3]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port G_STATE[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", G_STATE_expected_prev);
+		$display ("     Real value = %b", G_STATE_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_G_STATE_exp[3] = G_STATE_expected_prev[3];
+	end
+	if (
+		( G_STATE_expected_prev[4] !== 1'bx ) && ( G_STATE_prev[4] !== G_STATE_expected_prev[4] )
+		&& ((G_STATE_expected_prev[4] !== last_G_STATE_exp[4]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port G_STATE[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", G_STATE_expected_prev);
+		$display ("     Real value = %b", G_STATE_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_G_STATE_exp[4] = G_STATE_expected_prev[4];
+	end
+	if (
+		( G_STATE_expected_prev[5] !== 1'bx ) && ( G_STATE_prev[5] !== G_STATE_expected_prev[5] )
+		&& ((G_STATE_expected_prev[5] !== last_G_STATE_exp[5]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port G_STATE[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", G_STATE_expected_prev);
+		$display ("     Real value = %b", G_STATE_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_G_STATE_exp[5] = G_STATE_expected_prev[5];
+	end
+	if (
+		( G_STATE_expected_prev[6] !== 1'bx ) && ( G_STATE_prev[6] !== G_STATE_expected_prev[6] )
+		&& ((G_STATE_expected_prev[6] !== last_G_STATE_exp[6]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port G_STATE[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", G_STATE_expected_prev);
+		$display ("     Real value = %b", G_STATE_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_G_STATE_exp[6] = G_STATE_expected_prev[6];
+	end
+	if (
+		( INC_MISS_expected_prev !== 1'bx ) && ( INC_MISS_prev !== INC_MISS_expected_prev )
+		&& ((INC_MISS_expected_prev !== last_INC_MISS_exp) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port INC_MISS :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", INC_MISS_expected_prev);
+		$display ("     Real value = %b", INC_MISS_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_INC_MISS_exp = INC_MISS_expected_prev;
+	end
+	if (
+		( INC_SCORE_expected_prev !== 1'bx ) && ( INC_SCORE_prev !== INC_SCORE_expected_prev )
+		&& ((INC_SCORE_expected_prev !== last_INC_SCORE_exp) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port INC_SCORE :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", INC_SCORE_expected_prev);
+		$display ("     Real value = %b", INC_SCORE_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_INC_SCORE_exp = INC_SCORE_expected_prev;
+	end
+	if (
+		( LOAD_NOTE_expected_prev !== 1'bx ) && ( LOAD_NOTE_prev !== LOAD_NOTE_expected_prev )
+		&& ((LOAD_NOTE_expected_prev !== last_LOAD_NOTE_exp) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port LOAD_NOTE :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", LOAD_NOTE_expected_prev);
+		$display ("     Real value = %b", LOAD_NOTE_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_LOAD_NOTE_exp = LOAD_NOTE_expected_prev;
+	end
+	if (
+		( nCLRPT_expected_prev !== 1'bx ) && ( nCLRPT_prev !== nCLRPT_expected_prev )
+		&& ((nCLRPT_expected_prev !== last_nCLRPT_exp) ||
+			on_first_change[10])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port nCLRPT :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", nCLRPT_expected_prev);
+		$display ("     Real value = %b", nCLRPT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[10] = 1'b0;
+		last_nCLRPT_exp = nCLRPT_expected_prev;
+	end
+	if (
+		( output_error_expected_prev !== 1'bx ) && ( output_error_prev !== output_error_expected_prev )
+		&& ((output_error_expected_prev !== last_output_error_exp) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port output_error :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", output_error_expected_prev);
+		$display ("     Real value = %b", output_error_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_output_error_exp = output_error_expected_prev;
+	end
+	if (
+		( SHIFT_expected_prev !== 1'bx ) && ( SHIFT_prev !== SHIFT_expected_prev )
+		&& ((SHIFT_expected_prev !== last_SHIFT_exp) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port SHIFT :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", SHIFT_expected_prev);
+		$display ("     Real value = %b", SHIFT_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_SHIFT_exp = SHIFT_expected_prev;
+	end
+	if (
+		( STATE_expected_prev[0] !== 1'bx ) && ( STATE_prev[0] !== STATE_expected_prev[0] )
+		&& ((STATE_expected_prev[0] !== last_STATE_exp[0]) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port STATE[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", STATE_expected_prev);
+		$display ("     Real value = %b", STATE_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_STATE_exp[0] = STATE_expected_prev[0];
+	end
+	if (
+		( STATE_expected_prev[1] !== 1'bx ) && ( STATE_prev[1] !== STATE_expected_prev[1] )
+		&& ((STATE_expected_prev[1] !== last_STATE_exp[1]) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port STATE[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", STATE_expected_prev);
+		$display ("     Real value = %b", STATE_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_STATE_exp[1] = STATE_expected_prev[1];
+	end
+	if (
+		( STATE_expected_prev[2] !== 1'bx ) && ( STATE_prev[2] !== STATE_expected_prev[2] )
+		&& ((STATE_expected_prev[2] !== last_STATE_exp[2]) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port STATE[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", STATE_expected_prev);
+		$display ("     Real value = %b", STATE_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_STATE_exp[2] = STATE_expected_prev[2];
+	end
+	if (
+		( STATE_expected_prev[3] !== 1'bx ) && ( STATE_prev[3] !== STATE_expected_prev[3] )
+		&& ((STATE_expected_prev[3] !== last_STATE_exp[3]) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port STATE[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", STATE_expected_prev);
+		$display ("     Real value = %b", STATE_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_STATE_exp[3] = STATE_expected_prev[3];
+	end
+	if (
+		( STATE_expected_prev[4] !== 1'bx ) && ( STATE_prev[4] !== STATE_expected_prev[4] )
+		&& ((STATE_expected_prev[4] !== last_STATE_exp[4]) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port STATE[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", STATE_expected_prev);
+		$display ("     Real value = %b", STATE_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_STATE_exp[4] = STATE_expected_prev[4];
+	end
+	if (
+		( STATE_expected_prev[5] !== 1'bx ) && ( STATE_prev[5] !== STATE_expected_prev[5] )
+		&& ((STATE_expected_prev[5] !== last_STATE_exp[5]) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port STATE[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", STATE_expected_prev);
+		$display ("     Real value = %b", STATE_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_STATE_exp[5] = STATE_expected_prev[5];
+	end
+	if (
+		( STATE_expected_prev[6] !== 1'bx ) && ( STATE_prev[6] !== STATE_expected_prev[6] )
+		&& ((STATE_expected_prev[6] !== last_STATE_exp[6]) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port STATE[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", STATE_expected_prev);
+		$display ("     Real value = %b", STATE_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_STATE_exp[6] = STATE_expected_prev[6];
+	end
+	if (
+		( state_error_expected_prev !== 1'bx ) && ( state_error_prev !== state_error_expected_prev )
+		&& ((state_error_expected_prev !== last_state_error_exp) ||
+			on_first_change[14])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port state_error :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", state_error_expected_prev);
+		$display ("     Real value = %b", state_error_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[14] = 1'b0;
+		last_state_error_exp = state_error_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module Lab6_test_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg CLK;
+reg END_LEFT;
+reg END_MID;
+reg END_RIGHT;
+reg LEFT;
+reg MID;
+reg nOVER;
+reg RESET;
+reg RIGHT;
+reg START;
+reg TIME;
+// wires                                               
+wire G_INC_MISS;
+wire G_INC_SCORE;
+wire G_LOAD_NOTE;
+wire G_nCLRPT;
+wire G_SHIFT;
+wire [6:0] G_STATE;
+wire INC_MISS;
+wire INC_SCORE;
+wire LOAD_NOTE;
+wire nCLRPT;
+wire output_error;
+wire SHIFT;
+wire [6:0] STATE;
+wire state_error;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+Lab6_test i1 (
+// port map - connection between master ports and signals/registers   
+	.CLK(CLK),
+	.END_LEFT(END_LEFT),
+	.END_MID(END_MID),
+	.END_RIGHT(END_RIGHT),
+	.G_INC_MISS(G_INC_MISS),
+	.G_INC_SCORE(G_INC_SCORE),
+	.G_LOAD_NOTE(G_LOAD_NOTE),
+	.G_nCLRPT(G_nCLRPT),
+	.G_SHIFT(G_SHIFT),
+	.G_STATE(G_STATE),
+	.INC_MISS(INC_MISS),
+	.INC_SCORE(INC_SCORE),
+	.LEFT(LEFT),
+	.LOAD_NOTE(LOAD_NOTE),
+	.MID(MID),
+	.nCLRPT(nCLRPT),
+	.nOVER(nOVER),
+	.output_error(output_error),
+	.RESET(RESET),
+	.RIGHT(RIGHT),
+	.SHIFT(SHIFT),
+	.START(START),
+	.STATE(STATE),
+	.state_error(state_error),
+	.\TIME (TIME)
+);
+
+// CLK
+always
+begin
+	CLK = 1'b0;
+	CLK = #10000 1'b1;
+	#10000;
+end 
+
+// RESET
+initial
+begin
+	RESET = 1'b1;
+	RESET = #20000 1'b0;
+end 
+
+// nOVER
+initial
+begin
+	nOVER = 1'b1;
+	nOVER = #520000 1'b0;
+	nOVER = #20000 1'b1;
+end 
+
+// START
+initial
+begin
+	START = 1'b0;
+	START = #20000 1'b1;
+	START = #20000 1'b0;
+	START = #540000 1'b1;
+	START = #20000 1'b0;
+	START = #40000 1'b1;
+	START = #20000 1'b0;
+end 
+
+// TIME
+initial
+begin
+	TIME = 1'b0;
+	TIME = #60000 1'b1;
+	TIME = #20000 1'b0;
+	TIME = #20000 1'b1;
+	TIME = #10000 1'b0;
+	TIME = #70000 1'b1;
+	TIME = #20000 1'b0;
+	TIME = #20000 1'b1;
+	TIME = #10000 1'b0;
+	TIME = #70000 1'b1;
+	TIME = #20000 1'b0;
+	TIME = #20000 1'b1;
+	TIME = #10000 1'b0;
+	TIME = #50000 1'b1;
+	TIME = #20000 1'b0;
+	TIME = #20000 1'b1;
+	TIME = #10000 1'b0;
+	TIME = #30000 1'b1;
+	TIME = #20000 1'b0;
+end 
+
+// LEFT
+initial
+begin
+	LEFT = 1'b0;
+	LEFT = #140000 1'b1;
+	LEFT = #20000 1'b0;
+end 
+
+// MID
+initial
+begin
+	MID = 1'b0;
+	MID = #260000 1'b1;
+	MID = #20000 1'b0;
+end 
+
+// RIGHT
+initial
+begin
+	RIGHT = 1'b0;
+	RIGHT = #380000 1'b1;
+	RIGHT = #20000 1'b0;
+end 
+
+// END_LEFT
+initial
+begin
+	END_LEFT = 1'b1;
+	END_LEFT = #110000 1'b0;
+	END_LEFT = #50000 1'b1;
+	END_LEFT = #290000 1'b0;
+	END_LEFT = #50000 1'b1;
+end 
+
+// END_MID
+initial
+begin
+	END_MID = 1'b1;
+	END_MID = #230000 1'b0;
+	END_MID = #50000 1'b1;
+end 
+
+// END_RIGHT
+initial
+begin
+	END_RIGHT = 1'b1;
+	END_RIGHT = #350000 1'b0;
+	END_RIGHT = #50000 1'b1;
+end 
+
+Lab6_test_vlg_sample_tst tb_sample (
+	.CLK(CLK),
+	.END_LEFT(END_LEFT),
+	.END_MID(END_MID),
+	.END_RIGHT(END_RIGHT),
+	.LEFT(LEFT),
+	.MID(MID),
+	.nOVER(nOVER),
+	.RESET(RESET),
+	.RIGHT(RIGHT),
+	.START(START),
+	.TIME(TIME),
+	.sampler_tx(sampler)
+);
+
+Lab6_test_vlg_check_tst tb_out(
+	.G_INC_MISS(G_INC_MISS),
+	.G_INC_SCORE(G_INC_SCORE),
+	.G_LOAD_NOTE(G_LOAD_NOTE),
+	.G_nCLRPT(G_nCLRPT),
+	.G_SHIFT(G_SHIFT),
+	.G_STATE(G_STATE),
+	.INC_MISS(INC_MISS),
+	.INC_SCORE(INC_SCORE),
+	.LOAD_NOTE(LOAD_NOTE),
+	.nCLRPT(nCLRPT),
+	.output_error(output_error),
+	.SHIFT(SHIFT),
+	.STATE(STATE),
+	.state_error(state_error),
+	.sampler_rx(sampler)
+);
+endmodule
+

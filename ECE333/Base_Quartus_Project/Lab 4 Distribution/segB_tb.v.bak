@@ -1,0 +1,16 @@
+`timescale 1ns/1ps
+// This is a test bench to test the segB module
+
+module segB_tb;
+	reg D3_Test, D2_Test, D1_Test, D0_Test;	// inputs
+	wire segB_Test;	// outputs
+
+	// Instantiating a copy of the module we are testing
+	segB uut(D3_Test, D2_Test, D1_Test, D0_Test, segB_Test);
+	
+initial begin
+	D3_Test = 0; D2_Test = 0; D1_Test = 0; D0_Test = 0;	#10;
+	// Fill in the remaining 15 test inputs to test this
+	$stop;
+end
+endmodule

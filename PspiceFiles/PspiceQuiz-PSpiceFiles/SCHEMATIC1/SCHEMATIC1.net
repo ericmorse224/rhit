@@ -1,0 +1,23 @@
+* source PSPICEQUIZ
+R_R1         VIN1 VOUT1 1k 
+V_V1         VIN1 0 PWL
++ TIME_SCALE_FACTOR={1/1k}
++ VALUE_SCALE_FACTOR=15
++repeat forever
++(0,0) (0.25,1) (0.75,-1) (1,0)
++endrepeat
+D_D1         N00497 VOUT1 D1N4734A 
+D_D2         N00497 0 D1N4734A 
+R_R2         N01020 VOUT2 10k 
+M_M1         VOUT2 VIN2 0 0 M1           
+V_V2         N01020 0 5
+V_V3         VIN2 0 0
+C_C1         N01456 VOUT3 1000u 
+C_C2         N01380 0 1000u 
+I_I1         N01380 N01373 DC 1m
+V_V4         N01435 0  DC 15
+V_V5         0 N01373  DC 15
+R_RL         0 VOUT3 10k 
+R_RD         N01456 N01435 10k 
+M_M2         N01456 VIN3 N01380 N01380 ZVN3306A           
+V_V6         VIN3 0  AC 20 0

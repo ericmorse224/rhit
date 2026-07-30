@@ -1,0 +1,195 @@
+
+**** 09/11/18 19:45:52 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ECE351Lab1"  [ C:\Cadence\Pspice Work\ECE351Lab1p2-PSpiceFiles\SCHEMATIC1\ECE351Lab1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ECE351Lab1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "C:\Cadence\RHIT_Libraries\Class.lib" 
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 84ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ECE351LAB1P2
+D_D1         N09595 N09527 D1N4004 
+D_D2         N09599 N09527 D1N4004 
+D_D4         0 N09599 D1N4004 
+D_D3         0 N09595 D1N4004 
+R_R1         0 N09551 10 
+C_C1         N09527 0 680u 
+V_V1         N09595 N09599 
++SIN 0 16.97 60 0 0 0
+X_U2         N09527 N09551 0 x_LM78XX PARAMS:
++     Av_feedback=1665, R1_Value=1020
+
+**** RESUMING ECE351Lab1.cir ****
+.END
+
+**** 09/11/18 19:45:52 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ECE351Lab1"  [ C:\Cadence\Pspice Work\ECE351Lab1p2-PSpiceFiles\SCHEMATIC1\ECE351Lab1.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4004         X_U2.Dlim       X_U2.Dz         
+          IS   14.110000E-09   10.000000E-15   50.000000E-15 
+           N    1.984                                        
+         IKF   94.81                                         
+          BV  400                               7.11         
+         IBV   10.000000E-06                   50.000000E-09 
+          RS     .03389                         3            
+          TT    5.700000E-06                                 
+         CJO   25.890000E-12                                 
+          VJ     .3245           .7                          
+           M     .44                                         
+
+
+**** 09/11/18 19:45:52 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ECE351Lab1"  [ C:\Cadence\Pspice Work\ECE351Lab1p2-PSpiceFiles\SCHEMATIC1\ECE351Lab1.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2.Npn1       
+               NPN             
+       LEVEL    1            
+          IS   10.000000E-15 
+          BF   50            
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 09/11/18 19:45:52 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ECE351Lab1"  [ C:\Cadence\Pspice Work\ECE351Lab1p2-PSpiceFiles\SCHEMATIC1\ECE351Lab1.sim ] 
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2.Sbg1       
+         RON    1            
+        ROFF    1.000000E+06 
+         VON    3.7          
+        VOFF    3            
+
+
+**** 09/11/18 19:45:52 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ECE351Lab1"  [ C:\Cadence\Pspice Work\ECE351Lab1p2-PSpiceFiles\SCHEMATIC1\ECE351Lab1.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N09527)-48.33E-18 (N09551) 9.695E-21 (N09595)-26.16E-18 (N09599)-26.16E-18     
+
+(X_U2.4) 348.1E-12 (X_U2.5) 348.1E-12 (X_U2.6) 29.06E-21 (X_U2.7) 9.838E-21     
+
+(X_U2.8) 9.702E-21 (X_U2.9) 9.702E-21 (X_U2.55) 150.4E-21                       
+
+(X_U2.56) 150.4E-21                   (X_U2.100)    7.4000                      
+
+(X_U2.101) 7.399E-06                  (X_U2.102)-48.33E-18                      
+
+(X_U2.105)     .0166                  (X_U2.106) 348.1E-12                      
+
+(X_U2.107)    1.0000                  (X_U2.108)   -1.0000                      
+
+(X_U2.200) 1665.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    X_U2.Vbg    -7.400E-06
+    X_U2.Vgainf  -1.665E+03
+    X_U2.Vl1    -6.185E+02
+    X_U2.Vl2    -6.185E+02
+
+    TOTAL POWER DISSIPATION   2.77E+06  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 09/11/18 19:45:52 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ECE351Lab1"  [ C:\Cadence\Pspice Work\ECE351Lab1p2-PSpiceFiles\SCHEMATIC1\ECE351Lab1.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

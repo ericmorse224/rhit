@@ -1,0 +1,1776 @@
+|Lab4_top_level
+HEX0[0] <= bcd_7seg:inst7.segA
+HEX0[1] <= bcd_7seg:inst7.segB
+HEX0[2] <= bcd_7seg:inst7.segC
+HEX0[3] <= bcd_7seg:inst7.segD
+HEX0[4] <= bcd_7seg:inst7.segE
+HEX0[5] <= bcd_7seg:inst7.segF
+HEX0[6] <= bcd_7seg:inst7.segG
+HEX1[0] <= bcd_7seg:inst6.segA
+HEX1[1] <= bcd_7seg:inst6.segB
+HEX1[2] <= bcd_7seg:inst6.segC
+HEX1[3] <= bcd_7seg:inst6.segD
+HEX1[4] <= bcd_7seg:inst6.segE
+HEX1[5] <= bcd_7seg:inst6.segF
+HEX1[6] <= bcd_7seg:inst6.segG
+HEX2[0] <= bcd_7seg:inst5.segA
+HEX2[1] <= bcd_7seg:inst5.segB
+HEX2[2] <= bcd_7seg:inst5.segC
+HEX2[3] <= bcd_7seg:inst5.segD
+HEX2[4] <= bcd_7seg:inst5.segE
+HEX2[5] <= bcd_7seg:inst5.segF
+HEX2[6] <= bcd_7seg:inst5.segG
+HEX3[0] <= bcd_7seg:inst4.segA
+HEX3[1] <= bcd_7seg:inst4.segB
+HEX3[2] <= bcd_7seg:inst4.segC
+HEX3[3] <= bcd_7seg:inst4.segD
+HEX3[4] <= bcd_7seg:inst4.segE
+HEX3[5] <= bcd_7seg:inst4.segF
+HEX3[6] <= bcd_7seg:inst4.segG
+HEX4[0] <= bcd_7seg:inst11.segA
+HEX4[1] <= bcd_7seg:inst11.segB
+HEX4[2] <= bcd_7seg:inst11.segC
+HEX4[3] <= bcd_7seg:inst11.segD
+HEX4[4] <= bcd_7seg:inst11.segE
+HEX4[5] <= bcd_7seg:inst11.segF
+HEX4[6] <= bcd_7seg:inst11.segG
+KEY[2] => edge_det:inst13.IN
+CLOCK_50 => edge_det:inst13.CLK
+CLOCK_50 => edge_det:inst9.CLK
+CLOCK_50 => bcd_count2:inst12.CLK
+CLOCK_50 => edge_det:inst8.CLK
+CLOCK_50 => bcd_count2:inst2.CLK
+SW[0] => edge_det:inst13.CLRN
+SW[0] => edge_det:inst9.CLRN
+SW[0] => bcd_count2:inst12.CLRN
+SW[0] => edge_det:inst8.CLRN
+SW[0] => bcd_count2:inst2.CLRN
+KEY[0] => edge_det:inst9.IN
+HEX5[0] <= bcd_7seg:inst10.segA
+HEX5[1] <= bcd_7seg:inst10.segB
+HEX5[2] <= bcd_7seg:inst10.segC
+HEX5[3] <= bcd_7seg:inst10.segD
+HEX5[4] <= bcd_7seg:inst10.segE
+HEX5[5] <= bcd_7seg:inst10.segF
+HEX5[6] <= bcd_7seg:inst10.segG
+HEX6[0] <= bcd_7seg:inst1.segA
+HEX6[1] <= bcd_7seg:inst1.segB
+HEX6[2] <= bcd_7seg:inst1.segC
+HEX6[3] <= bcd_7seg:inst1.segD
+HEX6[4] <= bcd_7seg:inst1.segE
+HEX6[5] <= bcd_7seg:inst1.segF
+HEX6[6] <= bcd_7seg:inst1.segG
+KEY[3] => edge_det:inst8.IN
+HEX7[0] <= bcd_7seg:inst.segA
+HEX7[1] <= bcd_7seg:inst.segB
+HEX7[2] <= bcd_7seg:inst.segC
+HEX7[3] <= bcd_7seg:inst.segD
+HEX7[4] <= bcd_7seg:inst.segE
+HEX7[5] <= bcd_7seg:inst.segF
+HEX7[6] <= bcd_7seg:inst.segG
+
+
+|Lab4_top_level|bcd_7seg:inst7
+segB <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+ENbar => inst8.IN0
+ENbar => inst10.IN0
+ENbar => inst11.IN0
+ENbar => inst12.IN0
+ENbar => inst13.IN0
+ENbar => inst7.IN0
+ENbar => inst9.IN0
+D3 => segB:inst1.D3
+D3 => segD:inst3.D3
+D3 => segE:inst4.D3
+D3 => segF:inst5.D3
+D3 => segG:inst6.D3
+D3 => segA:inst.D3
+D3 => segC:inst2.D3
+D2 => segB:inst1.D2
+D2 => segD:inst3.D2
+D2 => segE:inst4.D2
+D2 => segF:inst5.D2
+D2 => segG:inst6.D2
+D2 => segA:inst.D2
+D2 => segC:inst2.D2
+D1 => segB:inst1.D1
+D1 => segD:inst3.D1
+D1 => segE:inst4.D1
+D1 => segF:inst5.D1
+D1 => segG:inst6.D1
+D1 => segA:inst.D1
+D1 => segC:inst2.D1
+D0 => segB:inst1.D0
+D0 => segD:inst3.D0
+D0 => segE:inst4.D0
+D0 => segF:inst5.D0
+D0 => segG:inst6.D0
+D0 => segA:inst.D0
+D0 => segC:inst2.D0
+segD <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+segE <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+segF <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+segG <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+segA <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+segC <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst7|segB:inst1
+D3 => segB.IN0
+D2 => segB.IN0
+D2 => segB.IN0
+D1 => segB.IN1
+D1 => segB.IN1
+D1 => segB.IN1
+D0 => segB.IN1
+D0 => segB.IN1
+segB <= segB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst7|segD:inst3
+D3 => segD.IN0
+D2 => segD.IN0
+D2 => segD.IN0
+D2 => segD.IN1
+D2 => segD.IN0
+D1 => segD.IN1
+D1 => segD.IN1
+D1 => segD.IN1
+D0 => segD.IN1
+D0 => segD.IN1
+D0 => segD.IN1
+segD <= segD.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst7|segE:inst4
+D3 => segE.IN0
+D2 => segE.IN0
+D1 => segE.IN1
+D1 => segE.IN1
+D0 => segE.IN1
+segE <= segE.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst7|segF:inst5
+D3 => segF.IN0
+D3 => segF.IN0
+D2 => segF.IN1
+D2 => segF.IN0
+D2 => segF.IN1
+D1 => segF.IN1
+D1 => segF.IN0
+D0 => segF.IN1
+D0 => segF.IN1
+segF <= segF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst7|segG:inst6
+D3 => segG.IN0
+D3 => segG.IN0
+D2 => segG.IN0
+D2 => segG.IN1
+D1 => segG.IN1
+D1 => segG.IN1
+D1 => segG.IN1
+D0 => segG.IN1
+segG <= segG.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst7|segA:inst
+D3 => segA.IN0
+D3 => segA.IN0
+D3 => segA.IN0
+D3 => segA.IN0
+D2 => segA.IN1
+D2 => segA.IN1
+D2 => segA.IN1
+D1 => segA.IN1
+D1 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+segA <= segA.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst7|segC:inst2
+D3 => segC.IN0
+D3 => segC.IN0
+D2 => segC.IN1
+D2 => segC.IN0
+D1 => segC.IN1
+D1 => segC.IN1
+D0 => segC.IN1
+segC <= segC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst6
+segB <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+ENbar => inst8.IN0
+ENbar => inst10.IN0
+ENbar => inst11.IN0
+ENbar => inst12.IN0
+ENbar => inst13.IN0
+ENbar => inst7.IN0
+ENbar => inst9.IN0
+D3 => segB:inst1.D3
+D3 => segD:inst3.D3
+D3 => segE:inst4.D3
+D3 => segF:inst5.D3
+D3 => segG:inst6.D3
+D3 => segA:inst.D3
+D3 => segC:inst2.D3
+D2 => segB:inst1.D2
+D2 => segD:inst3.D2
+D2 => segE:inst4.D2
+D2 => segF:inst5.D2
+D2 => segG:inst6.D2
+D2 => segA:inst.D2
+D2 => segC:inst2.D2
+D1 => segB:inst1.D1
+D1 => segD:inst3.D1
+D1 => segE:inst4.D1
+D1 => segF:inst5.D1
+D1 => segG:inst6.D1
+D1 => segA:inst.D1
+D1 => segC:inst2.D1
+D0 => segB:inst1.D0
+D0 => segD:inst3.D0
+D0 => segE:inst4.D0
+D0 => segF:inst5.D0
+D0 => segG:inst6.D0
+D0 => segA:inst.D0
+D0 => segC:inst2.D0
+segD <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+segE <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+segF <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+segG <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+segA <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+segC <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst6|segB:inst1
+D3 => segB.IN0
+D2 => segB.IN0
+D2 => segB.IN0
+D1 => segB.IN1
+D1 => segB.IN1
+D1 => segB.IN1
+D0 => segB.IN1
+D0 => segB.IN1
+segB <= segB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst6|segD:inst3
+D3 => segD.IN0
+D2 => segD.IN0
+D2 => segD.IN0
+D2 => segD.IN1
+D2 => segD.IN0
+D1 => segD.IN1
+D1 => segD.IN1
+D1 => segD.IN1
+D0 => segD.IN1
+D0 => segD.IN1
+D0 => segD.IN1
+segD <= segD.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst6|segE:inst4
+D3 => segE.IN0
+D2 => segE.IN0
+D1 => segE.IN1
+D1 => segE.IN1
+D0 => segE.IN1
+segE <= segE.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst6|segF:inst5
+D3 => segF.IN0
+D3 => segF.IN0
+D2 => segF.IN1
+D2 => segF.IN0
+D2 => segF.IN1
+D1 => segF.IN1
+D1 => segF.IN0
+D0 => segF.IN1
+D0 => segF.IN1
+segF <= segF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst6|segG:inst6
+D3 => segG.IN0
+D3 => segG.IN0
+D2 => segG.IN0
+D2 => segG.IN1
+D1 => segG.IN1
+D1 => segG.IN1
+D1 => segG.IN1
+D0 => segG.IN1
+segG <= segG.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst6|segA:inst
+D3 => segA.IN0
+D3 => segA.IN0
+D3 => segA.IN0
+D3 => segA.IN0
+D2 => segA.IN1
+D2 => segA.IN1
+D2 => segA.IN1
+D1 => segA.IN1
+D1 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+segA <= segA.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst6|segC:inst2
+D3 => segC.IN0
+D3 => segC.IN0
+D2 => segC.IN1
+D2 => segC.IN0
+D1 => segC.IN1
+D1 => segC.IN1
+D0 => segC.IN1
+segC <= segC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst5
+segB <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+ENbar => inst8.IN0
+ENbar => inst10.IN0
+ENbar => inst11.IN0
+ENbar => inst12.IN0
+ENbar => inst13.IN0
+ENbar => inst7.IN0
+ENbar => inst9.IN0
+D3 => segB:inst1.D3
+D3 => segD:inst3.D3
+D3 => segE:inst4.D3
+D3 => segF:inst5.D3
+D3 => segG:inst6.D3
+D3 => segA:inst.D3
+D3 => segC:inst2.D3
+D2 => segB:inst1.D2
+D2 => segD:inst3.D2
+D2 => segE:inst4.D2
+D2 => segF:inst5.D2
+D2 => segG:inst6.D2
+D2 => segA:inst.D2
+D2 => segC:inst2.D2
+D1 => segB:inst1.D1
+D1 => segD:inst3.D1
+D1 => segE:inst4.D1
+D1 => segF:inst5.D1
+D1 => segG:inst6.D1
+D1 => segA:inst.D1
+D1 => segC:inst2.D1
+D0 => segB:inst1.D0
+D0 => segD:inst3.D0
+D0 => segE:inst4.D0
+D0 => segF:inst5.D0
+D0 => segG:inst6.D0
+D0 => segA:inst.D0
+D0 => segC:inst2.D0
+segD <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+segE <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+segF <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+segG <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+segA <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+segC <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst5|segB:inst1
+D3 => segB.IN0
+D2 => segB.IN0
+D2 => segB.IN0
+D1 => segB.IN1
+D1 => segB.IN1
+D1 => segB.IN1
+D0 => segB.IN1
+D0 => segB.IN1
+segB <= segB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst5|segD:inst3
+D3 => segD.IN0
+D2 => segD.IN0
+D2 => segD.IN0
+D2 => segD.IN1
+D2 => segD.IN0
+D1 => segD.IN1
+D1 => segD.IN1
+D1 => segD.IN1
+D0 => segD.IN1
+D0 => segD.IN1
+D0 => segD.IN1
+segD <= segD.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst5|segE:inst4
+D3 => segE.IN0
+D2 => segE.IN0
+D1 => segE.IN1
+D1 => segE.IN1
+D0 => segE.IN1
+segE <= segE.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst5|segF:inst5
+D3 => segF.IN0
+D3 => segF.IN0
+D2 => segF.IN1
+D2 => segF.IN0
+D2 => segF.IN1
+D1 => segF.IN1
+D1 => segF.IN0
+D0 => segF.IN1
+D0 => segF.IN1
+segF <= segF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst5|segG:inst6
+D3 => segG.IN0
+D3 => segG.IN0
+D2 => segG.IN0
+D2 => segG.IN1
+D1 => segG.IN1
+D1 => segG.IN1
+D1 => segG.IN1
+D0 => segG.IN1
+segG <= segG.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst5|segA:inst
+D3 => segA.IN0
+D3 => segA.IN0
+D3 => segA.IN0
+D3 => segA.IN0
+D2 => segA.IN1
+D2 => segA.IN1
+D2 => segA.IN1
+D1 => segA.IN1
+D1 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+segA <= segA.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst5|segC:inst2
+D3 => segC.IN0
+D3 => segC.IN0
+D2 => segC.IN1
+D2 => segC.IN0
+D1 => segC.IN1
+D1 => segC.IN1
+D0 => segC.IN1
+segC <= segC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst4
+segB <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+ENbar => inst8.IN0
+ENbar => inst10.IN0
+ENbar => inst11.IN0
+ENbar => inst12.IN0
+ENbar => inst13.IN0
+ENbar => inst7.IN0
+ENbar => inst9.IN0
+D3 => segB:inst1.D3
+D3 => segD:inst3.D3
+D3 => segE:inst4.D3
+D3 => segF:inst5.D3
+D3 => segG:inst6.D3
+D3 => segA:inst.D3
+D3 => segC:inst2.D3
+D2 => segB:inst1.D2
+D2 => segD:inst3.D2
+D2 => segE:inst4.D2
+D2 => segF:inst5.D2
+D2 => segG:inst6.D2
+D2 => segA:inst.D2
+D2 => segC:inst2.D2
+D1 => segB:inst1.D1
+D1 => segD:inst3.D1
+D1 => segE:inst4.D1
+D1 => segF:inst5.D1
+D1 => segG:inst6.D1
+D1 => segA:inst.D1
+D1 => segC:inst2.D1
+D0 => segB:inst1.D0
+D0 => segD:inst3.D0
+D0 => segE:inst4.D0
+D0 => segF:inst5.D0
+D0 => segG:inst6.D0
+D0 => segA:inst.D0
+D0 => segC:inst2.D0
+segD <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+segE <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+segF <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+segG <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+segA <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+segC <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst4|segB:inst1
+D3 => segB.IN0
+D2 => segB.IN0
+D2 => segB.IN0
+D1 => segB.IN1
+D1 => segB.IN1
+D1 => segB.IN1
+D0 => segB.IN1
+D0 => segB.IN1
+segB <= segB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst4|segD:inst3
+D3 => segD.IN0
+D2 => segD.IN0
+D2 => segD.IN0
+D2 => segD.IN1
+D2 => segD.IN0
+D1 => segD.IN1
+D1 => segD.IN1
+D1 => segD.IN1
+D0 => segD.IN1
+D0 => segD.IN1
+D0 => segD.IN1
+segD <= segD.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst4|segE:inst4
+D3 => segE.IN0
+D2 => segE.IN0
+D1 => segE.IN1
+D1 => segE.IN1
+D0 => segE.IN1
+segE <= segE.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst4|segF:inst5
+D3 => segF.IN0
+D3 => segF.IN0
+D2 => segF.IN1
+D2 => segF.IN0
+D2 => segF.IN1
+D1 => segF.IN1
+D1 => segF.IN0
+D0 => segF.IN1
+D0 => segF.IN1
+segF <= segF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst4|segG:inst6
+D3 => segG.IN0
+D3 => segG.IN0
+D2 => segG.IN0
+D2 => segG.IN1
+D1 => segG.IN1
+D1 => segG.IN1
+D1 => segG.IN1
+D0 => segG.IN1
+segG <= segG.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst4|segA:inst
+D3 => segA.IN0
+D3 => segA.IN0
+D3 => segA.IN0
+D3 => segA.IN0
+D2 => segA.IN1
+D2 => segA.IN1
+D2 => segA.IN1
+D1 => segA.IN1
+D1 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+segA <= segA.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst4|segC:inst2
+D3 => segC.IN0
+D3 => segC.IN0
+D2 => segC.IN1
+D2 => segC.IN0
+D1 => segC.IN1
+D1 => segC.IN1
+D0 => segC.IN1
+segC <= segC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst11
+segB <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+ENbar => inst8.IN0
+ENbar => inst10.IN0
+ENbar => inst11.IN0
+ENbar => inst12.IN0
+ENbar => inst13.IN0
+ENbar => inst7.IN0
+ENbar => inst9.IN0
+D3 => segB:inst1.D3
+D3 => segD:inst3.D3
+D3 => segE:inst4.D3
+D3 => segF:inst5.D3
+D3 => segG:inst6.D3
+D3 => segA:inst.D3
+D3 => segC:inst2.D3
+D2 => segB:inst1.D2
+D2 => segD:inst3.D2
+D2 => segE:inst4.D2
+D2 => segF:inst5.D2
+D2 => segG:inst6.D2
+D2 => segA:inst.D2
+D2 => segC:inst2.D2
+D1 => segB:inst1.D1
+D1 => segD:inst3.D1
+D1 => segE:inst4.D1
+D1 => segF:inst5.D1
+D1 => segG:inst6.D1
+D1 => segA:inst.D1
+D1 => segC:inst2.D1
+D0 => segB:inst1.D0
+D0 => segD:inst3.D0
+D0 => segE:inst4.D0
+D0 => segF:inst5.D0
+D0 => segG:inst6.D0
+D0 => segA:inst.D0
+D0 => segC:inst2.D0
+segD <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+segE <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+segF <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+segG <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+segA <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+segC <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst11|segB:inst1
+D3 => segB.IN0
+D2 => segB.IN0
+D2 => segB.IN0
+D1 => segB.IN1
+D1 => segB.IN1
+D1 => segB.IN1
+D0 => segB.IN1
+D0 => segB.IN1
+segB <= segB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst11|segD:inst3
+D3 => segD.IN0
+D2 => segD.IN0
+D2 => segD.IN0
+D2 => segD.IN1
+D2 => segD.IN0
+D1 => segD.IN1
+D1 => segD.IN1
+D1 => segD.IN1
+D0 => segD.IN1
+D0 => segD.IN1
+D0 => segD.IN1
+segD <= segD.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst11|segE:inst4
+D3 => segE.IN0
+D2 => segE.IN0
+D1 => segE.IN1
+D1 => segE.IN1
+D0 => segE.IN1
+segE <= segE.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst11|segF:inst5
+D3 => segF.IN0
+D3 => segF.IN0
+D2 => segF.IN1
+D2 => segF.IN0
+D2 => segF.IN1
+D1 => segF.IN1
+D1 => segF.IN0
+D0 => segF.IN1
+D0 => segF.IN1
+segF <= segF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst11|segG:inst6
+D3 => segG.IN0
+D3 => segG.IN0
+D2 => segG.IN0
+D2 => segG.IN1
+D1 => segG.IN1
+D1 => segG.IN1
+D1 => segG.IN1
+D0 => segG.IN1
+segG <= segG.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst11|segA:inst
+D3 => segA.IN0
+D3 => segA.IN0
+D3 => segA.IN0
+D3 => segA.IN0
+D2 => segA.IN1
+D2 => segA.IN1
+D2 => segA.IN1
+D1 => segA.IN1
+D1 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+segA <= segA.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst11|segC:inst2
+D3 => segC.IN0
+D3 => segC.IN0
+D2 => segC.IN1
+D2 => segC.IN0
+D1 => segC.IN1
+D1 => segC.IN1
+D0 => segC.IN1
+segC <= segC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst12
+Q0 <= dff_enrst:inst15.Q
+INC => dff_enrst:inst5.EN
+INC => dff_enrst:inst14.EN
+INC => dff_enrst:inst7.EN
+INC => dff_enrst:inst15.EN
+INC => dff_enrst:inst20.EN
+INC => dff_enrst:inst18.EN
+INC => dff_enrst:inst8.EN
+INC => dff_enrst:inst19.EN
+RSTN => dff_enrst:inst5.RSTN
+RSTN => dff_enrst:inst14.RSTN
+RSTN => dff_enrst:inst7.RSTN
+RSTN => dff_enrst:inst15.RSTN
+RSTN => dff_enrst:inst20.RSTN
+RSTN => dff_enrst:inst18.RSTN
+RSTN => dff_enrst:inst8.RSTN
+RSTN => dff_enrst:inst19.RSTN
+CLK => dff_enrst:inst5.CLK
+CLK => dff_enrst:inst14.CLK
+CLK => dff_enrst:inst7.CLK
+CLK => dff_enrst:inst15.CLK
+CLK => dff_enrst:inst20.CLK
+CLK => dff_enrst:inst18.CLK
+CLK => dff_enrst:inst8.CLK
+CLK => dff_enrst:inst19.CLK
+CLRN => dff_enrst:inst5.CLRN
+CLRN => dff_enrst:inst14.CLRN
+CLRN => dff_enrst:inst7.CLRN
+CLRN => dff_enrst:inst15.CLRN
+CLRN => dff_enrst:inst20.CLRN
+CLRN => dff_enrst:inst18.CLRN
+CLRN => dff_enrst:inst8.CLRN
+CLRN => dff_enrst:inst19.CLRN
+Q1 <= dff_enrst:inst7.Q
+Q2 <= dff_enrst:inst14.Q
+Q3 <= dff_enrst:inst5.Q
+Q4 <= dff_enrst:inst19.Q
+Q5 <= dff_enrst:inst8.Q
+Q6 <= dff_enrst:inst18.Q
+Q7 <= dff_enrst:inst20.Q
+
+
+|Lab4_top_level|bcd_count2:inst12|dff_enrst:inst15
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+CLK => inst.CLK
+EN => inst5.IN0
+EN => inst3.IN1
+RSTN => inst2.IN1
+RSTN => inst3.IN2
+D => inst3.IN0
+PRN => inst.PRESET
+
+
+|Lab4_top_level|bcd_count2:inst12|BCD_INC:inst11
+A3 => A3.IN1
+A2 => A2.IN1
+A1 => A1.IN1
+A0 => A0.IN1
+Cin => Cin.IN1
+S3 <= fix_bcd:fix4.port2
+S2 <= fix_bcd:fix3.port2
+S1 <= fix_bcd:fix2.port2
+S0 <= fix_bcd:fix1.port2
+Cout <= T.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst12|BCD_INC:inst11|inc1b:inc3
+A => S.IN0
+A => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst12|BCD_INC:inst11|inc1b:inc4
+A => S.IN0
+A => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst12|BCD_INC:inst11|inc1b:inc5
+A => S.IN0
+A => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst12|BCD_INC:inst11|inc1b:inc6
+A => S.IN0
+A => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst12|BCD_INC:inst11|ten_detect:ten1
+A3 => T.IN0
+A2 => T.IN1
+A1 => T.IN1
+A0 => T.IN1
+T <= T.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst12|BCD_INC:inst11|fix_bcd:fix1
+P => S.IN0
+T => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst12|BCD_INC:inst11|fix_bcd:fix2
+P => S.IN0
+T => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst12|BCD_INC:inst11|fix_bcd:fix3
+P => S.IN0
+T => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst12|BCD_INC:inst11|fix_bcd:fix4
+P => S.IN0
+T => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst12|dff_enrst:inst5
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+CLK => inst.CLK
+EN => inst5.IN0
+EN => inst3.IN1
+RSTN => inst2.IN1
+RSTN => inst3.IN2
+D => inst3.IN0
+PRN => inst.PRESET
+
+
+|Lab4_top_level|bcd_count2:inst12|dff_enrst:inst14
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+CLK => inst.CLK
+EN => inst5.IN0
+EN => inst3.IN1
+RSTN => inst2.IN1
+RSTN => inst3.IN2
+D => inst3.IN0
+PRN => inst.PRESET
+
+
+|Lab4_top_level|bcd_count2:inst12|dff_enrst:inst7
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+CLK => inst.CLK
+EN => inst5.IN0
+EN => inst3.IN1
+RSTN => inst2.IN1
+RSTN => inst3.IN2
+D => inst3.IN0
+PRN => inst.PRESET
+
+
+|Lab4_top_level|bcd_count2:inst12|dff_enrst:inst19
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+CLK => inst.CLK
+EN => inst5.IN0
+EN => inst3.IN1
+RSTN => inst2.IN1
+RSTN => inst3.IN2
+D => inst3.IN0
+PRN => inst.PRESET
+
+
+|Lab4_top_level|bcd_count2:inst12|BCD_INC:inst16
+A3 => A3.IN1
+A2 => A2.IN1
+A1 => A1.IN1
+A0 => A0.IN1
+Cin => Cin.IN1
+S3 <= fix_bcd:fix4.port2
+S2 <= fix_bcd:fix3.port2
+S1 <= fix_bcd:fix2.port2
+S0 <= fix_bcd:fix1.port2
+Cout <= T.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst12|BCD_INC:inst16|inc1b:inc3
+A => S.IN0
+A => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst12|BCD_INC:inst16|inc1b:inc4
+A => S.IN0
+A => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst12|BCD_INC:inst16|inc1b:inc5
+A => S.IN0
+A => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst12|BCD_INC:inst16|inc1b:inc6
+A => S.IN0
+A => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst12|BCD_INC:inst16|ten_detect:ten1
+A3 => T.IN0
+A2 => T.IN1
+A1 => T.IN1
+A0 => T.IN1
+T <= T.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst12|BCD_INC:inst16|fix_bcd:fix1
+P => S.IN0
+T => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst12|BCD_INC:inst16|fix_bcd:fix2
+P => S.IN0
+T => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst12|BCD_INC:inst16|fix_bcd:fix3
+P => S.IN0
+T => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst12|BCD_INC:inst16|fix_bcd:fix4
+P => S.IN0
+T => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst12|dff_enrst:inst20
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+CLK => inst.CLK
+EN => inst5.IN0
+EN => inst3.IN1
+RSTN => inst2.IN1
+RSTN => inst3.IN2
+D => inst3.IN0
+PRN => inst.PRESET
+
+
+|Lab4_top_level|bcd_count2:inst12|dff_enrst:inst18
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+CLK => inst.CLK
+EN => inst5.IN0
+EN => inst3.IN1
+RSTN => inst2.IN1
+RSTN => inst3.IN2
+D => inst3.IN0
+PRN => inst.PRESET
+
+
+|Lab4_top_level|bcd_count2:inst12|dff_enrst:inst8
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+CLK => inst.CLK
+EN => inst5.IN0
+EN => inst3.IN1
+RSTN => inst2.IN1
+RSTN => inst3.IN2
+D => inst3.IN0
+PRN => inst.PRESET
+
+
+|Lab4_top_level|edge_det:inst13
+OUT <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+CLRN => inst2.ACLR
+CLK => inst.CLK
+CLK => inst2.CLK
+IN => inst.DATAIN
+IN => inst5.IN0
+
+
+|Lab4_top_level|edge_det:inst9
+OUT <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+CLRN => inst2.ACLR
+CLK => inst.CLK
+CLK => inst2.CLK
+IN => inst.DATAIN
+IN => inst5.IN0
+
+
+|Lab4_top_level|bcd_7seg:inst10
+segB <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+ENbar => inst8.IN0
+ENbar => inst10.IN0
+ENbar => inst11.IN0
+ENbar => inst12.IN0
+ENbar => inst13.IN0
+ENbar => inst7.IN0
+ENbar => inst9.IN0
+D3 => segB:inst1.D3
+D3 => segD:inst3.D3
+D3 => segE:inst4.D3
+D3 => segF:inst5.D3
+D3 => segG:inst6.D3
+D3 => segA:inst.D3
+D3 => segC:inst2.D3
+D2 => segB:inst1.D2
+D2 => segD:inst3.D2
+D2 => segE:inst4.D2
+D2 => segF:inst5.D2
+D2 => segG:inst6.D2
+D2 => segA:inst.D2
+D2 => segC:inst2.D2
+D1 => segB:inst1.D1
+D1 => segD:inst3.D1
+D1 => segE:inst4.D1
+D1 => segF:inst5.D1
+D1 => segG:inst6.D1
+D1 => segA:inst.D1
+D1 => segC:inst2.D1
+D0 => segB:inst1.D0
+D0 => segD:inst3.D0
+D0 => segE:inst4.D0
+D0 => segF:inst5.D0
+D0 => segG:inst6.D0
+D0 => segA:inst.D0
+D0 => segC:inst2.D0
+segD <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+segE <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+segF <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+segG <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+segA <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+segC <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst10|segB:inst1
+D3 => segB.IN0
+D2 => segB.IN0
+D2 => segB.IN0
+D1 => segB.IN1
+D1 => segB.IN1
+D1 => segB.IN1
+D0 => segB.IN1
+D0 => segB.IN1
+segB <= segB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst10|segD:inst3
+D3 => segD.IN0
+D2 => segD.IN0
+D2 => segD.IN0
+D2 => segD.IN1
+D2 => segD.IN0
+D1 => segD.IN1
+D1 => segD.IN1
+D1 => segD.IN1
+D0 => segD.IN1
+D0 => segD.IN1
+D0 => segD.IN1
+segD <= segD.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst10|segE:inst4
+D3 => segE.IN0
+D2 => segE.IN0
+D1 => segE.IN1
+D1 => segE.IN1
+D0 => segE.IN1
+segE <= segE.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst10|segF:inst5
+D3 => segF.IN0
+D3 => segF.IN0
+D2 => segF.IN1
+D2 => segF.IN0
+D2 => segF.IN1
+D1 => segF.IN1
+D1 => segF.IN0
+D0 => segF.IN1
+D0 => segF.IN1
+segF <= segF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst10|segG:inst6
+D3 => segG.IN0
+D3 => segG.IN0
+D2 => segG.IN0
+D2 => segG.IN1
+D1 => segG.IN1
+D1 => segG.IN1
+D1 => segG.IN1
+D0 => segG.IN1
+segG <= segG.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst10|segA:inst
+D3 => segA.IN0
+D3 => segA.IN0
+D3 => segA.IN0
+D3 => segA.IN0
+D2 => segA.IN1
+D2 => segA.IN1
+D2 => segA.IN1
+D1 => segA.IN1
+D1 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+segA <= segA.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst10|segC:inst2
+D3 => segC.IN0
+D3 => segC.IN0
+D2 => segC.IN1
+D2 => segC.IN0
+D1 => segC.IN1
+D1 => segC.IN1
+D0 => segC.IN1
+segC <= segC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst1
+segB <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+ENbar => inst8.IN0
+ENbar => inst10.IN0
+ENbar => inst11.IN0
+ENbar => inst12.IN0
+ENbar => inst13.IN0
+ENbar => inst7.IN0
+ENbar => inst9.IN0
+D3 => segB:inst1.D3
+D3 => segD:inst3.D3
+D3 => segE:inst4.D3
+D3 => segF:inst5.D3
+D3 => segG:inst6.D3
+D3 => segA:inst.D3
+D3 => segC:inst2.D3
+D2 => segB:inst1.D2
+D2 => segD:inst3.D2
+D2 => segE:inst4.D2
+D2 => segF:inst5.D2
+D2 => segG:inst6.D2
+D2 => segA:inst.D2
+D2 => segC:inst2.D2
+D1 => segB:inst1.D1
+D1 => segD:inst3.D1
+D1 => segE:inst4.D1
+D1 => segF:inst5.D1
+D1 => segG:inst6.D1
+D1 => segA:inst.D1
+D1 => segC:inst2.D1
+D0 => segB:inst1.D0
+D0 => segD:inst3.D0
+D0 => segE:inst4.D0
+D0 => segF:inst5.D0
+D0 => segG:inst6.D0
+D0 => segA:inst.D0
+D0 => segC:inst2.D0
+segD <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+segE <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+segF <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+segG <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+segA <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+segC <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst1|segB:inst1
+D3 => segB.IN0
+D2 => segB.IN0
+D2 => segB.IN0
+D1 => segB.IN1
+D1 => segB.IN1
+D1 => segB.IN1
+D0 => segB.IN1
+D0 => segB.IN1
+segB <= segB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst1|segD:inst3
+D3 => segD.IN0
+D2 => segD.IN0
+D2 => segD.IN0
+D2 => segD.IN1
+D2 => segD.IN0
+D1 => segD.IN1
+D1 => segD.IN1
+D1 => segD.IN1
+D0 => segD.IN1
+D0 => segD.IN1
+D0 => segD.IN1
+segD <= segD.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst1|segE:inst4
+D3 => segE.IN0
+D2 => segE.IN0
+D1 => segE.IN1
+D1 => segE.IN1
+D0 => segE.IN1
+segE <= segE.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst1|segF:inst5
+D3 => segF.IN0
+D3 => segF.IN0
+D2 => segF.IN1
+D2 => segF.IN0
+D2 => segF.IN1
+D1 => segF.IN1
+D1 => segF.IN0
+D0 => segF.IN1
+D0 => segF.IN1
+segF <= segF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst1|segG:inst6
+D3 => segG.IN0
+D3 => segG.IN0
+D2 => segG.IN0
+D2 => segG.IN1
+D1 => segG.IN1
+D1 => segG.IN1
+D1 => segG.IN1
+D0 => segG.IN1
+segG <= segG.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst1|segA:inst
+D3 => segA.IN0
+D3 => segA.IN0
+D3 => segA.IN0
+D3 => segA.IN0
+D2 => segA.IN1
+D2 => segA.IN1
+D2 => segA.IN1
+D1 => segA.IN1
+D1 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+segA <= segA.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst1|segC:inst2
+D3 => segC.IN0
+D3 => segC.IN0
+D2 => segC.IN1
+D2 => segC.IN0
+D1 => segC.IN1
+D1 => segC.IN1
+D0 => segC.IN1
+segC <= segC.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst2
+Q0 <= dff_enrst:inst15.Q
+INC => dff_enrst:inst5.EN
+INC => dff_enrst:inst14.EN
+INC => dff_enrst:inst7.EN
+INC => dff_enrst:inst15.EN
+INC => dff_enrst:inst20.EN
+INC => dff_enrst:inst18.EN
+INC => dff_enrst:inst8.EN
+INC => dff_enrst:inst19.EN
+RSTN => dff_enrst:inst5.RSTN
+RSTN => dff_enrst:inst14.RSTN
+RSTN => dff_enrst:inst7.RSTN
+RSTN => dff_enrst:inst15.RSTN
+RSTN => dff_enrst:inst20.RSTN
+RSTN => dff_enrst:inst18.RSTN
+RSTN => dff_enrst:inst8.RSTN
+RSTN => dff_enrst:inst19.RSTN
+CLK => dff_enrst:inst5.CLK
+CLK => dff_enrst:inst14.CLK
+CLK => dff_enrst:inst7.CLK
+CLK => dff_enrst:inst15.CLK
+CLK => dff_enrst:inst20.CLK
+CLK => dff_enrst:inst18.CLK
+CLK => dff_enrst:inst8.CLK
+CLK => dff_enrst:inst19.CLK
+CLRN => dff_enrst:inst5.CLRN
+CLRN => dff_enrst:inst14.CLRN
+CLRN => dff_enrst:inst7.CLRN
+CLRN => dff_enrst:inst15.CLRN
+CLRN => dff_enrst:inst20.CLRN
+CLRN => dff_enrst:inst18.CLRN
+CLRN => dff_enrst:inst8.CLRN
+CLRN => dff_enrst:inst19.CLRN
+Q1 <= dff_enrst:inst7.Q
+Q2 <= dff_enrst:inst14.Q
+Q3 <= dff_enrst:inst5.Q
+Q4 <= dff_enrst:inst19.Q
+Q5 <= dff_enrst:inst8.Q
+Q6 <= dff_enrst:inst18.Q
+Q7 <= dff_enrst:inst20.Q
+
+
+|Lab4_top_level|bcd_count2:inst2|dff_enrst:inst15
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+CLK => inst.CLK
+EN => inst5.IN0
+EN => inst3.IN1
+RSTN => inst2.IN1
+RSTN => inst3.IN2
+D => inst3.IN0
+PRN => inst.PRESET
+
+
+|Lab4_top_level|bcd_count2:inst2|BCD_INC:inst11
+A3 => A3.IN1
+A2 => A2.IN1
+A1 => A1.IN1
+A0 => A0.IN1
+Cin => Cin.IN1
+S3 <= fix_bcd:fix4.port2
+S2 <= fix_bcd:fix3.port2
+S1 <= fix_bcd:fix2.port2
+S0 <= fix_bcd:fix1.port2
+Cout <= T.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst2|BCD_INC:inst11|inc1b:inc3
+A => S.IN0
+A => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst2|BCD_INC:inst11|inc1b:inc4
+A => S.IN0
+A => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst2|BCD_INC:inst11|inc1b:inc5
+A => S.IN0
+A => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst2|BCD_INC:inst11|inc1b:inc6
+A => S.IN0
+A => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst2|BCD_INC:inst11|ten_detect:ten1
+A3 => T.IN0
+A2 => T.IN1
+A1 => T.IN1
+A0 => T.IN1
+T <= T.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst2|BCD_INC:inst11|fix_bcd:fix1
+P => S.IN0
+T => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst2|BCD_INC:inst11|fix_bcd:fix2
+P => S.IN0
+T => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst2|BCD_INC:inst11|fix_bcd:fix3
+P => S.IN0
+T => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst2|BCD_INC:inst11|fix_bcd:fix4
+P => S.IN0
+T => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst2|dff_enrst:inst5
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+CLK => inst.CLK
+EN => inst5.IN0
+EN => inst3.IN1
+RSTN => inst2.IN1
+RSTN => inst3.IN2
+D => inst3.IN0
+PRN => inst.PRESET
+
+
+|Lab4_top_level|bcd_count2:inst2|dff_enrst:inst14
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+CLK => inst.CLK
+EN => inst5.IN0
+EN => inst3.IN1
+RSTN => inst2.IN1
+RSTN => inst3.IN2
+D => inst3.IN0
+PRN => inst.PRESET
+
+
+|Lab4_top_level|bcd_count2:inst2|dff_enrst:inst7
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+CLK => inst.CLK
+EN => inst5.IN0
+EN => inst3.IN1
+RSTN => inst2.IN1
+RSTN => inst3.IN2
+D => inst3.IN0
+PRN => inst.PRESET
+
+
+|Lab4_top_level|bcd_count2:inst2|dff_enrst:inst19
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+CLK => inst.CLK
+EN => inst5.IN0
+EN => inst3.IN1
+RSTN => inst2.IN1
+RSTN => inst3.IN2
+D => inst3.IN0
+PRN => inst.PRESET
+
+
+|Lab4_top_level|bcd_count2:inst2|BCD_INC:inst16
+A3 => A3.IN1
+A2 => A2.IN1
+A1 => A1.IN1
+A0 => A0.IN1
+Cin => Cin.IN1
+S3 <= fix_bcd:fix4.port2
+S2 <= fix_bcd:fix3.port2
+S1 <= fix_bcd:fix2.port2
+S0 <= fix_bcd:fix1.port2
+Cout <= T.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst2|BCD_INC:inst16|inc1b:inc3
+A => S.IN0
+A => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst2|BCD_INC:inst16|inc1b:inc4
+A => S.IN0
+A => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst2|BCD_INC:inst16|inc1b:inc5
+A => S.IN0
+A => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst2|BCD_INC:inst16|inc1b:inc6
+A => S.IN0
+A => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst2|BCD_INC:inst16|ten_detect:ten1
+A3 => T.IN0
+A2 => T.IN1
+A1 => T.IN1
+A0 => T.IN1
+T <= T.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst2|BCD_INC:inst16|fix_bcd:fix1
+P => S.IN0
+T => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst2|BCD_INC:inst16|fix_bcd:fix2
+P => S.IN0
+T => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst2|BCD_INC:inst16|fix_bcd:fix3
+P => S.IN0
+T => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst2|BCD_INC:inst16|fix_bcd:fix4
+P => S.IN0
+T => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_count2:inst2|dff_enrst:inst20
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+CLK => inst.CLK
+EN => inst5.IN0
+EN => inst3.IN1
+RSTN => inst2.IN1
+RSTN => inst3.IN2
+D => inst3.IN0
+PRN => inst.PRESET
+
+
+|Lab4_top_level|bcd_count2:inst2|dff_enrst:inst18
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+CLK => inst.CLK
+EN => inst5.IN0
+EN => inst3.IN1
+RSTN => inst2.IN1
+RSTN => inst3.IN2
+D => inst3.IN0
+PRN => inst.PRESET
+
+
+|Lab4_top_level|bcd_count2:inst2|dff_enrst:inst8
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+CLK => inst.CLK
+EN => inst5.IN0
+EN => inst3.IN1
+RSTN => inst2.IN1
+RSTN => inst3.IN2
+D => inst3.IN0
+PRN => inst.PRESET
+
+
+|Lab4_top_level|edge_det:inst8
+OUT <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+CLRN => inst.ACLR
+CLRN => inst2.ACLR
+CLK => inst.CLK
+CLK => inst2.CLK
+IN => inst.DATAIN
+IN => inst5.IN0
+
+
+|Lab4_top_level|bcd_7seg:inst
+segB <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+ENbar => inst8.IN0
+ENbar => inst10.IN0
+ENbar => inst11.IN0
+ENbar => inst12.IN0
+ENbar => inst13.IN0
+ENbar => inst7.IN0
+ENbar => inst9.IN0
+D3 => segB:inst1.D3
+D3 => segD:inst3.D3
+D3 => segE:inst4.D3
+D3 => segF:inst5.D3
+D3 => segG:inst6.D3
+D3 => segA:inst.D3
+D3 => segC:inst2.D3
+D2 => segB:inst1.D2
+D2 => segD:inst3.D2
+D2 => segE:inst4.D2
+D2 => segF:inst5.D2
+D2 => segG:inst6.D2
+D2 => segA:inst.D2
+D2 => segC:inst2.D2
+D1 => segB:inst1.D1
+D1 => segD:inst3.D1
+D1 => segE:inst4.D1
+D1 => segF:inst5.D1
+D1 => segG:inst6.D1
+D1 => segA:inst.D1
+D1 => segC:inst2.D1
+D0 => segB:inst1.D0
+D0 => segD:inst3.D0
+D0 => segE:inst4.D0
+D0 => segF:inst5.D0
+D0 => segG:inst6.D0
+D0 => segA:inst.D0
+D0 => segC:inst2.D0
+segD <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+segE <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+segF <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+segG <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+segA <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+segC <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst|segB:inst1
+D3 => segB.IN0
+D2 => segB.IN0
+D2 => segB.IN0
+D1 => segB.IN1
+D1 => segB.IN1
+D1 => segB.IN1
+D0 => segB.IN1
+D0 => segB.IN1
+segB <= segB.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst|segD:inst3
+D3 => segD.IN0
+D2 => segD.IN0
+D2 => segD.IN0
+D2 => segD.IN1
+D2 => segD.IN0
+D1 => segD.IN1
+D1 => segD.IN1
+D1 => segD.IN1
+D0 => segD.IN1
+D0 => segD.IN1
+D0 => segD.IN1
+segD <= segD.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst|segE:inst4
+D3 => segE.IN0
+D2 => segE.IN0
+D1 => segE.IN1
+D1 => segE.IN1
+D0 => segE.IN1
+segE <= segE.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst|segF:inst5
+D3 => segF.IN0
+D3 => segF.IN0
+D2 => segF.IN1
+D2 => segF.IN0
+D2 => segF.IN1
+D1 => segF.IN1
+D1 => segF.IN0
+D0 => segF.IN1
+D0 => segF.IN1
+segF <= segF.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst|segG:inst6
+D3 => segG.IN0
+D3 => segG.IN0
+D2 => segG.IN0
+D2 => segG.IN1
+D1 => segG.IN1
+D1 => segG.IN1
+D1 => segG.IN1
+D0 => segG.IN1
+segG <= segG.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst|segA:inst
+D3 => segA.IN0
+D3 => segA.IN0
+D3 => segA.IN0
+D3 => segA.IN0
+D2 => segA.IN1
+D2 => segA.IN1
+D2 => segA.IN1
+D1 => segA.IN1
+D1 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+D0 => segA.IN1
+segA <= segA.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab4_top_level|bcd_7seg:inst|segC:inst2
+D3 => segC.IN0
+D3 => segC.IN0
+D2 => segC.IN1
+D2 => segC.IN0
+D1 => segC.IN1
+D1 => segC.IN1
+D0 => segC.IN1
+segC <= segC.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,10 @@
+* PSpice Model Editor - Version 17.2.0
+*$
+.model Mbreakn NMOS KP=300u Vto=1V
+*$
+.model Mp NMOS KP=100u Vto=-1.5V
+*$
+.model Mn NMOS KP=300u Vto = 1.5V 
+*$
+.model Dbreak D Is=1e-14 Cjo=.1pF Rs=.1 BV=5V IBV=2mA
+*$

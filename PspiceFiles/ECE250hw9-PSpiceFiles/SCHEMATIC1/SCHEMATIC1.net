@@ -1,0 +1,12 @@
+* source ECE250HW9
+Q_Q1         VOUT N00250 0 Q1 
+R_Rc         VOUT N00222 6.2k 
+R_R1         N00250 N00222 1500k 
+R_R2         0 N00250 750k 
+V_Vcc         N00222 0  DC 12
+V_V1         N00631 0  DC 13
+V_V2         0 N00642  DC 13
+V_V3         N00620 0  DC 3
+R_R3         N00627 N00631 5.1k 
+Q_Q2         N00627 N00620 N00682 Q2 
+I_I1         N00682 N00642 DC 1mA  

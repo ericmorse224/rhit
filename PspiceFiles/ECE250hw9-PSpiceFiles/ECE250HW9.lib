@@ -1,0 +1,6 @@
+* PSpice Model Editor - Version 17.2.0
+*$
+.model Q2 NPN (BF=150)
+*$
+.model Q1 NPN (BF=150)
+*$

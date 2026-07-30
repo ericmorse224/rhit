@@ -1,0 +1,21 @@
+** Profile: "SCHEMATIC1-pquiz"  [ C:\Cadence\Pspice Work\PspiceQuiz-PSpiceFiles\SCHEMATIC1\pquiz.sim ] 
+
+** Creating circuit file "pquiz.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../pspicequiz-pspicefiles/pspicequiz.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "C:\Cadence\RHIT_Libraries\Class.lib" 
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OP
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

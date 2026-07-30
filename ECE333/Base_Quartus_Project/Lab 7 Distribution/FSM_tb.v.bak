@@ -1,0 +1,29 @@
+`timescale 1ns/1ps
+
+module FSM_tb;
+	reg X, clk, rst;
+	wire detect;
+	wire [3:0] CurrentState;
+	wire [3:0] NextState;
+	
+	// Instantiating a copy of the FSM we are testing
+	FSM uut(X, clk, rst, detect, CurrentState, NextState);
+	
+	// Set the initial conditions (i.e. the start of the sim)
+	
+	
+	// Generate a 20 time unit clk (i.e. 10 low, 10 high)
+
+	
+	// Your test points
+	// Exhaustively test the FSM (i.e. all state transition)
+	initial begin
+		rst = 0; X = 1; #20 // tests the active-low rst
+		// Fill in the rest of your tests here
+		
+		$stop;
+	end
+endmodule
+		
+		
+		

@@ -1,0 +1,111 @@
+// Dr. Daniel Chang
+// Implements the Control Block in Verilog
+
+module control (
+input LEFT, MID, RIGHT, START, nOVER, TIME, END_LEFT, END_MID, END_RIGHT, 
+output LOAD_NOTE, SHIFT, INC_SCORE, INC_MISS, nCLRPT,
+output reg [6:0] STATE,
+input CLK, RESET);
+
+reg [6:0] NextState;
+
+// State Encoding
+localparam [6:0]
+	INIT = 7'b0000001,
+	LOAD = 7'b0000010,		
+	MOVE = 7'b0000100,
+	END_L = 7'b0001000,
+	END_M = 7'b0010000,
+	END_R = 7'b0100000,
+	DONE = 7'b1000000;
+
+	// Current State Assignment
+	always @(posedge CLK or posedge RESET) begin
+		if (RESET == 1) 
+			STATE <= INIT;
+		else
+			STATE <= NextState;
+	end
+	
+	// Next State Logic
+	always @(*) begin
+		NextState = 7'b0000000;
+		case (STATE)
+			// If in INIT and you hit start, load the first note. Else stay in INIT.
+			INIT: 	begin
+				if (START == 1)
+					NextState <= LOAD;
+				else
+					NextState <= INIT;
+				end
+			// If in LOAD and the game is over, go to Done. If Time has run out, move 
+			// the note down. Else stay in Load (i.e. wait 0.5s)
+			LOAD:	begin
+				if (nOVER == 0)
+					NextState <= DONE;
+				else if (TIME == 1)
+					NextState <= MOVE;
+				else
+					NextState <= LOAD;
+				end
+			// If in MOVE and you are at the bottom go to END state. Else stay in Move.
+			MOVE:	begin
+				if (END_LEFT == 0)
+					NextState <= END_L;
+				else if (END_MID == 0)
+					NextState <= END_M;
+				else if (END_RIGHT == 0)
+					NextState <= END_R;
+				else
+					NextState <= MOVE;
+				end
+			// If in an END state and either time runs out or the button is pressed
+			// go to LOAD and load next note. Else stay in END.
+			END_L:	begin
+				if (LEFT == 1 || TIME == 1)
+					NextState <= LOAD;
+				else
+					NextState <= END_L;
+				end
+			END_M:	begin
+				if (MID == 1 || TIME == 1)
+					NextState <= LOAD;
+				else
+					NextState <= END_M;
+				end
+			END_R:	begin
+				if (RIGHT == 1 || TIME == 1)
+					NextState <= LOAD;
+				else
+					NextState <= END_R;
+				end
+			// If in DONE and you the start button, start a new game. Else stay.
+			DONE:	begin
+				if (START == 1)
+					NextState <= INIT;
+				else
+					NextState <= DONE;
+			end
+			default:
+				NextState <= STATE;
+		endcase
+	end
+	
+	// Output Logic
+	// Load a note if we are in LOAD and time has run out (i.e. wait 0.5s)
+	assign LOAD_NOTE = ((STATE == LOAD) && TIME);
+
+	// Shift the note down if we are in SHIFT and time has run out (i.e. wait 0.5s)
+	assign SHIFT = ((STATE == MOVE) && TIME);
+
+	// Increment the score if we are in an END state and the button was pressed
+	assign INC_SCORE = ((STATE == END_L) && LEFT) || ((STATE == END_M) && MID) || ((STATE == END_R) && RIGHT);
+
+	// Increment the miss if we are in an END state and TIME runs out or if we are in the MOVE state and hit a button
+	// Counting misses on MOVE breaks the BDF version
+	//assign INC_MISS = ((STATE == END_L || STATE == END_M || STATE == END_R) && TIME) || ((STATE == MOVE) && (LEFT || MID || RIGHT));
+	assign INC_MISS = ((STATE == END_L || STATE == END_M || STATE == END_R) && TIME);
+
+	// Only clear the score if we are in the INIT state.
+	assign nCLRPT = ~(STATE == INIT);
+endmodule

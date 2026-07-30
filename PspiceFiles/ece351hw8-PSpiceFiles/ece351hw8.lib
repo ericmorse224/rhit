@@ -1,0 +1,6 @@
+* PSpice Model Editor - Version 17.2.0
+*$
+.model Qx NPN (Bf=100)
+*$
+.model Mx NMOS (Kp=10m Vto=2)
+*$

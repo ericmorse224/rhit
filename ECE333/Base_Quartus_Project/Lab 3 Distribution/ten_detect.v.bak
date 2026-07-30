@@ -1,0 +1,9 @@
+// Implement your ten_detect module using Verilog
+
+module ten_detect
+(
+	input A3, A2, A1, A0,
+	output T
+);
+
+endmodule

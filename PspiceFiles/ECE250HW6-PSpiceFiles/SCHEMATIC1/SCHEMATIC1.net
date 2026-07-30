@@ -1,0 +1,24 @@
+* source ECE250HW6
+R_R14         VOUT4N VOUT4P 1k 
+V_V9         VIN4 0 PWL
++ TIME_SCALE_FACTOR={1/60}
++ VALUE_SCALE_FACTOR=15
++repeat forever
++(0,0) (0.25,1) (0.75,-1) (1,0)
++endrepeat
+D_D18         VIN4 VOUT4P D1N4733 
+D_D19         0 VOUT4N D1N4733 
+V_Vcc         N09091 0  DC 5
+M_M1         VOUT VIN 0 0 Mn           
+M_M2         N09091 VIN VOUT VOUT Mp           
+V_Vcc1         N10654 0  DC 5
+C_C1         0 VOUT2 100u 
+M_M3         VOUT2 VIN2 0 0 Mn2           
+M_M4         N10654 VIN2 VOUT2 VOUT2 Mp2           
+V_Vin         VIN 0  DC 0
+R_R15         VIN3 VOUT3 3186 
+C_C2         0 VOUT3 100u 
+V_V12         VIN2 0  
++PULSE 0 5 5u 0.7m 0.7m 30m 50m
+V_V13         VIN3 0  
++PULSE 0 5 5u 0.7m 0.7m 30m 50m

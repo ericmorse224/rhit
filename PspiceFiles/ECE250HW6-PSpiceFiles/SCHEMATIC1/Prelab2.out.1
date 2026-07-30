@@ -1,0 +1,65 @@
+
+**** 04/22/18 20:08:22 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Prelab2"  [ c:\cadence\pspice work\ece250hw6-pspicefiles\schematic1\prelab2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Prelab2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ece250hw6-pspicefiles/ece250hw6.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN V_V11 0 5 0.1 
++ LIN V12 0 5 0.1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ECE250HW6
+R_R14         VOUT4N VOUT4P 1k 
+V_V9         VIN4 0 PWL
++ TIME_SCALE_FACTOR={1/60}
++ VALUE_SCALE_FACTOR=15
++repeat forever
++(0,0) (0.25,1) (0.75,-1) (1,0)
++endrepeat
+D_D18         VIN4 VOUT4P D1N4733 
+D_D19         0 VOUT4N D1N4733 
+V_Vcc         N09091 0  DC 5
+M_M1         VOUT VIN 0 0 Mn           
+M_M2         N09091 VIN VOUT VOUT Mp           
+V_Vcc1         N10654 0  DC 5
+C_C1         0 VOUT2 100u 
+M_M3         VOUT2 VIN2 0 0 Mn2           
+M_M4         N10654 VIN2 VOUT2 VOUT2 Mp2           
+V_Vin         VIN 0  DC 0
+R_R15         VIN3 VOUT3 3186 
+C_C2         0 VOUT3 100u 
+V_V10         VIN3 0  
++PULSE 5 0 1.5 0.7 0.7 5 5
+V_V11         VIN2 0  
++PULSE 5 0 1.5 0.7 0.7 5 5
+
+**** RESUMING Prelab2.cir ****
+.END
+
+
+ERROR(ORPSIM-15090): DC device V12 is undefined
+

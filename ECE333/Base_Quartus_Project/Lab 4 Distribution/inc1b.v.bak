@@ -1,0 +1,9 @@
+// Implement your inc1b module using Verilog
+
+module inc1b
+(
+	input A, Cin,
+	output Cout, S
+);
+
+endmodule

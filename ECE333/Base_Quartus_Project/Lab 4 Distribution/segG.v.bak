@@ -1,0 +1,10 @@
+// Implement your segG module using Verilog
+
+module segG
+(
+	input D3, D2, D1, D0,
+	output segG
+);
+
+	assign segG = ; // put the correct Verilog equation here
+endmodule

@@ -1,0 +1,20 @@
+// After creating your inc1b, fix_bcd, and ten_detect Verilog modules
+// Use instantiations of them (copies) to make the bcd_inc module
+
+module bcd_inc
+(
+	input A3, A2, A1, A0, Cin,
+	output S3, S2, S1, S0, Cout
+);
+
+wire Cout_3, Cout_2, Cout_1, Cout_0; // the Cout of each inc1b
+wire inc_S3, inc_S2, inc_S1, inc_S0; // the S output of each inc1b
+wire T; // the T output of the ten_detect
+
+//make 3 more copies of inc1b and use the correct input, outputs, and wires
+inc1b inc3(); 
+
+// make 1 copy of ten_detect
+
+// make 4 copies of fix_bcd
+endmodule

@@ -1,0 +1,66 @@
+
+**** 09/16/18 18:20:03 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ECEC351hw3"  [ C:\Cadence\Pspice Work\ECE351Hw3-PSpiceFiles\SCHEMATIC1\ECEC351hw3.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ECEC351hw3.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ece351hw3-pspicefiles/ece351hw3.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ECE351HW3
+R_R1         N00381 N00377 750 
+R_R2         N00373 N00366 2k 
+C_C1         N00388 0 100u 
+I_I1         N00388 N00426 DC 0.004785
+V_V2         N00366 0  DC 15
+V_V3         0 N00426  DC 15
+V_V4         N00381 0 
++SIN 0 4 3k 0 0 0
+V_V5         N01149 0  DC 15
+V_V7         0 N01395  DC 15
+R_R3         N01179 N01149 20.23k 
+Q_Q3         N01179 N01575 N01395 Qb400 
+M_M1         IOUT N01179 N01575 N01575 power_Mb200           
+M_M2         IOUT N01179 N01575 N01575 power_Mbreakn           
+Q_Q4         N01575 N01575 N01395 Qb400 
+Q_Q5         N00373 N00377 N00388 Qb200 
+
+**** RESUMING ECEC351hw3.cir ****
+.END
+
+WARNING(ORPSIM-15223): Library file "C:\Cadence\Pspice Work\ece351hw3-pspicefiles\ece351hw3.lib" has changed since index file ece351hw3.ind was created.
+
+WARNING(ORPSIM-15227): The timestamp changed from Sun Sep 16 18:18:29 2018 to Sun Sep 16 18:20:00 2018.
+
+INFO(ORPSIM-15422): Making new index file ece351hw3.ind for library file ece351hw3.lib.
+
+Index has 3 entries from 1 file(s).
+
+**** FROM LIBRARY ../../../ece351hw3-pspicefiles/ece351hw3.lib ****
+.model power_Mb200 NMOS W=1 L=1u LEVEL=3 CBD=1E-9 RDS=1E+06 TT=1n VTO=2.0 Kn=20u
+--------------------------------------------------------------------------$
+ERROR -- 'Kn' is not a model parameter name
+

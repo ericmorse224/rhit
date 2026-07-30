@@ -1,0 +1,4 @@
+* PSpice Model Editor - Version 17.2.0
+*$
+.model Mx NMOS(Kp=500U Vto=1)
+*$

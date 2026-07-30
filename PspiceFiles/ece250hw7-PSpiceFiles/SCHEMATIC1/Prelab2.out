@@ -1,0 +1,141 @@
+
+**** 04/28/18 19:28:51 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-HW7"  [ C:\Cadence\Pspice Work\ece250hw7-pspicefiles\schematic1\HW7.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "HW7.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ece250hw7-pspicefiles/ece250hw7.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ECE250HW7
+V_V10         N09269 0  DC 15
+R_R15         0 N09211 1.6k 
+R_R16         N09211 N09269 10k 
+R_R17         VOUT N09269 1.8k 
+M_M1         VOUT N09211 0 0 Mx           
+R_R1         VOUT2 N09707 1.8k 
+V_V1         N09707 0  DC 15
+M_M2         VOUT2 0 N10153 N10153 Mx           
+V_V2         0 N09877  DC 15
+I_I1         N10153 N09877 DC 0.005Adc  
+
+**** RESUMING HW7.cir ****
+.END
+
+**** 04/28/18 19:28:51 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-HW7"  [ C:\Cadence\Pspice Work\ece250hw7-pspicefiles\schematic1\HW7.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Mx              
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    1            
+          KP     .01         
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 04/28/18 19:28:51 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-HW7"  [ C:\Cadence\Pspice Work\ece250hw7-pspicefiles\schematic1\HW7.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( VOUT)    4.7158  (VOUT2)    6.0000  (N09211)    2.0690 (N09269)   15.0000     
+
+(N09707)   15.0000 (N09877)  -15.0000 (N10153)   -2.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V10       -7.007E-03
+    V_V1        -5.000E-03
+    V_V2        -5.000E-03
+
+    TOTAL POWER DISSIPATION   2.55E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 04/28/18 19:28:51 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-HW7"  [ C:\Cadence\Pspice Work\ece250hw7-pspicefiles\schematic1\HW7.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

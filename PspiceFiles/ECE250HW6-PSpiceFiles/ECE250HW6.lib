@@ -1,0 +1,10 @@
+* PSpice Model Editor - Version 17.2.0
+*$
+.model Mp2 PMOS (Kp=100u Vto=-1.5 lambda=0.01)
+*$
+.model Mn2 NMOS(Kp=300u Vto=1.5 lambda=0.05)
+*$
+.model Mp PMOS (Kp=100U Vto=-1.5 lambda=0.01)
+*$
+.model Mn NMOS (Kp=300u Vto=1.5 lambda=0.05)
+*$

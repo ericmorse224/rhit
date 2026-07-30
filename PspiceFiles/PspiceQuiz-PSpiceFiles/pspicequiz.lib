@@ -1,0 +1,6 @@
+* PSpice Model Editor - Version 17.2.0
+*$
+.model M1 NMOS KP=2m Vto=1.5
+*$
+.model Dbreak D Is=1e-14 Cjo=.1pF Rs=.1 BV=5.6 IBV=2mA
+*$

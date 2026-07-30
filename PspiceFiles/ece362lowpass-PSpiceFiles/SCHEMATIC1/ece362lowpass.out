@@ -1,0 +1,149 @@
+
+**** 12/10/18 00:36:33 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ece362lowpass"  [ C:\Cadence\Pspice Work\ece362lowpass-PSpiceFiles\SCHEMATIC1\ece362lowpass.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ece362lowpass.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 10 1 100Meg
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ECE362LOWPASS
+R_R1         N00279 N00182 1k 
+R_R2         VOUT 0 1k 
+R_R3         VOUT N00182 2.5k 
+C_C1         VOUT N00182 10n 
+V_V1         N00279 0  AC 1 0
+V_V2         15V 0  DC 15
+V_V3         0 -15V  DC 15
+X_U1A         0 N00182 15V -15V VOUT TL072/301/TI
+
+**** RESUMING ece362lowpass.cir ****
+.END
+
+**** 12/10/18 00:36:33 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ece362lowpass"  [ C:\Cadence\Pspice Work\ece362lowpass-PSpiceFiles\SCHEMATIC1\ece362lowpass.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.DX        
+          IS  800.000000E-18 
+
+
+**** 12/10/18 00:36:33 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ece362lowpass"  [ C:\Cadence\Pspice Work\ece362lowpass-PSpiceFiles\SCHEMATIC1\ece362lowpass.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1A.JX        
+               PJF             
+         VTO   -1            
+        BETA  270.100000E-06 
+          IS   15.000000E-12 
+
+
+**** 12/10/18 00:36:33 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ece362lowpass"  [ C:\Cadence\Pspice Work\ece362lowpass-PSpiceFiles\SCHEMATIC1\ece362lowpass.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  15V)   15.0000  ( -15V)  -15.0000  ( VOUT) 38.51E-06  (N00182) 10.97E-06     
+
+(N00279)    0.0000 (X_U1A.6)-7.564E-09                   (X_U1A.7) 45.94E-06    
+
+(X_U1A.8) 45.94E-06                   (X_U1A.9)    0.0000                       
+
+(X_U1A.10)    -.3986                  (X_U1A.11)  -14.6550                      
+
+(X_U1A.12)  -14.6550                  (X_U1A.53)   12.8000                      
+
+(X_U1A.54)  -12.8000                  (X_U1A.90) 49.52E-06                      
+
+(X_U1A.91)   25.0000                  (X_U1A.92)  -25.0000                      
+
+(X_U1A.99)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         1.097E-08
+    V_V2        -1.419E-02
+    V_V3        -1.419E-02
+    X_U1A.VB    -7.564E-14
+    X_U1A.VC     1.280E-11
+    X_U1A.VE     1.280E-11
+    X_U1A.VLIM   4.952E-08
+    X_U1A.VLP   -2.500E-11
+    X_U1A.VLN   -2.500E-11
+
+    TOTAL POWER DISSIPATION   4.26E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 12/10/18 00:36:33 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-ece362lowpass"  [ C:\Cadence\Pspice Work\ece362lowpass-PSpiceFiles\SCHEMATIC1\ece362lowpass.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

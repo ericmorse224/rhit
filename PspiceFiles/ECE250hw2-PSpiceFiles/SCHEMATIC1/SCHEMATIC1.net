@@ -1,0 +1,31 @@
+* source ECE250HW2
+V_V1         VIN 0 PWL
++ TIME_SCALE_FACTOR={1/1k}
++ VALUE_SCALE_FACTOR=15
++repeat forever
++(0,0) (0.25,1) (0.75,-1) (1,0)
++endrepeat
+R_R1         VOM VOP 3k 
+R_R2         VIN VOP 1k 
+R_R3         N00180 VOM 1k 
+R_R5         VIN2 VO2 1k 
+R_R6         0 VO2 1k 
+V_V2         VIN2 0 PWL
++ TIME_SCALE_FACTOR={1/1}
++ VALUE_SCALE_FACTOR=15
++repeat forever
++(0,0) (0.25,1) (0.75,-1) (1,0)
++endrepeat
+D_D3         VIN2 VO2 Dbreak 
+V_V3         VIN3 0  DC 0
+M_M1         VO3 VIN3 0 0 Mbreakn           
+R_R7         VO3 N01361 10k 
+V_Vcc         N01361 0  DC 5
+M_M2         VO4 VIN4 0 0 MbreakN           
+M_M3         N01634 VIN4 VO4 VO4 MbreakN           
+V_V4         N01634 0  DC 5
+V_V5         VIN4 0  DC 0
+.model         S_D1 VSWITCH Roff=1e6 Ron=0.1 Voff=0 Von=1m
+S_SD1         VIN VOP VIN VOP S_D1
+.model         S_D2 VSWITCH Roff=1e6 Ron=0.1 Voff=0 Von=1m
+S_SD2         0 N00180 0 N00180 S_D2

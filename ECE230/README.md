@@ -1,0 +1,1 @@
+Contains work done in ECE230 towards the development of a solar panel array that uses photovoltaic transistors to detect sunlight and linear actuator motors to always point the solar panel towards the sun.

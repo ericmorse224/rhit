@@ -1,0 +1,1311 @@
+TimeQuest Timing Analyzer report for Lab6_test
+Sun Feb 04 20:31:37 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLK'
+ 12. Slow Model Hold: 'CLK'
+ 13. Slow Model Minimum Pulse Width: 'CLK'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'CLK'
+ 26. Fast Model Hold: 'CLK'
+ 27. Fast Model Minimum Pulse Width: 'CLK'
+ 28. Setup Times
+ 29. Hold Times
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Propagation Delay
+ 33. Minimum Propagation Delay
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Progagation Delay
+ 40. Minimum Progagation Delay
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; Lab6_test                                                         ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; CLK        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 361.01 MHz ; 361.01 MHz      ; CLK        ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLK   ; -1.770 ; -16.160       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLK   ; 0.391 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CLK   ; -1.380 ; -17.380               ;
++-------+--------+-----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLK'                                                                                                                       ;
++--------+----------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                  ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.770 ; control_gold:inst|STATE[6] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.805      ;
+; -1.731 ; control_gold:inst|STATE[3] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.766      ;
+; -1.678 ; control_gold:inst|STATE[0] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.713      ;
+; -1.612 ; control_gold:inst|STATE[1] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.647      ;
+; -1.562 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.598      ;
+; -1.553 ; control_gold:inst|STATE[5] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.588      ;
+; -1.532 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.568      ;
+; -1.493 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.529      ;
+; -1.463 ; control_gold:inst|STATE[2] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.498      ;
+; -1.449 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.485      ;
+; -1.435 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.471      ;
+; -1.407 ; control_gold:inst|STATE[3] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 2.440      ;
+; -1.404 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.440      ;
+; -1.397 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.433      ;
+; -1.392 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.428      ;
+; -1.384 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.420      ;
+; -1.378 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.414      ;
+; -1.375 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.411      ;
+; -1.371 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.407      ;
+; -1.343 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.379      ;
+; -1.339 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.375      ;
+; -1.336 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.372      ;
+; -1.332 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.368      ;
+; -1.326 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.362      ;
+; -1.316 ; control_gold:inst|STATE[4] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; -0.001     ; 2.351      ;
+; -1.313 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.349      ;
+; -1.293 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.329      ;
+; -1.271 ; control:inst1|inst12       ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; 0.002      ; 2.309      ;
+; -1.247 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.283      ;
+; -1.243 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.279      ;
+; -1.231 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.267      ;
+; -1.214 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.250      ;
+; -1.198 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.234      ;
+; -1.134 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.170      ;
+; -1.130 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.166      ;
+; -1.123 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.159      ;
+; -1.116 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.152      ;
+; -1.106 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.142      ;
+; -1.085 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.121      ;
+; -1.078 ; control:inst1|inst8        ; control:inst1|inst7               ; CLK          ; CLK         ; 1.000        ; -0.002     ; 2.112      ;
+; -1.067 ; control_gold:inst|STATE[2] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 2.100      ;
+; -1.049 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.085      ;
+; -1.028 ; control:inst1|inst7        ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; 0.002      ; 2.066      ;
+; -1.023 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.059      ;
+; -0.994 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.030      ;
+; -0.986 ; control:inst1|inst8        ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.022      ;
+; -0.980 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.016      ;
+; -0.977 ; control_gold:inst|STATE[0] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 2.010      ;
+; -0.977 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 2.013      ;
+; -0.959 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.995      ;
+; -0.942 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.978      ;
+; -0.926 ; control_gold:inst|STATE[5] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 1.959      ;
+; -0.925 ; control:inst1|inst12       ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.961      ;
+; -0.886 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.922      ;
+; -0.883 ; control:inst1|inst9        ; control:inst1|inst7               ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.919      ;
+; -0.868 ; control:inst1|inst11       ; control:inst1|inst7               ; CLK          ; CLK         ; 1.000        ; -0.002     ; 1.902      ;
+; -0.868 ; control:inst1|inst9        ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; 0.002      ; 1.906      ;
+; -0.855 ; control_gold:inst|STATE[6] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 1.888      ;
+; -0.853 ; control:inst1|inst11       ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.889      ;
+; -0.851 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.887      ;
+; -0.845 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.881      ;
+; -0.845 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.881      ;
+; -0.839 ; control_gold:inst|STATE[1] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 1.872      ;
+; -0.787 ; control:inst1|inst9        ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.823      ;
+; -0.777 ; control:inst1|inst12       ; control:inst1|inst8               ; CLK          ; CLK         ; 1.000        ; 0.002      ; 1.815      ;
+; -0.771 ; control:inst1|inst12       ; control:inst1|inst11              ; CLK          ; CLK         ; 1.000        ; 0.002      ; 1.809      ;
+; -0.768 ; control_gold:inst|STATE[4] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 1.801      ;
+; -0.754 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.790      ;
+; -0.681 ; control:inst1|inst8        ; control:inst1|inst8               ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.717      ;
+; -0.681 ; control:inst1|inst11       ; control:inst1|inst11              ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.717      ;
+; -0.662 ; control:inst1|inst11       ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; -0.002     ; 1.696      ;
+; -0.635 ; control:inst1|inst7        ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.671      ;
+; -0.608 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.644      ;
+; -0.603 ; control:inst1|inst8        ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; -0.002     ; 1.637      ;
+; -0.572 ; control:inst1|inst10       ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.608      ;
+; -0.500 ; control:inst1|inst7        ; control:inst1|inst7               ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.536      ;
+; -0.494 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.530      ;
+; -0.470 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.506      ;
+; -0.466 ; control:inst1|inst12       ; control:inst1|inst12              ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.502      ;
+; -0.300 ; control:inst1|inst         ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.336      ;
+; -0.207 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.243      ;
+; -0.194 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.230      ;
+; -0.080 ; control:inst1|inst10       ; control:inst1|inst                ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.116      ;
+; -0.064 ; control:inst1|inst12       ; control:inst1|inst9               ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.100      ;
+; -0.036 ; control:inst1|inst         ; control:inst1|inst7               ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.072      ;
+; 0.212  ; control:inst1|inst7        ; control:inst1|inst10              ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.824      ;
+; 0.214  ; control:inst1|inst7        ; control:inst1|inst12              ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.822      ;
+; 0.379  ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; control:inst1|inst         ; control:inst1|inst                ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; control:inst1|inst9        ; control:inst1|inst9               ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; control:inst1|inst10       ; control:inst1|inst10              ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.657      ;
++--------+----------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLK'                                                                                                                       ;
++-------+----------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                  ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; control:inst1|inst9        ; control:inst1|inst9               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; control:inst1|inst10       ; control:inst1|inst10              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; control:inst1|inst         ; control:inst1|inst                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.556 ; control:inst1|inst7        ; control:inst1|inst12              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.822      ;
+; 0.558 ; control:inst1|inst7        ; control:inst1|inst10              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.824      ;
+; 0.806 ; control:inst1|inst         ; control:inst1|inst7               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.072      ;
+; 0.834 ; control:inst1|inst12       ; control:inst1|inst9               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.100      ;
+; 0.841 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.107      ;
+; 0.850 ; control:inst1|inst10       ; control:inst1|inst                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.116      ;
+; 0.964 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.230      ;
+; 0.977 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.243      ;
+; 1.015 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.281      ;
+; 1.045 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.311      ;
+; 1.070 ; control:inst1|inst         ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.336      ;
+; 1.216 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.482      ;
+; 1.236 ; control:inst1|inst12       ; control:inst1|inst12              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.502      ;
+; 1.240 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.506      ;
+; 1.264 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.530      ;
+; 1.270 ; control:inst1|inst7        ; control:inst1|inst7               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.536      ;
+; 1.294 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.560      ;
+; 1.298 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.564      ;
+; 1.333 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.599      ;
+; 1.342 ; control:inst1|inst10       ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.608      ;
+; 1.373 ; control:inst1|inst8        ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; -0.002     ; 1.637      ;
+; 1.378 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.644      ;
+; 1.405 ; control:inst1|inst7        ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.671      ;
+; 1.428 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.694      ;
+; 1.432 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.698      ;
+; 1.432 ; control:inst1|inst11       ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; -0.002     ; 1.696      ;
+; 1.447 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.713      ;
+; 1.448 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.714      ;
+; 1.451 ; control:inst1|inst11       ; control:inst1|inst11              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.717      ;
+; 1.451 ; control:inst1|inst8        ; control:inst1|inst8               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.717      ;
+; 1.485 ; control:inst1|inst9        ; control:inst1|inst7               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.751      ;
+; 1.524 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.790      ;
+; 1.534 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.800      ;
+; 1.538 ; control_gold:inst|STATE[4] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; -0.003     ; 1.801      ;
+; 1.541 ; control:inst1|inst12       ; control:inst1|inst11              ; CLK          ; CLK         ; 0.000        ; 0.002      ; 1.809      ;
+; 1.545 ; control:inst1|inst11       ; control:inst1|inst7               ; CLK          ; CLK         ; 0.000        ; -0.002     ; 1.809      ;
+; 1.547 ; control:inst1|inst12       ; control:inst1|inst8               ; CLK          ; CLK         ; 0.000        ; 0.002      ; 1.815      ;
+; 1.557 ; control:inst1|inst9        ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.823      ;
+; 1.559 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.825      ;
+; 1.560 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.826      ;
+; 1.563 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.829      ;
+; 1.564 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.830      ;
+; 1.567 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.833      ;
+; 1.577 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.843      ;
+; 1.581 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.847      ;
+; 1.607 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.873      ;
+; 1.609 ; control_gold:inst|STATE[1] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; -0.003     ; 1.872      ;
+; 1.615 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.881      ;
+; 1.615 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.881      ;
+; 1.623 ; control:inst1|inst11       ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.889      ;
+; 1.625 ; control_gold:inst|STATE[6] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; -0.003     ; 1.888      ;
+; 1.638 ; control:inst1|inst9        ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; 0.002      ; 1.906      ;
+; 1.648 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.914      ;
+; 1.656 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.922      ;
+; 1.670 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.936      ;
+; 1.694 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.960      ;
+; 1.695 ; control:inst1|inst12       ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.961      ;
+; 1.696 ; control_gold:inst|STATE[5] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; -0.003     ; 1.959      ;
+; 1.705 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.971      ;
+; 1.715 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.981      ;
+; 1.723 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.989      ;
+; 1.747 ; control_gold:inst|STATE[0] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; -0.003     ; 2.010      ;
+; 1.755 ; control_gold:inst|STATE[4] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.020      ;
+; 1.756 ; control:inst1|inst8        ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.022      ;
+; 1.770 ; control_gold:inst|STATE[5] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.035      ;
+; 1.771 ; control:inst1|inst8        ; control:inst1|inst7               ; CLK          ; CLK         ; 0.000        ; -0.002     ; 2.035      ;
+; 1.793 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.059      ;
+; 1.794 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.060      ;
+; 1.798 ; control:inst1|inst7        ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; 0.002      ; 2.066      ;
+; 1.819 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.085      ;
+; 1.837 ; control_gold:inst|STATE[2] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; -0.003     ; 2.100      ;
+; 1.855 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.121      ;
+; 1.884 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.150      ;
+; 1.885 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.151      ;
+; 1.949 ; control_gold:inst|STATE[3] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.214      ;
+; 1.950 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.216      ;
+; 1.968 ; control_gold:inst|STATE[1] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.233      ;
+; 2.018 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.284      ;
+; 2.041 ; control:inst1|inst12       ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; 0.002      ; 2.309      ;
+; 2.061 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.327      ;
+; 2.063 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.329      ;
+; 2.081 ; control_gold:inst|STATE[0] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.346      ;
+; 2.099 ; control_gold:inst|STATE[6] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.364      ;
+; 2.150 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 2.416      ;
+; 2.177 ; control_gold:inst|STATE[3] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; -0.003     ; 2.440      ;
+; 2.209 ; control_gold:inst|STATE[2] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; -0.001     ; 2.474      ;
++-------+----------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLK'                                                                              ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                            ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLK   ; Rise       ; CLK                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control:inst1|inst                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control:inst1|inst                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control:inst1|inst10              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control:inst1|inst10              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control:inst1|inst11              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control:inst1|inst11              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control:inst1|inst12              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control:inst1|inst12              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control:inst1|inst7               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control:inst1|inst7               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control:inst1|inst8               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control:inst1|inst8               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control:inst1|inst9               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control:inst1|inst9               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control_gold:inst|STATE[0]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control_gold:inst|STATE[0]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control_gold:inst|STATE[1]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control_gold:inst|STATE[1]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control_gold:inst|STATE[2]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control_gold:inst|STATE[2]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control_gold:inst|STATE[3]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control_gold:inst|STATE[3]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control_gold:inst|STATE[4]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control_gold:inst|STATE[4]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control_gold:inst|STATE[5]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control_gold:inst|STATE[5]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control_gold:inst|STATE[6]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control_gold:inst|STATE[6]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; error_detector:inst2|output_error ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; error_detector:inst2|output_error ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; error_detector:inst2|state_error  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; error_detector:inst2|state_error  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK|combout                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK|combout                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|outclk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|outclk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|inst10|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|inst10|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|inst11|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|inst11|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|inst12|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|inst12|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|inst7|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|inst7|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|inst8|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|inst8|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|inst9|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|inst9|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|inst|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|inst|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst2|output_error|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst2|output_error|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst2|state_error|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst2|state_error|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|STATE[0]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|STATE[0]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|STATE[1]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|STATE[1]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|STATE[2]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|STATE[2]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|STATE[3]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|STATE[3]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|STATE[4]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|STATE[4]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|STATE[5]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|STATE[5]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|STATE[6]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|STATE[6]|clk                 ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; END_LEFT  ; CLK        ; 4.586 ; 4.586 ; Rise       ; CLK             ;
+; END_MID   ; CLK        ; 4.576 ; 4.576 ; Rise       ; CLK             ;
+; END_RIGHT ; CLK        ; 4.873 ; 4.873 ; Rise       ; CLK             ;
+; LEFT      ; CLK        ; 5.905 ; 5.905 ; Rise       ; CLK             ;
+; MID       ; CLK        ; 3.034 ; 3.034 ; Rise       ; CLK             ;
+; RIGHT     ; CLK        ; 5.889 ; 5.889 ; Rise       ; CLK             ;
+; START     ; CLK        ; 4.467 ; 4.467 ; Rise       ; CLK             ;
+; TIME      ; CLK        ; 3.486 ; 3.486 ; Rise       ; CLK             ;
+; nOVER     ; CLK        ; 4.996 ; 4.996 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; END_LEFT  ; CLK        ; -3.441 ; -3.441 ; Rise       ; CLK             ;
+; END_MID   ; CLK        ; -4.163 ; -4.163 ; Rise       ; CLK             ;
+; END_RIGHT ; CLK        ; -3.496 ; -3.496 ; Rise       ; CLK             ;
+; LEFT      ; CLK        ; -4.180 ; -4.180 ; Rise       ; CLK             ;
+; MID       ; CLK        ; -1.590 ; -1.590 ; Rise       ; CLK             ;
+; RIGHT     ; CLK        ; -4.547 ; -4.547 ; Rise       ; CLK             ;
+; START     ; CLK        ; -3.520 ; -3.520 ; Rise       ; CLK             ;
+; TIME      ; CLK        ; -0.826 ; -0.826 ; Rise       ; CLK             ;
+; nOVER     ; CLK        ; -3.828 ; -3.828 ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; G_INC_MISS   ; CLK        ; 8.376 ; 8.376 ; Rise       ; CLK             ;
+; G_INC_SCORE  ; CLK        ; 8.409 ; 8.409 ; Rise       ; CLK             ;
+; G_LOAD_NOTE  ; CLK        ; 8.012 ; 8.012 ; Rise       ; CLK             ;
+; G_SHIFT      ; CLK        ; 8.153 ; 8.153 ; Rise       ; CLK             ;
+; G_STATE[*]   ; CLK        ; 6.943 ; 6.943 ; Rise       ; CLK             ;
+;  G_STATE[0]  ; CLK        ; 6.862 ; 6.862 ; Rise       ; CLK             ;
+;  G_STATE[1]  ; CLK        ; 6.649 ; 6.649 ; Rise       ; CLK             ;
+;  G_STATE[2]  ; CLK        ; 6.566 ; 6.566 ; Rise       ; CLK             ;
+;  G_STATE[3]  ; CLK        ; 6.943 ; 6.943 ; Rise       ; CLK             ;
+;  G_STATE[4]  ; CLK        ; 6.684 ; 6.684 ; Rise       ; CLK             ;
+;  G_STATE[5]  ; CLK        ; 6.841 ; 6.841 ; Rise       ; CLK             ;
+;  G_STATE[6]  ; CLK        ; 6.757 ; 6.757 ; Rise       ; CLK             ;
+; G_nCLRPT     ; CLK        ; 8.144 ; 8.144 ; Rise       ; CLK             ;
+; INC_MISS     ; CLK        ; 7.641 ; 7.641 ; Rise       ; CLK             ;
+; INC_SCORE    ; CLK        ; 7.801 ; 7.801 ; Rise       ; CLK             ;
+; LOAD_NOTE    ; CLK        ; 7.128 ; 7.128 ; Rise       ; CLK             ;
+; SHIFT        ; CLK        ; 7.276 ; 7.276 ; Rise       ; CLK             ;
+; STATE[*]     ; CLK        ; 6.843 ; 6.843 ; Rise       ; CLK             ;
+;  STATE[0]    ; CLK        ; 6.769 ; 6.769 ; Rise       ; CLK             ;
+;  STATE[1]    ; CLK        ; 6.843 ; 6.843 ; Rise       ; CLK             ;
+;  STATE[2]    ; CLK        ; 6.688 ; 6.688 ; Rise       ; CLK             ;
+;  STATE[3]    ; CLK        ; 6.833 ; 6.833 ; Rise       ; CLK             ;
+;  STATE[4]    ; CLK        ; 6.793 ; 6.793 ; Rise       ; CLK             ;
+;  STATE[5]    ; CLK        ; 6.801 ; 6.801 ; Rise       ; CLK             ;
+;  STATE[6]    ; CLK        ; 6.737 ; 6.737 ; Rise       ; CLK             ;
+; nCLRPT       ; CLK        ; 6.799 ; 6.799 ; Rise       ; CLK             ;
+; output_error ; CLK        ; 6.711 ; 6.711 ; Rise       ; CLK             ;
+; state_error  ; CLK        ; 6.757 ; 6.757 ; Rise       ; CLK             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; G_INC_MISS   ; CLK        ; 8.091 ; 8.091 ; Rise       ; CLK             ;
+; G_INC_SCORE  ; CLK        ; 7.955 ; 7.955 ; Rise       ; CLK             ;
+; G_LOAD_NOTE  ; CLK        ; 7.558 ; 7.558 ; Rise       ; CLK             ;
+; G_SHIFT      ; CLK        ; 7.541 ; 7.541 ; Rise       ; CLK             ;
+; G_STATE[*]   ; CLK        ; 6.566 ; 6.566 ; Rise       ; CLK             ;
+;  G_STATE[0]  ; CLK        ; 6.862 ; 6.862 ; Rise       ; CLK             ;
+;  G_STATE[1]  ; CLK        ; 6.649 ; 6.649 ; Rise       ; CLK             ;
+;  G_STATE[2]  ; CLK        ; 6.566 ; 6.566 ; Rise       ; CLK             ;
+;  G_STATE[3]  ; CLK        ; 6.943 ; 6.943 ; Rise       ; CLK             ;
+;  G_STATE[4]  ; CLK        ; 6.684 ; 6.684 ; Rise       ; CLK             ;
+;  G_STATE[5]  ; CLK        ; 6.841 ; 6.841 ; Rise       ; CLK             ;
+;  G_STATE[6]  ; CLK        ; 6.757 ; 6.757 ; Rise       ; CLK             ;
+; G_nCLRPT     ; CLK        ; 7.431 ; 7.431 ; Rise       ; CLK             ;
+; INC_MISS     ; CLK        ; 7.278 ; 7.278 ; Rise       ; CLK             ;
+; INC_SCORE    ; CLK        ; 7.668 ; 7.668 ; Rise       ; CLK             ;
+; LOAD_NOTE    ; CLK        ; 7.128 ; 7.128 ; Rise       ; CLK             ;
+; SHIFT        ; CLK        ; 7.276 ; 7.276 ; Rise       ; CLK             ;
+; STATE[*]     ; CLK        ; 6.688 ; 6.688 ; Rise       ; CLK             ;
+;  STATE[0]    ; CLK        ; 6.769 ; 6.769 ; Rise       ; CLK             ;
+;  STATE[1]    ; CLK        ; 6.843 ; 6.843 ; Rise       ; CLK             ;
+;  STATE[2]    ; CLK        ; 6.688 ; 6.688 ; Rise       ; CLK             ;
+;  STATE[3]    ; CLK        ; 6.833 ; 6.833 ; Rise       ; CLK             ;
+;  STATE[4]    ; CLK        ; 6.793 ; 6.793 ; Rise       ; CLK             ;
+;  STATE[5]    ; CLK        ; 6.801 ; 6.801 ; Rise       ; CLK             ;
+;  STATE[6]    ; CLK        ; 6.737 ; 6.737 ; Rise       ; CLK             ;
+; nCLRPT       ; CLK        ; 6.799 ; 6.799 ; Rise       ; CLK             ;
+; output_error ; CLK        ; 6.711 ; 6.711 ; Rise       ; CLK             ;
+; state_error  ; CLK        ; 6.757 ; 6.757 ; Rise       ; CLK             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------+
+; Propagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; LEFT       ; G_INC_SCORE ; 10.926 ; 10.926 ; 10.926 ; 10.926 ;
+; LEFT       ; INC_SCORE   ; 10.372 ;        ;        ; 10.372 ;
+; MID        ; G_INC_SCORE ; 8.141  ;        ;        ; 8.141  ;
+; MID        ; INC_SCORE   ; 8.143  ;        ;        ; 8.143  ;
+; RIGHT      ; G_INC_SCORE ; 10.747 ;        ;        ; 10.747 ;
+; RIGHT      ; INC_SCORE   ; 10.748 ;        ;        ; 10.748 ;
+; TIME       ; G_INC_MISS  ; 8.053  ;        ;        ; 8.053  ;
+; TIME       ; G_LOAD_NOTE ; 7.358  ;        ;        ; 7.358  ;
+; TIME       ; G_SHIFT     ; 7.515  ;        ;        ; 7.515  ;
+; TIME       ; INC_MISS    ; 7.818  ;        ;        ; 7.818  ;
+; TIME       ; LOAD_NOTE   ; 7.392  ;        ;        ; 7.392  ;
+; TIME       ; SHIFT       ; 7.531  ;        ;        ; 7.531  ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------------------------------------+
+; Minimum Propagation Delay                                    ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; LEFT       ; G_INC_SCORE ; 10.926 ; 10.926 ; 10.926 ; 10.926 ;
+; LEFT       ; INC_SCORE   ; 10.372 ;        ;        ; 10.372 ;
+; MID        ; G_INC_SCORE ; 8.141  ;        ;        ; 8.141  ;
+; MID        ; INC_SCORE   ; 8.143  ;        ;        ; 8.143  ;
+; RIGHT      ; G_INC_SCORE ; 10.747 ;        ;        ; 10.747 ;
+; RIGHT      ; INC_SCORE   ; 10.748 ;        ;        ; 10.748 ;
+; TIME       ; G_INC_MISS  ; 8.053  ;        ;        ; 8.053  ;
+; TIME       ; G_LOAD_NOTE ; 7.358  ;        ;        ; 7.358  ;
+; TIME       ; G_SHIFT     ; 7.515  ;        ;        ; 7.515  ;
+; TIME       ; INC_MISS    ; 7.818  ;        ;        ; 7.818  ;
+; TIME       ; LOAD_NOTE   ; 7.392  ;        ;        ; 7.392  ;
+; TIME       ; SHIFT       ; 7.531  ;        ;        ; 7.531  ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; CLK   ; -0.244 ; -0.996        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; CLK   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; CLK   ; -1.380 ; -17.380               ;
++-------+--------+-----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLK'                                                                                                                       ;
++--------+----------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                  ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.244 ; control_gold:inst|STATE[6] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.275      ;
+; -0.223 ; control_gold:inst|STATE[3] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.254      ;
+; -0.205 ; control_gold:inst|STATE[0] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.236      ;
+; -0.195 ; control_gold:inst|STATE[1] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.226      ;
+; -0.166 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.198      ;
+; -0.155 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.187      ;
+; -0.153 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.185      ;
+; -0.147 ; control_gold:inst|STATE[5] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.178      ;
+; -0.131 ; control_gold:inst|STATE[2] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.162      ;
+; -0.119 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.151      ;
+; -0.114 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.146      ;
+; -0.112 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.144      ;
+; -0.105 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.137      ;
+; -0.092 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.124      ;
+; -0.080 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.112      ;
+; -0.077 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.109      ;
+; -0.073 ; control_gold:inst|STATE[3] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 1.102      ;
+; -0.070 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.102      ;
+; -0.066 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.098      ;
+; -0.063 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.095      ;
+; -0.059 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.091      ;
+; -0.055 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.087      ;
+; -0.051 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.083      ;
+; -0.044 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.076      ;
+; -0.034 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.066      ;
+; -0.018 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.050      ;
+; -0.017 ; control_gold:inst|STATE[4] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; -0.001     ; 1.048      ;
+; -0.016 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.048      ;
+; -0.015 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.047      ;
+; -0.014 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.046      ;
+; -0.012 ; control:inst1|inst12       ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; 0.002      ; 1.046      ;
+; -0.009 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.041      ;
+; -0.002 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 1.034      ;
+; 0.037  ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.995      ;
+; 0.048  ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.984      ;
+; 0.051  ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.981      ;
+; 0.052  ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.980      ;
+; 0.052  ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.980      ;
+; 0.060  ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.972      ;
+; 0.071  ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.961      ;
+; 0.075  ; control_gold:inst|STATE[2] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 0.954      ;
+; 0.077  ; control:inst1|inst8        ; control:inst1|inst7               ; CLK          ; CLK         ; 1.000        ; -0.002     ; 0.953      ;
+; 0.095  ; control:inst1|inst7        ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; 0.002      ; 0.939      ;
+; 0.096  ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.936      ;
+; 0.098  ; control_gold:inst|STATE[0] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 0.931      ;
+; 0.102  ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.930      ;
+; 0.107  ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.925      ;
+; 0.114  ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.918      ;
+; 0.114  ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.918      ;
+; 0.117  ; control_gold:inst|STATE[5] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 0.912      ;
+; 0.118  ; control:inst1|inst12       ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.914      ;
+; 0.119  ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.913      ;
+; 0.125  ; control:inst1|inst8        ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.907      ;
+; 0.139  ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.893      ;
+; 0.139  ; control:inst1|inst9        ; control:inst1|inst7               ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.893      ;
+; 0.147  ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.885      ;
+; 0.150  ; control:inst1|inst9        ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; 0.002      ; 0.884      ;
+; 0.160  ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.872      ;
+; 0.162  ; control_gold:inst|STATE[6] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 0.867      ;
+; 0.162  ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.870      ;
+; 0.164  ; control:inst1|inst11       ; control:inst1|inst7               ; CLK          ; CLK         ; 1.000        ; -0.002     ; 0.866      ;
+; 0.174  ; control:inst1|inst12       ; control:inst1|inst8               ; CLK          ; CLK         ; 1.000        ; 0.002      ; 0.860      ;
+; 0.174  ; control_gold:inst|STATE[1] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 0.855      ;
+; 0.175  ; control:inst1|inst11       ; error_detector:inst2|output_error ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.857      ;
+; 0.178  ; control:inst1|inst12       ; control:inst1|inst11              ; CLK          ; CLK         ; 1.000        ; 0.002      ; 0.856      ;
+; 0.180  ; control_gold:inst|STATE[4] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; -0.003     ; 0.849      ;
+; 0.207  ; control:inst1|inst9        ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.825      ;
+; 0.213  ; control:inst1|inst11       ; control:inst1|inst11              ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.819      ;
+; 0.215  ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.817      ;
+; 0.215  ; control:inst1|inst8        ; control:inst1|inst8               ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.817      ;
+; 0.232  ; control:inst1|inst11       ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; -0.002     ; 0.798      ;
+; 0.237  ; control:inst1|inst8        ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; -0.002     ; 0.793      ;
+; 0.270  ; control:inst1|inst7        ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.762      ;
+; 0.277  ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.755      ;
+; 0.297  ; control:inst1|inst10       ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.735      ;
+; 0.322  ; control:inst1|inst7        ; control:inst1|inst7               ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.710      ;
+; 0.324  ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.708      ;
+; 0.328  ; control:inst1|inst12       ; control:inst1|inst12              ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.704      ;
+; 0.328  ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.704      ;
+; 0.354  ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.678      ;
+; 0.416  ; control:inst1|inst         ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.616      ;
+; 0.444  ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.588      ;
+; 0.497  ; control:inst1|inst12       ; control:inst1|inst9               ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.535      ;
+; 0.500  ; control:inst1|inst10       ; control:inst1|inst                ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.532      ;
+; 0.519  ; control:inst1|inst         ; control:inst1|inst7               ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.513      ;
+; 0.620  ; control:inst1|inst7        ; control:inst1|inst10              ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.412      ;
+; 0.621  ; control:inst1|inst7        ; control:inst1|inst12              ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.411      ;
+; 0.665  ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665  ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665  ; control:inst1|inst9        ; control:inst1|inst9               ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665  ; control:inst1|inst         ; control:inst1|inst                ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665  ; control:inst1|inst10       ; control:inst1|inst10              ; CLK          ; CLK         ; 1.000        ; 0.000      ; 0.367      ;
++--------+----------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLK'                                                                                                                       ;
++-------+----------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                  ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; control:inst1|inst9        ; control:inst1|inst9               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; control:inst1|inst10       ; control:inst1|inst10              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; control:inst1|inst         ; control:inst1|inst                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.259 ; control:inst1|inst7        ; control:inst1|inst12              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.411      ;
+; 0.260 ; control:inst1|inst7        ; control:inst1|inst10              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.412      ;
+; 0.361 ; control:inst1|inst         ; control:inst1|inst7               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.513      ;
+; 0.380 ; control:inst1|inst10       ; control:inst1|inst                ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.532      ;
+; 0.383 ; control:inst1|inst12       ; control:inst1|inst9               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.535      ;
+; 0.390 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.542      ;
+; 0.436 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.588      ;
+; 0.460 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.612      ;
+; 0.464 ; control:inst1|inst         ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.616      ;
+; 0.467 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.619      ;
+; 0.526 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.678      ;
+; 0.552 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.704      ;
+; 0.552 ; control:inst1|inst12       ; control:inst1|inst12              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.704      ;
+; 0.556 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.708      ;
+; 0.556 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.708      ;
+; 0.558 ; control:inst1|inst7        ; control:inst1|inst7               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.710      ;
+; 0.571 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.723      ;
+; 0.575 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.727      ;
+; 0.583 ; control:inst1|inst10       ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.735      ;
+; 0.594 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.746      ;
+; 0.603 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.755      ;
+; 0.610 ; control:inst1|inst7        ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.762      ;
+; 0.642 ; control:inst1|inst9        ; control:inst1|inst7               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.794      ;
+; 0.643 ; control:inst1|inst8        ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; -0.002     ; 0.793      ;
+; 0.646 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.798      ;
+; 0.648 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.800      ;
+; 0.648 ; control:inst1|inst11       ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; -0.002     ; 0.798      ;
+; 0.652 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.804      ;
+; 0.655 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.807      ;
+; 0.665 ; control:inst1|inst8        ; control:inst1|inst8               ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.817      ;
+; 0.665 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.817      ;
+; 0.667 ; control:inst1|inst11       ; control:inst1|inst11              ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.819      ;
+; 0.670 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.822      ;
+; 0.673 ; control:inst1|inst9        ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.825      ;
+; 0.677 ; control:inst1|inst11       ; control:inst1|inst7               ; CLK          ; CLK         ; 0.000        ; -0.002     ; 0.827      ;
+; 0.689 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.841      ;
+; 0.693 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.845      ;
+; 0.694 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.846      ;
+; 0.696 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.848      ;
+; 0.700 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.852      ;
+; 0.700 ; control_gold:inst|STATE[4] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; -0.003     ; 0.849      ;
+; 0.702 ; control:inst1|inst12       ; control:inst1|inst11              ; CLK          ; CLK         ; 0.000        ; 0.002      ; 0.856      ;
+; 0.705 ; control:inst1|inst11       ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.857      ;
+; 0.706 ; control_gold:inst|STATE[1] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; -0.003     ; 0.855      ;
+; 0.706 ; control:inst1|inst12       ; control:inst1|inst8               ; CLK          ; CLK         ; 0.000        ; 0.002      ; 0.860      ;
+; 0.712 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.864      ;
+; 0.716 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.868      ;
+; 0.718 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.870      ;
+; 0.718 ; control_gold:inst|STATE[6] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; -0.003     ; 0.867      ;
+; 0.721 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.873      ;
+; 0.725 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.877      ;
+; 0.730 ; control:inst1|inst9        ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; 0.002      ; 0.884      ;
+; 0.733 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.885      ;
+; 0.741 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[4]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.893      ;
+; 0.755 ; control:inst1|inst8        ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.907      ;
+; 0.756 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.908      ;
+; 0.762 ; control:inst1|inst12       ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.914      ;
+; 0.763 ; control_gold:inst|STATE[5] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; -0.003     ; 0.912      ;
+; 0.763 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.915      ;
+; 0.765 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.917      ;
+; 0.766 ; control:inst1|inst8        ; control:inst1|inst7               ; CLK          ; CLK         ; 0.000        ; -0.002     ; 0.916      ;
+; 0.773 ; control_gold:inst|STATE[4] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.924      ;
+; 0.777 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[5]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.929      ;
+; 0.780 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.932      ;
+; 0.782 ; control_gold:inst|STATE[0] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; -0.003     ; 0.931      ;
+; 0.783 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.935      ;
+; 0.785 ; control:inst1|inst7        ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; 0.002      ; 0.939      ;
+; 0.787 ; control_gold:inst|STATE[5] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; -0.001     ; 0.938      ;
+; 0.805 ; control_gold:inst|STATE[2] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; -0.003     ; 0.954      ;
+; 0.809 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[0]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.961      ;
+; 0.816 ; control_gold:inst|STATE[4] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.968      ;
+; 0.819 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[2]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 0.971      ;
+; 0.851 ; control_gold:inst|STATE[6] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.003      ;
+; 0.851 ; control_gold:inst|STATE[5] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.003      ;
+; 0.858 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[1]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.010      ;
+; 0.867 ; control_gold:inst|STATE[3] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.018      ;
+; 0.877 ; control_gold:inst|STATE[1] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.028      ;
+; 0.892 ; control:inst1|inst12       ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; 0.002      ; 1.046      ;
+; 0.927 ; control_gold:inst|STATE[3] ; control_gold:inst|STATE[6]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.079      ;
+; 0.928 ; control_gold:inst|STATE[1] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.080      ;
+; 0.928 ; control_gold:inst|STATE[2] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.080      ;
+; 0.934 ; control_gold:inst|STATE[6] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.085      ;
+; 0.943 ; control_gold:inst|STATE[0] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.094      ;
+; 0.953 ; control_gold:inst|STATE[3] ; error_detector:inst2|state_error  ; CLK          ; CLK         ; 0.000        ; -0.003     ; 1.102      ;
+; 0.959 ; control_gold:inst|STATE[2] ; error_detector:inst2|output_error ; CLK          ; CLK         ; 0.000        ; -0.001     ; 1.110      ;
+; 0.969 ; control_gold:inst|STATE[0] ; control_gold:inst|STATE[3]        ; CLK          ; CLK         ; 0.000        ; 0.000      ; 1.121      ;
++-------+----------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLK'                                                                              ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                            ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLK   ; Rise       ; CLK                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control:inst1|inst                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control:inst1|inst                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control:inst1|inst10              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control:inst1|inst10              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control:inst1|inst11              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control:inst1|inst11              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control:inst1|inst12              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control:inst1|inst12              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control:inst1|inst7               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control:inst1|inst7               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control:inst1|inst8               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control:inst1|inst8               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control:inst1|inst9               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control:inst1|inst9               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control_gold:inst|STATE[0]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control_gold:inst|STATE[0]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control_gold:inst|STATE[1]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control_gold:inst|STATE[1]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control_gold:inst|STATE[2]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control_gold:inst|STATE[2]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control_gold:inst|STATE[3]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control_gold:inst|STATE[3]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control_gold:inst|STATE[4]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control_gold:inst|STATE[4]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control_gold:inst|STATE[5]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control_gold:inst|STATE[5]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; control_gold:inst|STATE[6]        ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; control_gold:inst|STATE[6]        ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; error_detector:inst2|output_error ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; error_detector:inst2|output_error ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK   ; Rise       ; error_detector:inst2|state_error  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK   ; Rise       ; error_detector:inst2|state_error  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK|combout                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK|combout                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|inclk[0]              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; CLK~clkctrl|outclk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; CLK~clkctrl|outclk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|inst10|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|inst10|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|inst11|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|inst11|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|inst12|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|inst12|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|inst7|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|inst7|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|inst8|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|inst8|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|inst9|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|inst9|clk                   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst1|inst|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst1|inst|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst2|output_error|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst2|output_error|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst2|state_error|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst2|state_error|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|STATE[0]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|STATE[0]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|STATE[1]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|STATE[1]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|STATE[2]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|STATE[2]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|STATE[3]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|STATE[3]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|STATE[4]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|STATE[4]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|STATE[5]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|STATE[5]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLK   ; Rise       ; inst|STATE[6]|clk                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLK   ; Rise       ; inst|STATE[6]|clk                 ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; END_LEFT  ; CLK        ; 2.378 ; 2.378 ; Rise       ; CLK             ;
+; END_MID   ; CLK        ; 2.405 ; 2.405 ; Rise       ; CLK             ;
+; END_RIGHT ; CLK        ; 2.509 ; 2.509 ; Rise       ; CLK             ;
+; LEFT      ; CLK        ; 2.950 ; 2.950 ; Rise       ; CLK             ;
+; MID       ; CLK        ; 1.209 ; 1.209 ; Rise       ; CLK             ;
+; RIGHT     ; CLK        ; 2.971 ; 2.971 ; Rise       ; CLK             ;
+; START     ; CLK        ; 2.339 ; 2.339 ; Rise       ; CLK             ;
+; TIME      ; CLK        ; 1.372 ; 1.372 ; Rise       ; CLK             ;
+; nOVER     ; CLK        ; 2.569 ; 2.569 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; END_LEFT  ; CLK        ; -1.868 ; -1.868 ; Rise       ; CLK             ;
+; END_MID   ; CLK        ; -2.181 ; -2.181 ; Rise       ; CLK             ;
+; END_RIGHT ; CLK        ; -1.896 ; -1.896 ; Rise       ; CLK             ;
+; LEFT      ; CLK        ; -2.199 ; -2.199 ; Rise       ; CLK             ;
+; MID       ; CLK        ; -0.513 ; -0.513 ; Rise       ; CLK             ;
+; RIGHT     ; CLK        ; -2.339 ; -2.339 ; Rise       ; CLK             ;
+; START     ; CLK        ; -1.906 ; -1.906 ; Rise       ; CLK             ;
+; TIME      ; CLK        ; -0.169 ; -0.169 ; Rise       ; CLK             ;
+; nOVER     ; CLK        ; -2.026 ; -2.026 ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; G_INC_MISS   ; CLK        ; 4.508 ; 4.508 ; Rise       ; CLK             ;
+; G_INC_SCORE  ; CLK        ; 4.538 ; 4.538 ; Rise       ; CLK             ;
+; G_LOAD_NOTE  ; CLK        ; 4.388 ; 4.388 ; Rise       ; CLK             ;
+; G_SHIFT      ; CLK        ; 4.468 ; 4.468 ; Rise       ; CLK             ;
+; G_STATE[*]   ; CLK        ; 3.868 ; 3.868 ; Rise       ; CLK             ;
+;  G_STATE[0]  ; CLK        ; 3.836 ; 3.836 ; Rise       ; CLK             ;
+;  G_STATE[1]  ; CLK        ; 3.754 ; 3.754 ; Rise       ; CLK             ;
+;  G_STATE[2]  ; CLK        ; 3.703 ; 3.703 ; Rise       ; CLK             ;
+;  G_STATE[3]  ; CLK        ; 3.868 ; 3.868 ; Rise       ; CLK             ;
+;  G_STATE[4]  ; CLK        ; 3.788 ; 3.788 ; Rise       ; CLK             ;
+;  G_STATE[5]  ; CLK        ; 3.813 ; 3.813 ; Rise       ; CLK             ;
+;  G_STATE[6]  ; CLK        ; 3.787 ; 3.787 ; Rise       ; CLK             ;
+; G_nCLRPT     ; CLK        ; 4.457 ; 4.457 ; Rise       ; CLK             ;
+; INC_MISS     ; CLK        ; 4.212 ; 4.212 ; Rise       ; CLK             ;
+; INC_SCORE    ; CLK        ; 4.223 ; 4.223 ; Rise       ; CLK             ;
+; LOAD_NOTE    ; CLK        ; 3.987 ; 3.987 ; Rise       ; CLK             ;
+; SHIFT        ; CLK        ; 4.021 ; 4.021 ; Rise       ; CLK             ;
+; STATE[*]     ; CLK        ; 3.830 ; 3.830 ; Rise       ; CLK             ;
+;  STATE[0]    ; CLK        ; 3.771 ; 3.771 ; Rise       ; CLK             ;
+;  STATE[1]    ; CLK        ; 3.825 ; 3.825 ; Rise       ; CLK             ;
+;  STATE[2]    ; CLK        ; 3.798 ; 3.798 ; Rise       ; CLK             ;
+;  STATE[3]    ; CLK        ; 3.812 ; 3.812 ; Rise       ; CLK             ;
+;  STATE[4]    ; CLK        ; 3.787 ; 3.787 ; Rise       ; CLK             ;
+;  STATE[5]    ; CLK        ; 3.795 ; 3.795 ; Rise       ; CLK             ;
+;  STATE[6]    ; CLK        ; 3.830 ; 3.830 ; Rise       ; CLK             ;
+; nCLRPT       ; CLK        ; 3.801 ; 3.801 ; Rise       ; CLK             ;
+; output_error ; CLK        ; 3.834 ; 3.834 ; Rise       ; CLK             ;
+; state_error  ; CLK        ; 3.767 ; 3.767 ; Rise       ; CLK             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; G_INC_MISS   ; CLK        ; 4.362 ; 4.362 ; Rise       ; CLK             ;
+; G_INC_SCORE  ; CLK        ; 4.316 ; 4.316 ; Rise       ; CLK             ;
+; G_LOAD_NOTE  ; CLK        ; 4.161 ; 4.161 ; Rise       ; CLK             ;
+; G_SHIFT      ; CLK        ; 4.191 ; 4.191 ; Rise       ; CLK             ;
+; G_STATE[*]   ; CLK        ; 3.703 ; 3.703 ; Rise       ; CLK             ;
+;  G_STATE[0]  ; CLK        ; 3.836 ; 3.836 ; Rise       ; CLK             ;
+;  G_STATE[1]  ; CLK        ; 3.754 ; 3.754 ; Rise       ; CLK             ;
+;  G_STATE[2]  ; CLK        ; 3.703 ; 3.703 ; Rise       ; CLK             ;
+;  G_STATE[3]  ; CLK        ; 3.868 ; 3.868 ; Rise       ; CLK             ;
+;  G_STATE[4]  ; CLK        ; 3.788 ; 3.788 ; Rise       ; CLK             ;
+;  G_STATE[5]  ; CLK        ; 3.813 ; 3.813 ; Rise       ; CLK             ;
+;  G_STATE[6]  ; CLK        ; 3.787 ; 3.787 ; Rise       ; CLK             ;
+; G_nCLRPT     ; CLK        ; 4.118 ; 4.118 ; Rise       ; CLK             ;
+; INC_MISS     ; CLK        ; 4.051 ; 4.051 ; Rise       ; CLK             ;
+; INC_SCORE    ; CLK        ; 4.173 ; 4.173 ; Rise       ; CLK             ;
+; LOAD_NOTE    ; CLK        ; 3.987 ; 3.987 ; Rise       ; CLK             ;
+; SHIFT        ; CLK        ; 4.021 ; 4.021 ; Rise       ; CLK             ;
+; STATE[*]     ; CLK        ; 3.771 ; 3.771 ; Rise       ; CLK             ;
+;  STATE[0]    ; CLK        ; 3.771 ; 3.771 ; Rise       ; CLK             ;
+;  STATE[1]    ; CLK        ; 3.825 ; 3.825 ; Rise       ; CLK             ;
+;  STATE[2]    ; CLK        ; 3.798 ; 3.798 ; Rise       ; CLK             ;
+;  STATE[3]    ; CLK        ; 3.812 ; 3.812 ; Rise       ; CLK             ;
+;  STATE[4]    ; CLK        ; 3.787 ; 3.787 ; Rise       ; CLK             ;
+;  STATE[5]    ; CLK        ; 3.795 ; 3.795 ; Rise       ; CLK             ;
+;  STATE[6]    ; CLK        ; 3.830 ; 3.830 ; Rise       ; CLK             ;
+; nCLRPT       ; CLK        ; 3.801 ; 3.801 ; Rise       ; CLK             ;
+; output_error ; CLK        ; 3.834 ; 3.834 ; Rise       ; CLK             ;
+; state_error  ; CLK        ; 3.767 ; 3.767 ; Rise       ; CLK             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; LEFT       ; G_INC_SCORE ; 5.951 ; 5.951 ; 5.951 ; 5.951 ;
+; LEFT       ; INC_SCORE   ; 5.735 ;       ;       ; 5.735 ;
+; MID        ; G_INC_SCORE ; 4.201 ;       ;       ; 4.201 ;
+; MID        ; INC_SCORE   ; 4.200 ;       ;       ; 4.200 ;
+; RIGHT      ; G_INC_SCORE ; 5.882 ;       ;       ; 5.882 ;
+; RIGHT      ; INC_SCORE   ; 5.882 ;       ;       ; 5.882 ;
+; TIME       ; G_INC_MISS  ; 4.123 ;       ;       ; 4.123 ;
+; TIME       ; G_LOAD_NOTE ; 3.882 ;       ;       ; 3.882 ;
+; TIME       ; G_SHIFT     ; 3.960 ;       ;       ; 3.960 ;
+; TIME       ; INC_MISS    ; 4.088 ;       ;       ; 4.088 ;
+; TIME       ; LOAD_NOTE   ; 3.922 ;       ;       ; 3.922 ;
+; TIME       ; SHIFT       ; 3.949 ;       ;       ; 3.949 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; LEFT       ; G_INC_SCORE ; 5.951 ; 5.951 ; 5.951 ; 5.951 ;
+; LEFT       ; INC_SCORE   ; 5.735 ;       ;       ; 5.735 ;
+; MID        ; G_INC_SCORE ; 4.201 ;       ;       ; 4.201 ;
+; MID        ; INC_SCORE   ; 4.200 ;       ;       ; 4.200 ;
+; RIGHT      ; G_INC_SCORE ; 5.882 ;       ;       ; 5.882 ;
+; RIGHT      ; INC_SCORE   ; 5.882 ;       ;       ; 5.882 ;
+; TIME       ; G_INC_MISS  ; 4.123 ;       ;       ; 4.123 ;
+; TIME       ; G_LOAD_NOTE ; 3.882 ;       ;       ; 3.882 ;
+; TIME       ; G_SHIFT     ; 3.960 ;       ;       ; 3.960 ;
+; TIME       ; INC_MISS    ; 4.088 ;       ;       ; 4.088 ;
+; TIME       ; LOAD_NOTE   ; 3.922 ;       ;       ; 3.922 ;
+; TIME       ; SHIFT       ; 3.949 ;       ;       ; 3.949 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.770  ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  CLK             ; -1.770  ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -16.16  ; 0.0   ; 0.0      ; 0.0     ; -17.38              ;
+;  CLK             ; -16.160 ; 0.000 ; N/A      ; N/A     ; -17.380             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; END_LEFT  ; CLK        ; 4.586 ; 4.586 ; Rise       ; CLK             ;
+; END_MID   ; CLK        ; 4.576 ; 4.576 ; Rise       ; CLK             ;
+; END_RIGHT ; CLK        ; 4.873 ; 4.873 ; Rise       ; CLK             ;
+; LEFT      ; CLK        ; 5.905 ; 5.905 ; Rise       ; CLK             ;
+; MID       ; CLK        ; 3.034 ; 3.034 ; Rise       ; CLK             ;
+; RIGHT     ; CLK        ; 5.889 ; 5.889 ; Rise       ; CLK             ;
+; START     ; CLK        ; 4.467 ; 4.467 ; Rise       ; CLK             ;
+; TIME      ; CLK        ; 3.486 ; 3.486 ; Rise       ; CLK             ;
+; nOVER     ; CLK        ; 4.996 ; 4.996 ; Rise       ; CLK             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; END_LEFT  ; CLK        ; -1.868 ; -1.868 ; Rise       ; CLK             ;
+; END_MID   ; CLK        ; -2.181 ; -2.181 ; Rise       ; CLK             ;
+; END_RIGHT ; CLK        ; -1.896 ; -1.896 ; Rise       ; CLK             ;
+; LEFT      ; CLK        ; -2.199 ; -2.199 ; Rise       ; CLK             ;
+; MID       ; CLK        ; -0.513 ; -0.513 ; Rise       ; CLK             ;
+; RIGHT     ; CLK        ; -2.339 ; -2.339 ; Rise       ; CLK             ;
+; START     ; CLK        ; -1.906 ; -1.906 ; Rise       ; CLK             ;
+; TIME      ; CLK        ; -0.169 ; -0.169 ; Rise       ; CLK             ;
+; nOVER     ; CLK        ; -2.026 ; -2.026 ; Rise       ; CLK             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; G_INC_MISS   ; CLK        ; 8.376 ; 8.376 ; Rise       ; CLK             ;
+; G_INC_SCORE  ; CLK        ; 8.409 ; 8.409 ; Rise       ; CLK             ;
+; G_LOAD_NOTE  ; CLK        ; 8.012 ; 8.012 ; Rise       ; CLK             ;
+; G_SHIFT      ; CLK        ; 8.153 ; 8.153 ; Rise       ; CLK             ;
+; G_STATE[*]   ; CLK        ; 6.943 ; 6.943 ; Rise       ; CLK             ;
+;  G_STATE[0]  ; CLK        ; 6.862 ; 6.862 ; Rise       ; CLK             ;
+;  G_STATE[1]  ; CLK        ; 6.649 ; 6.649 ; Rise       ; CLK             ;
+;  G_STATE[2]  ; CLK        ; 6.566 ; 6.566 ; Rise       ; CLK             ;
+;  G_STATE[3]  ; CLK        ; 6.943 ; 6.943 ; Rise       ; CLK             ;
+;  G_STATE[4]  ; CLK        ; 6.684 ; 6.684 ; Rise       ; CLK             ;
+;  G_STATE[5]  ; CLK        ; 6.841 ; 6.841 ; Rise       ; CLK             ;
+;  G_STATE[6]  ; CLK        ; 6.757 ; 6.757 ; Rise       ; CLK             ;
+; G_nCLRPT     ; CLK        ; 8.144 ; 8.144 ; Rise       ; CLK             ;
+; INC_MISS     ; CLK        ; 7.641 ; 7.641 ; Rise       ; CLK             ;
+; INC_SCORE    ; CLK        ; 7.801 ; 7.801 ; Rise       ; CLK             ;
+; LOAD_NOTE    ; CLK        ; 7.128 ; 7.128 ; Rise       ; CLK             ;
+; SHIFT        ; CLK        ; 7.276 ; 7.276 ; Rise       ; CLK             ;
+; STATE[*]     ; CLK        ; 6.843 ; 6.843 ; Rise       ; CLK             ;
+;  STATE[0]    ; CLK        ; 6.769 ; 6.769 ; Rise       ; CLK             ;
+;  STATE[1]    ; CLK        ; 6.843 ; 6.843 ; Rise       ; CLK             ;
+;  STATE[2]    ; CLK        ; 6.688 ; 6.688 ; Rise       ; CLK             ;
+;  STATE[3]    ; CLK        ; 6.833 ; 6.833 ; Rise       ; CLK             ;
+;  STATE[4]    ; CLK        ; 6.793 ; 6.793 ; Rise       ; CLK             ;
+;  STATE[5]    ; CLK        ; 6.801 ; 6.801 ; Rise       ; CLK             ;
+;  STATE[6]    ; CLK        ; 6.737 ; 6.737 ; Rise       ; CLK             ;
+; nCLRPT       ; CLK        ; 6.799 ; 6.799 ; Rise       ; CLK             ;
+; output_error ; CLK        ; 6.711 ; 6.711 ; Rise       ; CLK             ;
+; state_error  ; CLK        ; 6.757 ; 6.757 ; Rise       ; CLK             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; G_INC_MISS   ; CLK        ; 4.362 ; 4.362 ; Rise       ; CLK             ;
+; G_INC_SCORE  ; CLK        ; 4.316 ; 4.316 ; Rise       ; CLK             ;
+; G_LOAD_NOTE  ; CLK        ; 4.161 ; 4.161 ; Rise       ; CLK             ;
+; G_SHIFT      ; CLK        ; 4.191 ; 4.191 ; Rise       ; CLK             ;
+; G_STATE[*]   ; CLK        ; 3.703 ; 3.703 ; Rise       ; CLK             ;
+;  G_STATE[0]  ; CLK        ; 3.836 ; 3.836 ; Rise       ; CLK             ;
+;  G_STATE[1]  ; CLK        ; 3.754 ; 3.754 ; Rise       ; CLK             ;
+;  G_STATE[2]  ; CLK        ; 3.703 ; 3.703 ; Rise       ; CLK             ;
+;  G_STATE[3]  ; CLK        ; 3.868 ; 3.868 ; Rise       ; CLK             ;
+;  G_STATE[4]  ; CLK        ; 3.788 ; 3.788 ; Rise       ; CLK             ;
+;  G_STATE[5]  ; CLK        ; 3.813 ; 3.813 ; Rise       ; CLK             ;
+;  G_STATE[6]  ; CLK        ; 3.787 ; 3.787 ; Rise       ; CLK             ;
+; G_nCLRPT     ; CLK        ; 4.118 ; 4.118 ; Rise       ; CLK             ;
+; INC_MISS     ; CLK        ; 4.051 ; 4.051 ; Rise       ; CLK             ;
+; INC_SCORE    ; CLK        ; 4.173 ; 4.173 ; Rise       ; CLK             ;
+; LOAD_NOTE    ; CLK        ; 3.987 ; 3.987 ; Rise       ; CLK             ;
+; SHIFT        ; CLK        ; 4.021 ; 4.021 ; Rise       ; CLK             ;
+; STATE[*]     ; CLK        ; 3.771 ; 3.771 ; Rise       ; CLK             ;
+;  STATE[0]    ; CLK        ; 3.771 ; 3.771 ; Rise       ; CLK             ;
+;  STATE[1]    ; CLK        ; 3.825 ; 3.825 ; Rise       ; CLK             ;
+;  STATE[2]    ; CLK        ; 3.798 ; 3.798 ; Rise       ; CLK             ;
+;  STATE[3]    ; CLK        ; 3.812 ; 3.812 ; Rise       ; CLK             ;
+;  STATE[4]    ; CLK        ; 3.787 ; 3.787 ; Rise       ; CLK             ;
+;  STATE[5]    ; CLK        ; 3.795 ; 3.795 ; Rise       ; CLK             ;
+;  STATE[6]    ; CLK        ; 3.830 ; 3.830 ; Rise       ; CLK             ;
+; nCLRPT       ; CLK        ; 3.801 ; 3.801 ; Rise       ; CLK             ;
+; output_error ; CLK        ; 3.834 ; 3.834 ; Rise       ; CLK             ;
+; state_error  ; CLK        ; 3.767 ; 3.767 ; Rise       ; CLK             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------+
+; Progagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; LEFT       ; G_INC_SCORE ; 10.926 ; 10.926 ; 10.926 ; 10.926 ;
+; LEFT       ; INC_SCORE   ; 10.372 ;        ;        ; 10.372 ;
+; MID        ; G_INC_SCORE ; 8.141  ;        ;        ; 8.141  ;
+; MID        ; INC_SCORE   ; 8.143  ;        ;        ; 8.143  ;
+; RIGHT      ; G_INC_SCORE ; 10.747 ;        ;        ; 10.747 ;
+; RIGHT      ; INC_SCORE   ; 10.748 ;        ;        ; 10.748 ;
+; TIME       ; G_INC_MISS  ; 8.053  ;        ;        ; 8.053  ;
+; TIME       ; G_LOAD_NOTE ; 7.358  ;        ;        ; 7.358  ;
+; TIME       ; G_SHIFT     ; 7.515  ;        ;        ; 7.515  ;
+; TIME       ; INC_MISS    ; 7.818  ;        ;        ; 7.818  ;
+; TIME       ; LOAD_NOTE   ; 7.392  ;        ;        ; 7.392  ;
+; TIME       ; SHIFT       ; 7.531  ;        ;        ; 7.531  ;
++------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------+
+; Minimum Progagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; LEFT       ; G_INC_SCORE ; 5.951 ; 5.951 ; 5.951 ; 5.951 ;
+; LEFT       ; INC_SCORE   ; 5.735 ;       ;       ; 5.735 ;
+; MID        ; G_INC_SCORE ; 4.201 ;       ;       ; 4.201 ;
+; MID        ; INC_SCORE   ; 4.200 ;       ;       ; 4.200 ;
+; RIGHT      ; G_INC_SCORE ; 5.882 ;       ;       ; 5.882 ;
+; RIGHT      ; INC_SCORE   ; 5.882 ;       ;       ; 5.882 ;
+; TIME       ; G_INC_MISS  ; 4.123 ;       ;       ; 4.123 ;
+; TIME       ; G_LOAD_NOTE ; 3.882 ;       ;       ; 3.882 ;
+; TIME       ; G_SHIFT     ; 3.960 ;       ;       ; 3.960 ;
+; TIME       ; INC_MISS    ; 4.088 ;       ;       ; 4.088 ;
+; TIME       ; LOAD_NOTE   ; 3.922 ;       ;       ; 3.922 ;
+; TIME       ; SHIFT       ; 3.949 ;       ;       ; 3.949 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 152      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 152      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 81    ; 81   ;
+; Unconstrained Output Ports      ; 26    ; 26   ;
+; Unconstrained Output Port Paths ; 72    ; 72   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Feb 04 20:31:36 2018
+Info: Command: quartus_sta Lab6_test -c Lab6_test
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Lab6_test.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLK CLK
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.770
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.770       -16.160 CLK 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -17.380 CLK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.244
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.244        -0.996 CLK 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -17.380 CLK 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 464 megabytes
+    Info: Processing ended: Sun Feb 04 20:31:37 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

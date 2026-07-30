@@ -1,0 +1,87 @@
+
+**** 03/24/18 13:12:40 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Prelab2"  [ c:\cadence\pspice work\prelab 2-pspicefiles\schematic1\prelab2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Prelab2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.05 0 10u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ECE250HW3
+V_V1         VIN 0 PWL
++ TIME_SCALE_FACTOR={1/60}
++ VALUE_SCALE_FACTOR=15
++repeat forever
++(0,0) (0.25,1) (0.75,-1) (1,0)
++endrepeat
+R_R1         0 VOUT 1k 
+V_V2         VIN2 0 PWL
++ TIME_SCALE_FACTOR={1/60}
++ VALUE_SCALE_FACTOR=30
++repeat forever
++(0,0) (0.25,1) (0.75,-1) (1,0)
++endrepeat
+V_V3         VIN3 0 PWL
++ TIME_SCALE_FACTOR={1/60}
++ VALUE_SCALE_FACTOR=10
++repeat forever
++(0,0) (0.25,1) (0.75,-1) (1,0)
++endrepeat
+R_R3         VIN3 VOUT3 1k 
+D_D3         VOUT3 0 D1N4004 
+D_D4         VOUT4 N02645 D1N4004 
+R_R4         VIN4 VOUT4 1k 
+V_V4         VIN4 0 PWL
++ TIME_SCALE_FACTOR={1/60}
++ VALUE_SCALE_FACTOR=10
++repeat forever
++(0,0) (0.25,1) (0.75,-1) (1,0)
++endrepeat
+V_V5         N02645 0  DC 5
+V_V6         VP VM 
++SIN 0 10 1 0 0 0
+D_D5         VP VO D1N4001 
+D_D6         0 VM D1N4001 
+D_D7         0 VP D1N4001 
+D_D8         VM VO D1N4001 
+R_R5         0 VO 1k 
+R_R6         VIN VOUT 1k 
+D_D9         VIN VOUT D1N4733 
+R_R7         VIN2 N05375 1k 
+D_D10         N05375 N05391 D1N4001 
+D_D11         N05395 N05375 D1N4001 
+C_C1         N05391 0 100u 
+C_C2         N05395 0 100u 
+V_V7         N05391 0  DC 15
+V_V8         0 N05395  DC 15
+X_U1A         N05375 0 N05391 N05395 VOUT2 TL064/TI
+
+**** RESUMING Prelab2.cir ****
+.END
+
+
+ERROR(ORPSIM-15108): Subcircuit TL064/TI used by X_U1A is undefined
+

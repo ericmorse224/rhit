@@ -1,0 +1,205 @@
+
+**** 10/11/18 19:53:07 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-lab5"  [ c:\cadence\pspice work\ece351lab5-pspicefiles\schematic1\lab5.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "lab5.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ECE351LAB5
+R_Rl         N01231 0 8 
+V_Vcc         N00261 0  DC 15
+V_Vee         0 N00857  DC 15
+Q_Q3         N05226 N00294 N01231 Q2N3906
+C_C3         N02143 0 100u 
+Q_Q7         N02557 N02645 N02567 TIP32
+V_Vcc1         N02143 0  DC 15
+V_Vee1         0 N02557  DC 15
+R_R1         VOUT 0 8 
+R_R2         N02339 VOUT 1 
+R_R4         N02143 N02277 3.3k 
+Q_Q9         N02143 N02313 N02339 TIP31
+D_D5         N02277 N03570 D1N4001 
+D_D6         N03570 N02429 D1N4001 
+D_D7         N02429 N03574 D1N4001 
+D_D8         N03574 N02641 D1N4001 
+D_D11         N00401 N00290 D1N4001 
+D_D12         N00290 N00294 D1N4001 
+C_C4         0 N02557 100u 
+R_R5         N02567 VOUT 1 
+R_R6         N02557 N02641 3.3k 
+Q_Q10         N00261 N00401 N01231 TIP31
+Q_Q11         N01231 N05226 N00857 TIP31
+I_I1         N00261 N00401 DC 50m
+V_V2         N00294 0 
++SIN 0 10 1k 0 0 0
+Q_Q15         N02557 N02641 N02645 Q2N3906
+Q_Q16         N02143 N02277 N02313 Q2N3904
+V_V1         N02429 0 
++SIN 0 10 1k 0 0 0
+
+**** RESUMING lab5.cir ****
+.END
+
+**** 10/11/18 19:53:07 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-lab5"  [ c:\cadence\pspice work\ece351lab5-pspicefiles\schematic1\lab5.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4001         
+          IS   14.110000E-09 
+           N    1.984        
+         IKF   94.81         
+          BV   75            
+         IBV   10.000000E-06 
+          RS     .03389      
+          TT    5.700000E-06 
+         CJO   25.890000E-12 
+          VJ     .3245       
+           M     .44         
+
+
+**** 10/11/18 19:53:07 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-lab5"  [ c:\cadence\pspice work\ece351lab5-pspicefiles\schematic1\lab5.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N3906         Q2N3904         TIP32           TIP31           
+               PNP             NPN             PNP             NPN             
+       LEVEL    1               1               1               1            
+          IS    1.410000E-15    6.734000E-15   51.230000E-15    2.447000E-12 
+          BF  180.7           416.4           434.1           208.2          
+          NF    1               1               1               1            
+         VAF   18.7            74.03          100             100            
+         IKF     .08             .06678          .3883           .9743       
+         ISE                    6.734000E-15   51.230000E-15   70.690000E-12 
+          NE                    1.259           1.22            1.565        
+          BR    4.977            .7371         55.47           12.59         
+          NR    1               1               1               1            
+         IKR                                   10.87            3.86         
+         ISC                                   51.230000E-15   11.680000E-09 
+          NC                                    1.205           1.835        
+          NK                                     .5544           .6134       
+         ISS    0               0               0               0            
+          RB   10              10                .1              .1          
+          RE    0               0               0               0            
+          RC    2.5             1                .3443           .4685       
+         CJE    8.063000E-12    4.493000E-12  179.900000E-12  188.500000E-12 
+         VJE     .75             .75             .75             .75         
+         MJE     .3677           .2593           .4294           .4878       
+         CJC    9.728000E-12    3.638000E-12  136.900000E-12  142.000000E-12 
+         VJC     .75             .75             .75             .75         
+         MJC     .5776           .3085           .3155           .4353       
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          TF  179.300000E-12  301.200000E-12   13.050000E-09   19.850000E-09 
+         XTF    6               2               1.573           5.945        
+         VTF    4               4              10              10            
+         ITF     .4              .4             6.85          164.1          
+          TR   33.420000E-09  239.500000E-09   20.250000E-09  194.200000E-09 
+         XTB    1.5             1.5             2.2             1.5          
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.2             2.42            2.2             2.42         
+           D     .52             .87             .52             .87         
+
+
+**** 10/11/18 19:53:07 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-lab5"  [ c:\cadence\pspice work\ece351lab5-pspicefiles\schematic1\lab5.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( VOUT)     .0523  (N00261)   15.0000 (N00290)     .7474 (N00294)    0.0000     
+
+(N00401)    1.4947 (N00857)  -15.0000 (N01231)     .7690 (N02143)   15.0000     
+
+(N02277)    1.2926 (N02313)     .6670 (N02339)     .0757 (N02429)    0.0000     
+
+(N02557)  -15.0000 (N02567)     .0355 (N02641)   -1.2926 (N02645)    -.6478     
+
+(N03570)     .6463 (N03574)    -.6463 (N05226)  -14.2790 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vcc       -1.289E+00
+    V_Vee       -1.164E+00
+    V_Vcc1      -2.754E-02
+    V_Vee1      -2.100E-02
+    V_V2         2.932E-02
+    V_V1        -1.463E-06
+
+    TOTAL POWER DISSIPATION   3.75E+01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/11/18 19:53:07 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-lab5"  [ c:\cadence\pspice work\ece351lab5-pspicefiles\schematic1\lab5.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .06
+

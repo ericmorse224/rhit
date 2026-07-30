@@ -1,0 +1,9 @@
+* source ECE362LOWPASS
+R_R1         N00279 N00182 1k 
+R_R2         VOUT 0 1k 
+R_R3         VOUT N00182 2.5k 
+C_C1         VOUT N00182 10n 
+V_V1         N00279 0  AC 1 0
+V_V2         15V 0  DC 15
+V_V3         0 -15V  DC 15
+X_U1A         0 N00182 15V -15V VOUT TL072/301/TI

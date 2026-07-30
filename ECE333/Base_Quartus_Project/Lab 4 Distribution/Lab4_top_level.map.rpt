@@ -1,0 +1,447 @@
+Analysis & Synthesis report for Lab4_top_level
+Wed Jan 17 14:48:57 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "bcd_count2:inst12|BCD_INC:inst11|inc1b:inc6"
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Jan 17 14:48:57 2018           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; Lab4_top_level                                  ;
+; Top-level Entity Name              ; Lab4_top_level                                  ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 75                                              ;
+;     Total combinational functions  ; 72                                              ;
+;     Dedicated logic registers      ; 22                                              ;
+; Total registers                    ; 22                                              ;
+; Total pins                         ; 61                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; Lab4_top_level     ; Lab4_top_level     ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; Off                ; Off                ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------------------+---------+
+; bcd_count2.bdf                   ; yes             ; User Block Diagram/Schematic File        ; C:/altera/13.0sp1/Base_Quartus_Project/Lab 4 Distribution/bcd_count2.bdf     ;         ;
+; dff_enrst.bdf                    ; yes             ; User Block Diagram/Schematic File        ; C:/altera/13.0sp1/Base_Quartus_Project/Lab 4 Distribution/dff_enrst.bdf      ;         ;
+; edge_det.bdf                     ; yes             ; User Block Diagram/Schematic File        ; C:/altera/13.0sp1/Base_Quartus_Project/Lab 4 Distribution/edge_det.bdf       ;         ;
+; Lab4_top_level.bdf               ; yes             ; User Block Diagram/Schematic File        ; C:/altera/13.0sp1/Base_Quartus_Project/Lab 4 Distribution/Lab4_top_level.bdf ;         ;
+; bcd_7seg.bdf                     ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/altera/13.0sp1/Base_Quartus_Project/Lab 4 Distribution/bcd_7seg.bdf       ;         ;
+; segb.v                           ; yes             ; Auto-Found Verilog HDL File              ; C:/altera/13.0sp1/Base_Quartus_Project/Lab 4 Distribution/segb.v             ;         ;
+; segd.v                           ; yes             ; Auto-Found Verilog HDL File              ; C:/altera/13.0sp1/Base_Quartus_Project/Lab 4 Distribution/segd.v             ;         ;
+; sege.v                           ; yes             ; Auto-Found Verilog HDL File              ; C:/altera/13.0sp1/Base_Quartus_Project/Lab 4 Distribution/sege.v             ;         ;
+; segf.v                           ; yes             ; Auto-Found Verilog HDL File              ; C:/altera/13.0sp1/Base_Quartus_Project/Lab 4 Distribution/segf.v             ;         ;
+; segg.v                           ; yes             ; Auto-Found Verilog HDL File              ; C:/altera/13.0sp1/Base_Quartus_Project/Lab 4 Distribution/segg.v             ;         ;
+; sega.v                           ; yes             ; Auto-Found Verilog HDL File              ; C:/altera/13.0sp1/Base_Quartus_Project/Lab 4 Distribution/sega.v             ;         ;
+; segc.v                           ; yes             ; Auto-Found Verilog HDL File              ; C:/altera/13.0sp1/Base_Quartus_Project/Lab 4 Distribution/segc.v             ;         ;
+; bcd_inc.v                        ; yes             ; Auto-Found Verilog HDL File              ; C:/altera/13.0sp1/Base_Quartus_Project/Lab 4 Distribution/bcd_inc.v          ;         ;
+; inc1b.v                          ; yes             ; Auto-Found Verilog HDL File              ; C:/altera/13.0sp1/Base_Quartus_Project/Lab 4 Distribution/inc1b.v            ;         ;
+; ten_detect.v                     ; yes             ; Auto-Found Verilog HDL File              ; C:/altera/13.0sp1/Base_Quartus_Project/Lab 4 Distribution/ten_detect.v       ;         ;
+; fix_bcd.v                        ; yes             ; Auto-Found Verilog HDL File              ; C:/altera/13.0sp1/Base_Quartus_Project/Lab 4 Distribution/fix_bcd.v          ;         ;
++----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 75       ;
+;                                             ;          ;
+; Total combinational functions               ; 72       ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 62       ;
+;     -- 3 input functions                    ; 6        ;
+;     -- <=2 input functions                  ; 4        ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 72       ;
+;     -- arithmetic mode                      ; 0        ;
+;                                             ;          ;
+; Total registers                             ; 22       ;
+;     -- Dedicated logic registers            ; 22       ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 61       ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+; Maximum fan-out node                        ; CLOCK_50 ;
+; Maximum fan-out                             ; 22       ;
+; Total fan-out                               ; 368      ;
+; Average fan-out                             ; 2.37     ;
++---------------------------------------------+----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                      ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                              ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
+; |Lab4_top_level            ; 72 (0)            ; 22 (0)       ; 0           ; 0            ; 0       ; 0         ; 61   ; 0            ; |Lab4_top_level                                                  ; work         ;
+;    |bcd_7seg:inst10|       ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst10                                  ; work         ;
+;       |segA:inst|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst10|segA:inst                        ; work         ;
+;       |segB:inst1|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst10|segB:inst1                       ; work         ;
+;       |segC:inst2|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst10|segC:inst2                       ; work         ;
+;       |segD:inst3|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst10|segD:inst3                       ; work         ;
+;       |segE:inst4|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst10|segE:inst4                       ; work         ;
+;       |segF:inst5|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst10|segF:inst5                       ; work         ;
+;       |segG:inst6|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst10|segG:inst6                       ; work         ;
+;    |bcd_7seg:inst11|       ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst11                                  ; work         ;
+;       |segA:inst|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst11|segA:inst                        ; work         ;
+;       |segB:inst1|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst11|segB:inst1                       ; work         ;
+;       |segC:inst2|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst11|segC:inst2                       ; work         ;
+;       |segD:inst3|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst11|segD:inst3                       ; work         ;
+;       |segE:inst4|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst11|segE:inst4                       ; work         ;
+;       |segF:inst5|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst11|segF:inst5                       ; work         ;
+;       |segG:inst6|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst11|segG:inst6                       ; work         ;
+;    |bcd_7seg:inst1|        ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst1                                   ; work         ;
+;       |segA:inst|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst1|segA:inst                         ; work         ;
+;       |segB:inst1|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst1|segB:inst1                        ; work         ;
+;       |segC:inst2|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst1|segC:inst2                        ; work         ;
+;       |segD:inst3|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst1|segD:inst3                        ; work         ;
+;       |segE:inst4|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst1|segE:inst4                        ; work         ;
+;       |segF:inst5|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst1|segF:inst5                        ; work         ;
+;       |segG:inst6|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst1|segG:inst6                        ; work         ;
+;    |bcd_7seg:inst|         ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst                                    ; work         ;
+;       |segA:inst|          ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst|segA:inst                          ; work         ;
+;       |segB:inst1|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst|segB:inst1                         ; work         ;
+;       |segC:inst2|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst|segC:inst2                         ; work         ;
+;       |segD:inst3|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst|segD:inst3                         ; work         ;
+;       |segE:inst4|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst|segE:inst4                         ; work         ;
+;       |segF:inst5|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst|segF:inst5                         ; work         ;
+;       |segG:inst6|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_7seg:inst|segG:inst6                         ; work         ;
+;    |bcd_count2:inst12|     ; 20 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst12                                ; work         ;
+;       |BCD_INC:inst11|     ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst12|BCD_INC:inst11                 ; work         ;
+;          |ten_detect:ten1| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst12|BCD_INC:inst11|ten_detect:ten1 ; work         ;
+;       |BCD_INC:inst16|     ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst12|BCD_INC:inst16                 ; work         ;
+;          |inc1b:inc4|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst12|BCD_INC:inst16|inc1b:inc4      ; work         ;
+;          |inc1b:inc5|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst12|BCD_INC:inst16|inc1b:inc5      ; work         ;
+;       |dff_enrst:inst14|   ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst12|dff_enrst:inst14               ; work         ;
+;       |dff_enrst:inst15|   ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst12|dff_enrst:inst15               ; work         ;
+;       |dff_enrst:inst18|   ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst12|dff_enrst:inst18               ; work         ;
+;       |dff_enrst:inst19|   ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst12|dff_enrst:inst19               ; work         ;
+;       |dff_enrst:inst20|   ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst12|dff_enrst:inst20               ; work         ;
+;       |dff_enrst:inst5|    ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst12|dff_enrst:inst5                ; work         ;
+;       |dff_enrst:inst7|    ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst12|dff_enrst:inst7                ; work         ;
+;       |dff_enrst:inst8|    ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst12|dff_enrst:inst8                ; work         ;
+;    |bcd_count2:inst2|      ; 20 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst2                                 ; work         ;
+;       |BCD_INC:inst11|     ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst2|BCD_INC:inst11                  ; work         ;
+;          |ten_detect:ten1| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst2|BCD_INC:inst11|ten_detect:ten1  ; work         ;
+;       |BCD_INC:inst16|     ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst2|BCD_INC:inst16                  ; work         ;
+;          |inc1b:inc4|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst2|BCD_INC:inst16|inc1b:inc4       ; work         ;
+;          |inc1b:inc5|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst2|BCD_INC:inst16|inc1b:inc5       ; work         ;
+;       |dff_enrst:inst14|   ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst2|dff_enrst:inst14                ; work         ;
+;       |dff_enrst:inst15|   ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst2|dff_enrst:inst15                ; work         ;
+;       |dff_enrst:inst18|   ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst2|dff_enrst:inst18                ; work         ;
+;       |dff_enrst:inst19|   ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst2|dff_enrst:inst19                ; work         ;
+;       |dff_enrst:inst20|   ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst2|dff_enrst:inst20                ; work         ;
+;       |dff_enrst:inst5|    ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst2|dff_enrst:inst5                 ; work         ;
+;       |dff_enrst:inst7|    ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst2|dff_enrst:inst7                 ; work         ;
+;       |dff_enrst:inst8|    ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|bcd_count2:inst2|dff_enrst:inst8                 ; work         ;
+;    |edge_det:inst13|       ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|edge_det:inst13                                  ; work         ;
+;    |edge_det:inst8|        ; 1 (1)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|edge_det:inst8                                   ; work         ;
+;    |edge_det:inst9|        ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Lab4_top_level|edge_det:inst9                                   ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 22    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 22    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bcd_count2:inst12|BCD_INC:inst11|inc1b:inc6"                                        ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Jan 17 14:48:56 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab4_top_level -c Lab4_top_level
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file bcd_count2.bdf
+    Info (12023): Found entity 1: bcd_count2
+Info (12021): Found 1 design units, including 1 entities, in source file dff_enrst.bdf
+    Info (12023): Found entity 1: dff_enrst
+Info (12021): Found 1 design units, including 1 entities, in source file edge_det.bdf
+    Info (12023): Found entity 1: edge_det
+Info (12021): Found 1 design units, including 1 entities, in source file edge_det_mealy.bdf
+    Info (12023): Found entity 1: edge_det_mealy
+Info (12021): Found 1 design units, including 1 entities, in source file lab4_top_level.bdf
+    Info (12023): Found entity 1: Lab4_top_level
+Info (12021): Found 1 design units, including 1 entities, in source file mealy_vs_moore.bdf
+    Info (12023): Found entity 1: mealy_vs_moore
+Info (12127): Elaborating entity "Lab4_top_level" for the top level hierarchy
+Warning (275089): Not all bits in bus "KEY[3..0]" are used
+Warning (12125): Using design file bcd_7seg.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: bcd_7seg
+Info (12128): Elaborating entity "bcd_7seg" for hierarchy "bcd_7seg:inst7"
+Warning (12125): Using design file segb.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: segB
+Warning (12300): Found the following files while searching for definition of entity "segB", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: segB.bdf
+Info (12128): Elaborating entity "segB" for hierarchy "bcd_7seg:inst7|segB:inst1"
+Warning (12125): Using design file segd.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: segD
+Info (12128): Elaborating entity "segD" for hierarchy "bcd_7seg:inst7|segD:inst3"
+Warning (12125): Using design file sege.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: segE
+Info (12128): Elaborating entity "segE" for hierarchy "bcd_7seg:inst7|segE:inst4"
+Warning (12125): Using design file segf.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: segF
+Info (12128): Elaborating entity "segF" for hierarchy "bcd_7seg:inst7|segF:inst5"
+Warning (12125): Using design file segg.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: segG
+Warning (12300): Found the following files while searching for definition of entity "segG", but did not use these files because already using a different file containing the entity definition
+    Warning (12126): File: segG.bdf
+Info (12128): Elaborating entity "segG" for hierarchy "bcd_7seg:inst7|segG:inst6"
+Warning (12125): Using design file sega.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: segA
+Info (12128): Elaborating entity "segA" for hierarchy "bcd_7seg:inst7|segA:inst"
+Warning (12125): Using design file segc.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: segC
+Info (12128): Elaborating entity "segC" for hierarchy "bcd_7seg:inst7|segC:inst2"
+Info (12128): Elaborating entity "bcd_count2" for hierarchy "bcd_count2:inst12"
+Warning (275008): Primitive "GND" of instance "inst1" not used
+Info (12128): Elaborating entity "dff_enrst" for hierarchy "bcd_count2:inst12|dff_enrst:inst15"
+Warning (12125): Using design file bcd_inc.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: bcd_inc
+Info (12128): Elaborating entity "BCD_INC" for hierarchy "bcd_count2:inst12|BCD_INC:inst11"
+Warning (12125): Using design file inc1b.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: inc1b
+Info (12128): Elaborating entity "inc1b" for hierarchy "bcd_count2:inst12|BCD_INC:inst11|inc1b:inc3"
+Warning (12125): Using design file ten_detect.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ten_detect
+Info (12128): Elaborating entity "ten_detect" for hierarchy "bcd_count2:inst12|BCD_INC:inst11|ten_detect:ten1"
+Warning (12125): Using design file fix_bcd.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: fix_bcd
+Info (12128): Elaborating entity "fix_bcd" for hierarchy "bcd_count2:inst12|BCD_INC:inst11|fix_bcd:fix1"
+Info (12128): Elaborating entity "edge_det" for hierarchy "edge_det:inst13"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX0[6]" is stuck at VCC
+    Warning (13410): Pin "HEX0[5]" is stuck at VCC
+    Warning (13410): Pin "HEX0[4]" is stuck at VCC
+    Warning (13410): Pin "HEX0[3]" is stuck at GND
+    Warning (13410): Pin "HEX0[2]" is stuck at VCC
+    Warning (13410): Pin "HEX0[1]" is stuck at VCC
+    Warning (13410): Pin "HEX0[0]" is stuck at VCC
+    Warning (13410): Pin "HEX1[6]" is stuck at GND
+    Warning (13410): Pin "HEX1[5]" is stuck at VCC
+    Warning (13410): Pin "HEX1[4]" is stuck at VCC
+    Warning (13410): Pin "HEX1[3]" is stuck at VCC
+    Warning (13410): Pin "HEX1[2]" is stuck at VCC
+    Warning (13410): Pin "HEX1[1]" is stuck at VCC
+    Warning (13410): Pin "HEX1[0]" is stuck at VCC
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC
+    Warning (13410): Pin "HEX2[5]" is stuck at VCC
+    Warning (13410): Pin "HEX2[4]" is stuck at VCC
+    Warning (13410): Pin "HEX2[3]" is stuck at VCC
+    Warning (13410): Pin "HEX2[2]" is stuck at VCC
+    Warning (13410): Pin "HEX2[1]" is stuck at VCC
+    Warning (13410): Pin "HEX2[0]" is stuck at GND
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC
+    Warning (13410): Pin "HEX3[5]" is stuck at VCC
+    Warning (13410): Pin "HEX3[4]" is stuck at VCC
+    Warning (13410): Pin "HEX3[3]" is stuck at VCC
+    Warning (13410): Pin "HEX3[2]" is stuck at VCC
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC
+    Warning (13410): Pin "HEX3[0]" is stuck at VCC
+Warning (20013): Ignored assignments for entity "Lab2_top_level" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity Lab2_top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity Lab2_top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity Lab2_top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity Lab2_top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity Lab2_top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity Lab2_top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity Lab2_top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity Lab2_top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity Lab2_top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity Lab2_top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity Lab2_top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity Lab2_top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity Lab2_top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity Lab2_top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity Lab2_top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity Lab2_top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity Lab2_top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity Lab2_top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity Lab2_top_level -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity Lab2_top_level -section_id Top was ignored
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 136 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 56 output pins
+    Info (21061): Implemented 75 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 69 warnings
+    Info: Peak virtual memory: 531 megabytes
+    Info: Processing ended: Wed Jan 17 14:48:57 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

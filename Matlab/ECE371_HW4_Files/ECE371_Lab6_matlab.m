@@ -1,0 +1,53 @@
+%%
+Tf = 0.6;
+t = linspace(0, Tf, 60);
+sim('ECE371_Lab6_Simple');
+V1 = V;
+I1 = I;
+P1 = P;
+%subplot(2,1,1);
+%plot(V, I);
+%xlabel('Voltage (V)');
+%ylabel('Current (A)');
+%title('I vs V');
+%axis([0 0.6 0 2]);
+%subplot(2,1,2);
+%plot(V, P);
+%xlabel('Voltage (V)');
+%ylabel('Power (W)');
+%title('P vs V');
+%axis([0 0.6 0 1]);
+%% Part 3
+Tf = 0.6;
+t = linspace(0, Tf, 60);
+Rs = 0.05;
+Rp = 6;
+sim('ECE371_Lab6_Exact');
+%subplot(2,1,1);
+%plot(V, I);
+%xlabel('Voltage (V)');
+%ylabel('Current (A)');
+%title('I vs V');
+%axis([0 0.6 0 2]);
+%subplot(2,1,2);
+%plot(V, P);
+%xlabel('Voltage (V)');
+%ylabel('Power (W)');
+%title('P vs V');
+%axis([0 0.6 0 1]);
+
+%% Part 5
+subplot(2,1,1);
+plot(V1, I1, 'g', V, I, 'b');
+xlabel('Voltage (V)');
+ylabel('Current (A)');
+axis([0 0.6 0 2]);
+title('I vs V');
+legend('Simple','Exact');
+subplot(2,1,2);
+plot(V1,P1, 'g', V, P, 'b');
+xlabel('Voltage (V)');
+ylabel('Power (W)');
+title('P vs V');
+axis([0 0.6 0 1]);
+legend('Simple', 'Exact');

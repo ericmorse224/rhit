@@ -1,0 +1,117 @@
+|top_level
+LEDG[0] <= fa4:fa41.S[0]
+LEDG[1] <= fa4:fa41.S[1]
+LEDG[2] <= fa4:fa41.S[2]
+LEDG[3] <= fa4:fa41.S[3]
+LEDG[4] <= <GND>
+LEDG[5] <= <GND>
+LEDG[6] <= <GND>
+LEDG[7] <= <GND>
+SW[0] => fa4:fa41.A[0]
+SW[0] => LEDR[0].DATAIN
+SW[1] => fa4:fa41.A[1]
+SW[1] => LEDR[1].DATAIN
+SW[2] => fa4:fa41.A[2]
+SW[2] => LEDR[2].DATAIN
+SW[3] => fa4:fa41.A[3]
+SW[3] => LEDR[3].DATAIN
+SW[4] => fa4:fa41.B[0]
+SW[4] => LEDR[4].DATAIN
+SW[5] => fa4:fa41.B[1]
+SW[5] => LEDR[5].DATAIN
+SW[6] => fa4:fa41.B[2]
+SW[6] => LEDR[6].DATAIN
+SW[7] => fa4:fa41.B[3]
+SW[7] => LEDR[7].DATAIN
+SW[8] => fa4:fa41.Cin
+SW[8] => LEDR[8].DATAIN
+SW[9] => ~NO_FANOUT~
+SW[10] => ~NO_FANOUT~
+SW[11] => ~NO_FANOUT~
+SW[12] => ~NO_FANOUT~
+SW[13] => ~NO_FANOUT~
+SW[14] => ~NO_FANOUT~
+SW[15] => ~NO_FANOUT~
+SW[16] => ~NO_FANOUT~
+SW[17] => ~NO_FANOUT~
+LEDR[0] <= SW[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= SW[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= SW[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= SW[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] <= SW[4].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] <= SW[5].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] <= SW[6].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[7] <= SW[7].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[8] <= SW[8].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[9] <= <GND>
+LEDR[10] <= <GND>
+LEDR[11] <= <GND>
+LEDR[12] <= <GND>
+LEDR[13] <= <GND>
+LEDR[14] <= <GND>
+LEDR[15] <= <GND>
+LEDR[16] <= <GND>
+LEDR[17] <= fa4:fa41.Cout
+
+
+|top_level|fa4:fa41
+Cout <= fa:inst.Cout
+A[0] => fa:inst1.A
+A[1] => fa:inst2.A
+A[2] => fa:inst3.A
+A[3] => fa:inst.A
+B[0] => fa:inst1.B
+B[1] => fa:inst2.B
+B[2] => fa:inst3.B
+B[3] => fa:inst.B
+Cin => fa:inst1.Cin
+S[0] <= fa:inst1.S
+S[1] <= fa:inst2.S
+S[2] <= fa:inst3.S
+S[3] <= fa:inst.S
+
+
+|top_level|fa4:fa41|fa:inst
+S <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst1.IN0
+B => inst2.IN1
+B => inst1.IN1
+Cin => inst3.IN1
+Cin => inst.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|fa4:fa41|fa:inst3
+S <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst1.IN0
+B => inst2.IN1
+B => inst1.IN1
+Cin => inst3.IN1
+Cin => inst.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|fa4:fa41|fa:inst2
+S <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst1.IN0
+B => inst2.IN1
+B => inst1.IN1
+Cin => inst3.IN1
+Cin => inst.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_level|fa4:fa41|fa:inst1
+S <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+A => inst2.IN0
+A => inst1.IN0
+B => inst2.IN1
+B => inst1.IN1
+Cin => inst3.IN1
+Cin => inst.IN1
+Cout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,169 @@
+
+**** 11/06/18 18:42:00 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ECE351prelab10"  [ C:\Cadence\Pspice Work\ece351prelab10-PSpiceFiles\SCHEMATIC1\ECE351prelab10.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ECE351prelab10.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "C:\Cadence\RHIT_Libraries\Class.lib" 
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 10 1 100Meg
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ECE351PRELAB10
+X_U1         0 N00382 VCC -VEE VO LM741
+V_V1         VCC 0  DC 15
+V_V2         0 -VEE  DC 15
+R_Rf         N00382 VO 10k 
+R_R1         VIN N00382 100 
+V_V3         VIN 0  AC 1 0
+
+**** RESUMING ECE351prelab10.cir ****
+.END
+
+**** 11/06/18 18:42:00 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ECE351prelab10"  [ C:\Cadence\Pspice Work\ece351prelab10-PSpiceFiles\SCHEMATIC1\ECE351prelab10.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.x_lm741.dx 
+          IS  800.000000E-18 
+
+
+**** 11/06/18 18:42:00 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ECE351prelab10"  [ C:\Cadence\Pspice Work\ece351prelab10-PSpiceFiles\SCHEMATIC1\ECE351prelab10.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.x_lm741.qx 
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   62.5          
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 11/06/18 18:42:00 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ECE351prelab10"  [ C:\Cadence\Pspice Work\ece351prelab10-PSpiceFiles\SCHEMATIC1\ECE351prelab10.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   VO)     .0019  (  VCC)   15.0000  (  VIN)    0.0000  ( -VEE)  -15.0000      
+
+(N00382) 11.18E-06 (X_U1.x_lm741.6)-125.0E-09                                   
+
+(X_U1.x_lm741.7)     .0020            (X_U1.x_lm741.8)     .0020                
+
+(X_U1.x_lm741.9)    0.0000            (X_U1.x_lm741.10)    -.5972               
+
+(X_U1.x_lm741.11)   14.9600           (X_U1.x_lm741.12)   14.9600               
+
+(X_U1.x_lm741.13)    -.5833           (X_U1.x_lm741.14)    -.5833               
+
+(X_U1.x_lm741.53)   12.4000           (X_U1.x_lm741.54)  -12.4000               
+
+(X_U1.x_lm741.90) 191.5E-06           (X_U1.x_lm741.91)   25.0000               
+
+(X_U1.x_lm741.92)  -25.0000           (X_U1.x_lm741.99)    0.0000           
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.667E-03
+    V_V2        -1.667E-03
+    V_V3         1.118E-07
+    X_U1.x_lm741.vb  -1.250E-12
+    X_U1.x_lm741.vc   1.240E-11
+    X_U1.x_lm741.ve   1.240E-11
+    X_U1.x_lm741.vlim   1.915E-07
+    X_U1.x_lm741.vlp  -2.500E-11
+    X_U1.x_lm741.vln  -2.500E-11
+
+    TOTAL POWER DISSIPATION   5.00E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/06/18 18:42:00 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ECE351prelab10"  [ C:\Cadence\Pspice Work\ece351prelab10-PSpiceFiles\SCHEMATIC1\ECE351prelab10.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =        1.61
+  Total job time (using Solver 1)   =         .06
+

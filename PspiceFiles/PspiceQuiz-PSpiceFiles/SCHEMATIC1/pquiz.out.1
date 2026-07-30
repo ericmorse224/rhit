@@ -1,0 +1,243 @@
+
+**** 05/21/18 11:05:11 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-pquiz"  [ C:\Cadence\Pspice Work\PspiceQuiz-PSpiceFiles\SCHEMATIC1\pquiz.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "pquiz.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../pspicequiz-pspicefiles/pspicequiz.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "C:\Cadence\RHIT_Libraries\Class.lib" 
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OP
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PSPICEQUIZ
+R_R1         VIN1 VOUT1 1k 
+V_V1         VIN1 0 PWL
++ TIME_SCALE_FACTOR={1/1k}
++ VALUE_SCALE_FACTOR=15
++repeat forever
++(0,0) (0.25,1) (0.75,-1) (1,0)
++endrepeat
+D_D1         N00497 VOUT1 D1N4734A 
+D_D2         N00497 0 D1N4734A 
+R_R2         N01020 VOUT2 10k 
+M_M1         VOUT2 VIN2 0 0 M1           
+V_V2         N01020 0 5
+V_V3         VIN2 0 0
+C_C1         N01456 VOUT3 1000u 
+C_C2         N01380 0 1000u 
+I_I1         N01380 N01373 DC 1m
+V_V4         N01435 0  DC 15
+V_V5         0 N01373  DC 15
+R_RL         0 VOUT3 10k 
+R_RD         N01456 N01435 10k 
+M_M2         N01456 VIN3 N01380 N01380 ZVN3306A           
+V_V6         VIN3 0  AC 20 0
+
+**** RESUMING pquiz.cir ****
+.END
+
+**** 05/21/18 11:05:11 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-pquiz"  [ C:\Cadence\Pspice Work\PspiceQuiz-PSpiceFiles\SCHEMATIC1\pquiz.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4734A        
+          IS    1.085000E-15 
+         ISR    2.811000E-09 
+          BV    5.6          
+         IBV     .37157      
+         NBV     .64726      
+        IBVL    1.000000E-03 
+        NBVL    6.5761       
+          RS     .7945       
+         CJO  157.000000E-12 
+          VJ     .75         
+           M     .2966       
+        TBV1  267.860000E-06 
+
+
+**** 05/21/18 11:05:11 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-pquiz"  [ C:\Cadence\Pspice Work\PspiceQuiz-PSpiceFiles\SCHEMATIC1\pquiz.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               M1              ZVN3306A        
+               NMOS            NMOS            
+       LEVEL    1               1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+         VTO    1.5             1.824        
+          KP    2.000000E-03     .1233       
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               0            
+          RD                    1.436        
+          RS                    1.572        
+          IS   10.000000E-15    1.000000E-15 
+          JS    0               0            
+          PB     .8             1            
+        PBSW     .8             1            
+         CBD                   35.000000E-12 
+          CJ    0               0            
+        CJSW    0               0            
+        CGSO    0               0            
+        CGDO    0               0            
+        CGBO    0               0            
+         TOX    0               0            
+          XJ    0               0            
+       UCRIT   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 05/21/18 11:05:11 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-pquiz"  [ C:\Cadence\Pspice Work\PspiceQuiz-PSpiceFiles\SCHEMATIC1\pquiz.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( VIN1)    0.0000  ( VIN2)    0.0000  ( VIN3)    0.0000  (VOUT1) 79.55E-30      
+
+(VOUT2)    5.0000  (VOUT3)    0.0000  (N00497) 2.349E-18 (N01020)    5.0000     
+
+(N01373)  -15.0000 (N01380)   -1.9529 (N01435)   15.0000 (N01456)    5.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2        -5.010E-12
+    V_V3         0.000E+00
+    V_V4        -1.000E-03
+    V_V5        -1.000E-03
+    V_V6         0.000E+00
+
+    TOTAL POWER DISSIPATION   3.00E-02  WATTS
+
+
+**** 05/21/18 11:05:11 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-pquiz"  [ C:\Cadence\Pspice Work\PspiceQuiz-PSpiceFiles\SCHEMATIC1\pquiz.sim ] 
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** DIODES
+
+
+NAME         D_D1        D_D2      
+MODEL        D1N4734A    D1N4734A  
+ID           0.00E+00    0.00E+00 
+VD           2.35E-18    2.35E-18 
+REQ          1.84E+07    1.84E+07 
+CAP          1.57E-10    1.57E-10 
+
+
+**** MOSFETS
+
+
+NAME         M_M1        M_M2      
+MODEL        M1          ZVN3306A  
+ID           5.01E-12    1.00E-03 
+VGS          0.00E+00    1.95E+00 
+VDS          5.00E+00    6.95E+00 
+VBS          0.00E+00    0.00E+00 
+VTH          1.50E+00    1.82E+00 
+VDSAT        0.00E+00    1.27E-01 
+Lin0/Sat1   -1.00E+00   -1.00E+00 
+if          -1.00E+00   -1.00E+00 
+ir          -1.00E+00   -1.00E+00 
+TAU         -1.00E+00   -1.00E+00 
+GM           0.00E+00    1.57E-02 
+GDS          0.00E+00    0.00E+00 
+GMB          0.00E+00    0.00E+00 
+CBD          0.00E+00    1.24E-11 
+CBS          0.00E+00    0.00E+00 
+CGSOV        0.00E+00    0.00E+00 
+CGDOV        0.00E+00    0.00E+00 
+CGBOV        0.00E+00    0.00E+00 
+CGS          0.00E+00    0.00E+00 
+CGD          0.00E+00    0.00E+00 
+CGB          0.00E+00    0.00E+00 
+
+          JOB CONCLUDED
+
+**** 05/21/18 11:05:11 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-pquiz"  [ C:\Cadence\Pspice Work\PspiceQuiz-PSpiceFiles\SCHEMATIC1\pquiz.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        0.00
+

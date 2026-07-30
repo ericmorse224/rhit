@@ -1,0 +1,59 @@
+
+**** 05/07/18 20:18:09 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-AC Analysis"  [ C:\Cadence\Pspice Work\ECE250HW8-PSpiceFiles\SCHEMATIC1\AC Analysis.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "AC Analysis.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ece250hw8-pspicefiles/ece250hw8.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 100 1 100Meg
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ECE250HW8
+R_R1         VOUT N00331 9k 
+C_C1         N00289 N00359 1000u 
+I_I1         N00289 N00296 DC 1m
+V_V1         N00366 0  DC 3
+V_V2         N00331 0  DC 15
+V_V3         0 N00296  DC 15
+V_Vin         N00359 0  AC 5 0
+Q_Q1         VOUT N00366 N00289 Qx 
+
+**** RESUMING "AC Analysis.cir" ****
+.END
+
+WARNING(ORPSIM-15223): Library file "C:\Cadence\Pspice Work\ece250hw8-pspicefiles\ece250hw8.lib" has changed since index file ece250hw8.ind was created.
+
+WARNING(ORPSIM-15227): The timestamp changed from Mon May 07 20:14:41 2018 to Mon May 07 20:17:59 2018.
+
+INFO(ORPSIM-15422): Making new index file ece250hw8.ind for library file ece250hw8.lib.
+
+Index has 1 entries from 1 file(s).
+
+**** FROM LIBRARY ../../../ece250hw8-pspicefiles/ece250hw8.lib ****
+.model Qx NPN Vto=1.8 Kp=120m
+--------------$
+ERROR -- 'Vto' is not a model parameter name
+

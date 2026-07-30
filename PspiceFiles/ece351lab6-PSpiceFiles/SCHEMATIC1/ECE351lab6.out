@@ -1,0 +1,157 @@
+
+**** 10/16/18 19:30:11 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ECE351lab6"  [ C:\Cadence\Pspice Work\ece351lab6-PSpiceFiles\SCHEMATIC1\ECE351lab6.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "ECE351lab6.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "C:\Cadence\RHIT_Libraries\Class.lib" 
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 10 0.01 100000000
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ECE351LAB6
+R_Rinternal         N00815 VIN 50 
+R_R1         N00496 N00307 10.2k 
+R_RC1         N00496 V1 820 
+R_R2         N00307 N00436 1960 
+R_RE1         N00348 N00436 180 
+R_R3         N00496 N00352 10.2k 
+R_R4         N00352 N00436 1960 
+R_RE2         N00374 N00436 180 
+R_Rload         VO 0 100 
+C_C1         VIN N00307 100u 
+C_C2         V1 N00352 100u 
+C_C3         VO N00374 100u 
+Q_Q1         N00496 N00352 N00374 Q2N3904
+Q_Q2         V1 N00307 N00348 Q2N3904
+V_Vcc         N00496 0  DC 15
+V_Vee         0 N00436  DC 15
+V_V3         N00815 0  AC 1 0
+C_C4         N00348 0 1000u 
+
+**** RESUMING ECE351lab6.cir ****
+.END
+
+**** 10/16/18 19:30:11 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ECE351lab6"  [ C:\Cadence\Pspice Work\ece351lab6-PSpiceFiles\SCHEMATIC1\ECE351lab6.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N3904         
+               NPN             
+       LEVEL    1            
+          IS    6.734000E-15 
+          BF  416.4          
+          NF    1            
+         VAF   74.03         
+         IKF     .06678      
+         ISE    6.734000E-15 
+          NE    1.259        
+          BR     .7371       
+          NR    1            
+         ISS    0            
+          RB   10            
+          RE    0            
+          RC    1            
+         CJE    4.493000E-12 
+         VJE     .75         
+         MJE     .2593       
+         CJC    3.638000E-12 
+         VJC     .75         
+         MJC     .3085       
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          TF  301.200000E-12 
+         XTF    2            
+         VTF    4            
+         ITF     .4          
+          TR  239.500000E-09 
+         XTB    1.5          
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 10/16/18 19:30:11 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ECE351lab6"  [ C:\Cadence\Pspice Work\ece351lab6-PSpiceFiles\SCHEMATIC1\ECE351lab6.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V1)   -2.5735  (   VO)    0.0000  (  VIN)    0.0000  (N00307)  -10.3700     
+
+(N00348)  -11.1200 (N00352)  -10.3330 (N00374)  -11.0770 (N00436)  -15.0000     
+
+(N00496)   15.0000 (N00815)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vcc       -4.809E-02
+    V_Vee       -4.809E-02
+    V_V3         0.000E+00
+
+    TOTAL POWER DISSIPATION   1.44E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/16/18 19:30:11 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-ECE351lab6"  [ C:\Cadence\Pspice Work\ece351lab6-PSpiceFiles\SCHEMATIC1\ECE351lab6.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

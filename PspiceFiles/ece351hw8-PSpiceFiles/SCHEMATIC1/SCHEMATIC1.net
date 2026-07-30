@@ -1,0 +1,18 @@
+* source ECE351HW8
+Q_Q1         N00245 N00826 N00280 QbreakN 
+Q_Q2         N00273 N00280 N00308 Qx 
+M_M1         N00245 N00273 N00312 N00312 Mx           
+V_V1         N00245 0  DC 15
+V_V2         0 N00209  DC 15
+I_I1         N00312 N00209 DC 10m
+I_I2         N00308 N00209 DC 1m
+I_I3         N00280 N00209 DC 39u
+R_RC2         N00245 N00273 7.5k 
+R_REE3         N00280 N00209 10Meg 
+R_REE2         N00308 N00209 10Meg 
+R_REE1         N00312 N00209 10Meg 
+R_Rs         VIN N00826 1k 
+V_V3         VIN 0  AC 1 0
+C_C1         N00312 VOUT 1000u 
+C_C2         N00308 0 1000u 
+R_RL         VOUT 0 1k 

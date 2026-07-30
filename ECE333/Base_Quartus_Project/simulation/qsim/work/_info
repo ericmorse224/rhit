@@ -1,0 +1,157 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Administrator\Desktop\Lab 1 Distribution\Base_Quartus_Project\simulation\qsim
+vfa
+Z1 IABe93oC`SQNSB6QozNd]@3
+Z2 V;Tj;>^N_S7X:BJC91?=aD3
+Z3 dC:\Users\Administrator\Desktop\Lab 1 Distribution\Base_Quartus_Project\simulation\qsim
+Z4 w1512443490
+Z5 8ECE233_Base.vo
+Z6 FECE233_Base.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 !s100 cSCC]ocR<h?K^mC:6ACDO1
+Z10 !s108 1512443491.310000
+Z11 !s107 ECE233_Base.vo|
+Z12 !s90 -work|work|ECE233_Base.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vfa4
+Z13 Ijm8NMMi_LJaFozA@E=GfQ1
+Z14 VEOH[DKEEHU630^OH6:3D81
+R3
+Z15 w1512524631
+R5
+R6
+L0 31
+R7
+r1
+31
+R12
+R8
+!i10b 1
+Z16 !s100 YPJQX5F2eeo[PoS0@hh_H3
+!s85 0
+Z17 !s108 1512524632.656000
+R11
+!s101 -O0
+vfa4_vlg_check_tst
+!i10b 1
+!s100 14GQM_@ik;b]ST;]bI1[j2
+IM7oB3JP571Vo?gWGFmi4U0
+VHEE<<@oMV_=HoBco7OWa>0
+R3
+R15
+Z18 8ECE233_Base.vt
+Z19 FECE233_Base.vt
+L0 61
+R7
+r1
+!s85 0
+31
+Z20 !s108 1512524632.828000
+Z21 !s107 ECE233_Base.vt|
+Z22 !s90 -work|work|ECE233_Base.vt|
+!s101 -O0
+R8
+vfa4_vlg_sample_tst
+!i10b 1
+!s100 UkO263Uz?m>cXl;3dLWdX2
+IZ8W]0`=i^9j5iEB1F30FW3
+VLWhMSVXfS[:XOSYDPa:=G0
+R3
+R15
+R18
+R19
+L0 29
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R8
+vfa4_vlg_vec_tst
+!i10b 1
+!s100 l[TCMB94IEYUMAhc82D?C0
+I]6z]In0z8VU`i[YWDV9_11
+V8ckNZ50JjiiV;z<_g<L<71
+R3
+R15
+R18
+R19
+L0 236
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R8
+vfa_vlg_check_tst
+Z23 IUhNYiab7SEJRFVFnWh7fB1
+Z24 VS8z[IK_kzczczCD;JCz<22
+R3
+Z25 w1512443489
+R18
+R19
+L0 61
+R7
+r1
+31
+Z26 !s108 1512443491.419000
+Z27 !s107 ECE233_Base.vt|
+R22
+R8
+Z28 !s100 4aMci9<?em1V@<XS@Go[R2
+!i10b 1
+!s85 0
+!s101 -O0
+vfa_vlg_sample_tst
+Z29 I`WIjVZl3RcRo_QZQ>aYlk2
+Z30 V3@kan45Q3Xnh`@:@c[_UZ3
+R3
+R25
+R18
+R19
+L0 29
+R7
+r1
+31
+R26
+R27
+R22
+R8
+Z31 !s100 ^hKW8XC6Ok?UMM[4B`f492
+!i10b 1
+!s85 0
+!s101 -O0
+vfa_vlg_vec_tst
+Z32 IN=R`E3SNf40l_QD=7<Y4Y2
+Z33 V2A;TkhTMYY=W:HGah^U2I1
+R3
+R25
+R18
+R19
+Z34 L0 183
+R7
+r1
+31
+R26
+R27
+R22
+R8
+Z35 !s100 Y:fY=:]HgfB<MIl1U9TEl0
+!i10b 1
+!s85 0
+!s101 -O0
